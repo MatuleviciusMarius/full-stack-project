@@ -1,0 +1,23 @@
+.section {
+  background-color: #1738a1;
+  padding: 5rem;
+}
+
+.text-container {
+  line-height: 2;
+  width: 50%;
+  margin: auto;
+  color: white;
+  text-align: center;
+}
+
+.heading {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}

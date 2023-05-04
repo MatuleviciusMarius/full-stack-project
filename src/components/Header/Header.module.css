@@ -1,0 +1,18 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+.navigation li a {
+  text-decoration: none;
+}
+
+.navigation {
+  display: flex;
+}
+
+.navigation li {
+  list-style: none;
+  padding-left: 1rem;
+}

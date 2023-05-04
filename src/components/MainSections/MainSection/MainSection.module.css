@@ -1,0 +1,48 @@
+.section {
+  background-image: url('/images/main-section-image.jpg');
+  background-position: center center;
+  height: max-content;
+  color: white;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: 10%;
+  height: 100%;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10% 0;
+  text-align: right;
+  align-items: flex-end;
+}
+
+.section h1 {
+  font-size: 3rem;
+}
+
+.section ul {
+  display: flex;
+  column-gap: 1rem;
+  list-style: none;
+  padding-left: 0;
+  font-size: 1.5rem;
+}
+
+.section a {
+  text-decoration: none;
+  color: white;
+}
+
+.section button {
+  background-color: transparent;
+  border: 2px solid white;
+  width: fit-content;
+  padding: 1rem 2rem 1rem 2rem;
+  border-radius: 50px 50px 50px 50px;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}

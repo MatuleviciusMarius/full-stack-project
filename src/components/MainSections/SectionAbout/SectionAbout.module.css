@@ -1,0 +1,21 @@
+.container {
+  text-align: center;
+  background-color: #e0e5eb;
+  padding: 5rem;
+}
+
+.container h1 {
+  margin: 0;
+  font-size: 3rem;
+}
+
+.container p {
+  font-size: 1em;
+  line-height: 2em;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
