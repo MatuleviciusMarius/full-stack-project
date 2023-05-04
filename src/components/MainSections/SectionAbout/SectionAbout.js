@@ -9,7 +9,7 @@ export default function SectionAbout() {
         Uncover and meet <br /> customer needs.
       </h1>
       <p>
-        Most teams seek to understand customer needs, yet aren't able to hire a <br /> dedicated researcher. Now there's another option.
+        Most teams seek to understand customer needs, yet arent able to hire a <br /> dedicated researcher. Now theres another option.
       </p>
       <div className={styles['flex-container']}>
         <Card
