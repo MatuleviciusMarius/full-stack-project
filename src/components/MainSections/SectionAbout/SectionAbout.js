@@ -5,22 +5,18 @@ import styles from './SectionAbout.module.css';
 export default function SectionAbout() {
   return (
     <section className={styles.container} id="about">
-      <h1>
-        Uncover and meet <br /> customer needs.
-      </h1>
-      <p>
-        Most teams seek to understand customer needs, yet arent able to hire a <br /> dedicated researcher. Now theres another option.
-      </p>
+      <h1>Norų išsipildymas</h1>
+      <p>Holistinės praktinės žinios ir užduotys norų išsipildymui</p>
       <div className={styles['flex-container']}>
         <Card
-          title={'Founders'}
+          title={'Apie'}
           text={
             'Sample text. Click to select the text box. Click again or double click to start editing the text. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
           }
           link={'#'}
         />
         <Card
-          title={'Product teams'}
+          title={'Praktikumas'}
           text={
             'Sample text. Click to select the text box. Click again or double click to start editing the text. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
           }

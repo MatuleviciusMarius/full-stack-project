@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Main from '@/components/Main/Main';
 import { Inter } from 'next/font/google';
 import Header from '@/components/Header/Header';
+import Footer from '@/components/Footer/Footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -19,6 +20,7 @@ export default function Home() {
       </Head>
       <Header />
       <Main />
+      <Footer />
     </>
   );
 }

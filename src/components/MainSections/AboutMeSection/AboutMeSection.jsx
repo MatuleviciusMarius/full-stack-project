@@ -6,11 +6,8 @@ export default function AboutMeSection() {
   return (
     <section className={styles.section}>
       <div className={styles['text-container']}>
-        <h2 className={styles.heading}>Apie Mane</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores tempora cumque nam quos quam mollitia exercitationem officiis,
-          illo doloremque ipsum laborum ut omnis fugiat, quo in sit pariatur. Obcaecati, vero?
-        </p>
+        <h2 className={styles.heading}>Apie Jūratę</h2>
+        <p>Holistinė koučerė</p>
       </div>
       <div className={styles.container}>
         <Card

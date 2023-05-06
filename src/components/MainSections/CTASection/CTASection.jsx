@@ -1,20 +1,19 @@
 import React from 'react';
 import styles from './CTASection.module.css';
+import Button from '@/components/atoms/Button/Button';
+import { useRouter } from 'next/router';
 
 export default function CTASection() {
+  const router = useRouter();
   return (
     <section className={styles.section}>
       <div className={styles['text-container']}>
         <h2>Prisijunk prie mūsų</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti voluptatum eveniet dolorum inventore quia saepe? Deleniti,
-          suscipit officia accusamus voluptatem dolorem sapiente temporibus exercitationem necessitatibus, in optio, impedit dolore
-          consequatur.
-        </p>
+        <p>Neprivalai būti patenkinta mažais dalykais, kai esi pajėgi naudotis ir mėgautis didesniais</p>
       </div>
       <div className={styles['button-container']}>
-        <button>Prisijungti</button>
-        <button>Registruotis</button>
+        <Button text={'Registracija'} action={() => router.push('/register')} />
+        <Button text={'Prisijungti'} action={() => router.push('/login')} />
       </div>
     </section>
   );
