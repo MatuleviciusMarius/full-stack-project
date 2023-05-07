@@ -8,8 +8,9 @@ export default NextAuth({
     CredentialsProvider({
       // Add your custom credentials validation logic here
       authorize: async (credentials) => {
+        const host = process.env.API_HOST;
+        const secret = process.env.SECRET;
         try {
-          const host = process.env.API_HOST;
           const res = await axios.post(`${host}/auth/login`, {
             email: credentials.email,
             password: credentials.password,
