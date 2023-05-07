@@ -2,8 +2,11 @@ import React, { useEffect, useState } from 'react';
 import styles from './RegisterForm.module.css';
 import Input from '@/components/atoms/Input/Input';
 import Button from '@/components/atoms/Button/Button';
+import axios from 'axios';
 
 export default function RegisterForm() {
+  const host = process.env.NEXT_PUBLIC_API_HOST;
+
   const [email, setEmail] = useState('');
   const [isEmailValid, setIsEmailValid] = useState(true);
 
@@ -49,6 +52,10 @@ export default function RegisterForm() {
 
   function handleSubmit(e) {
     e.preventDefault();
+    try {
+      console.log(`${host}/auth/register`);
+      axios.post(`${host}/auth/register`, { email, password, name });
+    } catch (error) {}
   }
 
   useEffect(() => {
