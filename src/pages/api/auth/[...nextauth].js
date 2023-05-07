@@ -2,6 +2,7 @@
 import NextAuth from 'next-auth';
 import CredentialsProvider from 'next-auth/providers/credentials';
 import axios from 'axios';
+const secret = process.env.SECRET;
 
 export default NextAuth({
   providers: [
@@ -9,7 +10,6 @@ export default NextAuth({
       // Add your custom credentials validation logic here
       authorize: async (credentials) => {
         const host = process.env.API_HOST;
-        const secret = process.env.SECRET;
         try {
           const res = await axios.post(`${host}/auth/login`, {
             email: credentials.email,
@@ -33,4 +33,5 @@ export default NextAuth({
       return { ...token, ...user };
     },
   },
+  secret: secret,
 });
