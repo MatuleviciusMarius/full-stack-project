@@ -1,8 +1,11 @@
 import React from 'react';
 import styles from './MainSection.module.css';
 import Button from '@/components/atoms/Button/Button';
+import { useRouter } from 'next/router';
 
 export default function MainSection() {
+  const router = useRouter();
+
   return (
     <section className={styles.section}>
       <div className={styles.container}>
@@ -26,7 +29,7 @@ export default function MainSection() {
             <a href="">Kazkas</a>
           </li>
         </ul>
-        <Button text={'Registracija'} action={'#'} />
+        <Button text={'Registracija'} action={() => router.push('/register')} />
       </div>
     </section>
   );

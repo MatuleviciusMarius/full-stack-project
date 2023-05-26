@@ -9,7 +9,9 @@ export default function CTASection() {
     <section className={styles.section}>
       <div className={styles['text-container']}>
         <h2>Prisijunk prie mūsų</h2>
-        <p>Neprivalai būti patenkinta mažais dalykais, kai esi pajėgi naudotis ir mėgautis didesniais</p>
+        <p>
+          Neprivalai būti patenkinta mažais dalykais, kai <br /> esi pajėgi naudotis ir mėgautis didesniais
+        </p>
       </div>
       <div className={styles['button-container']}>
         <Button text={'Registracija'} action={() => router.push('/register')} />

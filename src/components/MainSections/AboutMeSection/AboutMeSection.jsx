@@ -6,8 +6,8 @@ export default function AboutMeSection() {
   return (
     <section className={styles.section}>
       <div className={styles['text-container']}>
-        <h2 className={styles.heading}>Apie Jūratę</h2>
-        <p>Holistinė koučerė</p>
+        <h2 className={styles.heading}>Apie mane</h2>
+        <p>Trokštu tik tikro gyvenimo</p>
       </div>
       <div className={styles.container}>
         <Card

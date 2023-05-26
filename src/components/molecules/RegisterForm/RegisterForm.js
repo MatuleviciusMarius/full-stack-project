@@ -120,7 +120,6 @@ export default function RegisterForm() {
         invalidText={'Slaptažodžiai nesutampa'}
       />
       <Button text={'Registruotis'} />
-      <Loading />
     </form>
   );
 }

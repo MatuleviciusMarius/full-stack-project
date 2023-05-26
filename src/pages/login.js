@@ -16,10 +16,10 @@ export default function login() {
     }
   }, [session, router]);
   return (
-    <div>
+    <>
       <Header />
       <LoginForm />
-      <Footer className="position-bottom" forceBottom={true} />
-    </div>
+      <Footer />
+    </>
   );
 }
