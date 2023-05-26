@@ -8,7 +8,7 @@ export default function register() {
     <div>
       <Header />
       <RegisterForm />
-      <Footer forceBottom />
+      <Footer />
     </div>
   );
 }

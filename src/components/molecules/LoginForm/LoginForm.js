@@ -29,6 +29,8 @@ export default function LoginForm() {
     });
 
     if (result.error) {
+      alert(error.message);
+      console.log(result.error);
       // Handle error, e.g., display a message or update the component state
     } else {
       router.push('/dashboard');

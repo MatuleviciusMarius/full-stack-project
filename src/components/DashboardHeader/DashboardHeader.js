@@ -1,10 +1,10 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import styles from './DashboardHeader.module.css';
 import { signOut } from 'next-auth/react';
 
 export default function DashboardHeader() {
   function handleSignOut() {
-    signOut();
+    signOut({ callbackUrl: '/' });
   }
 
   return (

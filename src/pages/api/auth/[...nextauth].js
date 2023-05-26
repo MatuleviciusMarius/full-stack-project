@@ -1,24 +1,21 @@
-// pages/api/auth/[...nextauth].js
 import NextAuth from 'next-auth';
 import CredentialsProvider from 'next-auth/providers/credentials';
+import { loginHandle } from './login';
 import axios from 'axios';
 const secret = process.env.SECRET;
 
 export default NextAuth({
   providers: [
     CredentialsProvider({
-      // Add your custom credentials validation logic here
+      name: 'credentials',
       authorize: async (credentials) => {
-        const host = process.env.API_HOST;
         try {
-          const res = await axios.post(`${host}/auth/login`, {
-            email: credentials.email,
-            password: credentials.password,
-          });
+          const res = await loginHandle({ email: credentials.email, password: credentials.password });
+          const { user } = res;
 
-          const user = res.data.user;
           return { name: user.name, email: user.email, id: user._id };
         } catch (error) {
+          console.log(error);
           return Promise.reject(new Error('Invalid email or password'));
         }
       },

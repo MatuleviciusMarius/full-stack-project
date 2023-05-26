@@ -3,9 +3,10 @@ import styles from './RegisterForm.module.css';
 import Input from '@/components/atoms/Input/Input';
 import Button from '@/components/atoms/Button/Button';
 import axios from 'axios';
+import Loading from '@/components/atoms/Loading/Loading';
 
 export default function RegisterForm() {
-  const host = process.env.NEXT_PUBLIC_API_HOST;
+  const [registrationError, setRegistrationError] = useState('');
 
   const [email, setEmail] = useState('');
   const [isEmailValid, setIsEmailValid] = useState(true);
@@ -50,12 +51,18 @@ export default function RegisterForm() {
     setName(e.target.value);
   }
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
     try {
-      console.log(`${host}/auth/register`);
-      axios.post(`${host}/auth/register`, { email, password, name });
-    } catch (error) {}
+      await axios.post('/api/auth/register', { email, password, name });
+    } catch (error) {
+      const errorCode = error.response.status;
+      if (errorCode === 409) {
+        setRegistrationError('Vartotojas su tokiu elektroniniu paštu jau egzistuoja');
+      } else {
+        setRegistrationError('Kažkas negerai pabandykite vėliau');
+      }
+    }
   }
 
   useEffect(() => {
@@ -69,6 +76,12 @@ export default function RegisterForm() {
   return (
     <form className={styles.form} onSubmit={handleSubmit}>
       <h1>Registruotis</h1>
+      {registrationError && (
+        <div class={styles['warning-message']}>
+          <p>{registrationError}</p>
+        </div>
+      )}
+
       <Input text={'Vardas:'} id={'name'} value={name} setValue={handleSetName} />
       <Input
         text={'Emailas:'}
@@ -107,6 +120,7 @@ export default function RegisterForm() {
         invalidText={'Slaptažodžiai nesutampa'}
       />
       <Button text={'Registruotis'} />
+      <Loading />
     </form>
   );
 }
