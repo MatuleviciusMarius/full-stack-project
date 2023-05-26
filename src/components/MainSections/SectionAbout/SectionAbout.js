@@ -10,16 +10,15 @@ export default function SectionAbout() {
       <div className={styles['flex-container']}>
         <Card
           title={'Apie'}
-          text={
-            'Sample text. Click to select the text box. Click again or double click to start editing the text. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-          }
+          text={`Norų išsipildymas, tai pasiūlymas,
+            kuris leidžia kiekvienai iš mūsų tapti 
+            savo gyvenimo alchemike ir dovanoja 
+            galią savo norus paversti realybe.`}
           link={'#'}
         />
         <Card
-          title={'Praktikumas'}
-          text={
-            'Sample text. Click to select the text box. Click again or double click to start editing the text. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-          }
+          title={'Praktinis vedimas'}
+          text={`Skirtas kiekvienam žmogui, kurio pagrindinis poreikis yra norų, svajonių ir troškimų išsipildymas, ir kiekvienam, kuris trokšta apčiuopiamų rezultatų.`}
           link={'#'}
         />
       </div>

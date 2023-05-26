@@ -6,7 +6,7 @@ export default function Card({ title, text, link, photo }) {
     <div className={styles.card}>
       {title && <h2>{title}</h2>}
       {text && <p>{text}</p>}
-      {link && <a href={link}>MORE</a>}
+      {link && <a href={link}>Daugiau</a>}
       {photo && <img src={photo} />}
     </div>
   );
