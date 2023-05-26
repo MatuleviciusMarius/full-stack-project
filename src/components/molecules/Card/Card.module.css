@@ -10,6 +10,9 @@
 
 .card p {
   font-style: italic;
+  white-space: pre-line;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
 }
 
 .card a {
@@ -17,6 +20,11 @@
   text-decoration-thickness: 0.1em;
   text-underline-offset: 0.2em;
   cursor: pointer;
+}
+
+.card a:hover {
+  color: #007bff;
+  text-decoration-color: #007bff;
 }
 
 .card img {

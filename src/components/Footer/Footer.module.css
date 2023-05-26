@@ -2,7 +2,7 @@
   background-color: #333333;
   color: white;
   padding: 3rem;
-  margin: auto;
+  margin-top: auto;
 }
 
 .footer ul {
@@ -17,11 +17,4 @@
 
 .footer ul li a {
   color: white;
-}
-
-.position-bottom {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
 }

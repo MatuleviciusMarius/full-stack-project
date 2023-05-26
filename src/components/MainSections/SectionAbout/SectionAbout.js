@@ -14,12 +14,12 @@ export default function SectionAbout() {
             kuris leidžia kiekvienai iš mūsų tapti 
             savo gyvenimo alchemike ir dovanoja 
             galią savo norus paversti realybe.`}
-          link={'#'}
+          link={'/details/about'}
         />
         <Card
           title={'Praktinis vedimas'}
           text={`Skirtas kiekvienam žmogui, kurio pagrindinis poreikis yra norų, svajonių ir troškimų išsipildymas, ir kiekvienam, kuris trokšta apčiuopiamų rezultatų.`}
-          link={'#'}
+          link={'/details/practicalGuidance'}
         />
       </div>
     </section>

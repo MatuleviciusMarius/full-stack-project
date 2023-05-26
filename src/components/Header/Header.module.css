@@ -11,6 +11,11 @@
   letter-spacing: 0.06em;
 }
 
+.navigation li a:hover {
+  color: #007bff;
+  text-decoration: underline;
+}
+
 .navigation {
   display: flex;
 }
