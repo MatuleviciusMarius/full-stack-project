@@ -13,7 +13,7 @@ export default function Footer({ forceBottom }) {
         <div>
           <ul className={styles['flex-container']}>
             <li>
-              <Link href={'#'}>Taisyklės</Link>
+              <Link href={'/rules'}>Taisyklės</Link>
             </li>
             <li>
               <Link href={'#'}>Privatumo Politika</Link>
