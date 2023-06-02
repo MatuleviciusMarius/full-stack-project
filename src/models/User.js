@@ -20,8 +20,22 @@ const userSchema = new Schema({
   emailToken: {
     type: String,
   },
+  role: {
+    type: String,
+    default: 'user',
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now(),
+  },
+  groups: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Groups',
+    },
+  ],
 });
 
-const User = models.User || model('User', userSchema);
+const User = models.Users || model('Users', userSchema);
 
 export default User;
