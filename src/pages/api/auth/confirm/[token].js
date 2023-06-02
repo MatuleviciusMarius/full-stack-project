@@ -14,9 +14,9 @@ export default async (req, res) => {
       user.isEmailVerified = true;
       await user.save();
 
-      res.redirect('registration/success');
+      res.redirect('/registration/success');
     } else {
-      res.redirect('registration/failure');
+      res.redirect('/registration/failure');
     }
   } catch (error) {
     console.error(error);
