@@ -37,7 +37,6 @@ export default async function registerHandler(req, res) {
         pass: process.env.EMAIL_PASS,
       },
     });
-    // Generate the confirmation URL
     const confirmationUrl = `${process.env.HOST}/api/auth/confirm/${emailToken}`;
 
     let mailOptions = {

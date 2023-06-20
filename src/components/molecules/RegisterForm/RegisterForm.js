@@ -5,7 +5,16 @@ import Button from '@/components/atoms/Button/Button';
 import axios from 'axios';
 import Loading from '@/components/atoms/Loading/Loading';
 
+const loadingStates = {
+  idle: 'idle',
+  loading: 'loading',
+  finished: 'finished',
+  error: 'error',
+};
+
 export default function RegisterForm() {
+  const [loadingState, setIsLoadingState] = useState(loadingStates.idle);
+
   const [registrationError, setRegistrationError] = useState('');
 
   const [email, setEmail] = useState('');
@@ -53,8 +62,10 @@ export default function RegisterForm() {
 
   async function handleSubmit(e) {
     e.preventDefault();
+    setIsLoadingState(loadingStates.loading);
     try {
       await axios.post('/api/auth/register', { email, password, name });
+      setIsLoadingState(loadingStates.finished);
     } catch (error) {
       const errorCode = error.response.status;
       if (errorCode === 409) {
@@ -62,6 +73,10 @@ export default function RegisterForm() {
       } else {
         setRegistrationError('Kažkas negerai pabandykite vėliau');
       }
+      setIsLoadingState(loadingStates.error);
+      setTimeout(() => {
+        setIsLoadingState(loadingStates.idle);
+      }, 2000);
     }
   }
 
@@ -72,6 +87,18 @@ export default function RegisterForm() {
   useEffect(() => {
     email === repeatEmail ? setIsRepeatEmailValid(true) : setIsRepeatEmailValid(false);
   }, [email, repeatEmail]);
+
+  function showLoadingState() {
+    if (loadingState === loadingStates.idle) {
+      return <Button text={'Registruotis'} />;
+    } else if (loadingState === loadingStates.loading) {
+      return <Loading />;
+    } else if (loadingState === loadingStates.finished) {
+      return <p>Sėkmingai užsiregistravote, galite prisijungti</p>;
+    } else if (loadingState === loadingStates.error) {
+      return <p>Įvyko klaida, bandykite dar kartą</p>;
+    }
+  }
 
   return (
     <form className={styles.form} onSubmit={handleSubmit}>
@@ -119,7 +146,7 @@ export default function RegisterForm() {
         isValid={isRepeatPasswordValid}
         invalidText={'Slaptažodžiai nesutampa'}
       />
-      <Button text={'Registruotis'} />
+      {showLoadingState()}
     </form>
   );
 }
