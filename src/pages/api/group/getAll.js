@@ -5,7 +5,7 @@ export default async function getAll(req, res) {
   try {
     await connectMongo();
 
-    const groups = await Group.find({});
+    const groups = await Group.find({}).populate('users');
 
     res.status(200).json({ groups });
   } catch (error) {

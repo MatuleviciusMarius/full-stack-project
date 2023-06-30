@@ -2,6 +2,22 @@ html {
   scroll-behavior: smooth;
 }
 
+.module-text {
+  width: 70%;
+  margin: 1rem auto;
+  text-align: justify;
+  padding: 1rem 2rem;
+  line-height: 1.5rem;
+}
+
+.margin-left {
+  margin-left: 2rem;
+}
+
+.blue-text {
+  color: #3c78d8;
+}
+
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;

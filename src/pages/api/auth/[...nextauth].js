@@ -12,7 +12,7 @@ export default NextAuth({
           const res = await loginHandle({ email: credentials.email, password: credentials.password });
           const { user } = res;
 
-          return { name: user.name, email: user.email, id: user._id, role: user.role };
+          return { name: user.name, email: user.email, id: user._id, role: user.role, groups: user.groups };
         } catch (error) {
           console.log(error);
           return Promise.reject(new Error('Invalid email or password'));
