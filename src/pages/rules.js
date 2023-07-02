@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer/Footer';
 import RulesSection from '@/components/molecules/RulesSection/RulesSection';
+import Head from 'next/head';
 
 export default function rules() {
   return (

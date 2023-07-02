@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from 'next/head';
 import { useRouter } from 'next/router';
 import DashboardHeader from '@/components/DashboardHeader/DashboardHeader';
 import Module1 from '@/components/modules/Module1/Module1';

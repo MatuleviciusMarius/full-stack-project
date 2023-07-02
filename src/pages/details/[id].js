@@ -4,6 +4,7 @@ import React from 'react';
 import { useRouter } from 'next/router';
 import DetailsSection from '@/components/molecules/DetailsSections/DetailsSection';
 import detailsText from '@/data/detailsText';
+import Head from 'next/head';
 
 export default function about() {
   const router = useRouter();
