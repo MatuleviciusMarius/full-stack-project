@@ -22,9 +22,11 @@ export default function about() {
     }
   }
 
-  console.log(id);
   return (
     <>
+      <Head>
+        <title>My Dream World</title>
+      </Head>
       <Header />
       <DetailsSection text={pickText()} />
       <Footer />

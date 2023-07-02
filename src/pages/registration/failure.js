@@ -5,6 +5,9 @@ import React from 'react';
 export default function Failure() {
   return (
     <>
+      <Head>
+        <title>My Dream World</title>
+      </Head>
       <Header />
       Nepavyko
       <Footer />

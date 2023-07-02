@@ -5,6 +5,7 @@ import { useRouter } from 'next/router';
 import Loading from '@/components/atoms/Loading/Loading';
 import axios from 'axios';
 import ModuleList from '@/components/molecules/ModuleList/ModuleList';
+import Head from 'next/head';
 
 function dashboard() {
   const router = useRouter();
@@ -36,7 +37,10 @@ function dashboard() {
   }
 
   return (
-    <div>
+    <>
+      <Head>
+        <title>My Dream World</title>
+      </Head>
       {user && (
         <>
           <DashboardHeader />
@@ -44,7 +48,7 @@ function dashboard() {
           {groups.length && <ModuleList openModules={groups[0].openLessons} />}
         </>
       )}
-    </div>
+    </>
   );
 }
 

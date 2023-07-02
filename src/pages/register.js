@@ -6,6 +6,9 @@ import React from 'react';
 export default function register() {
   return (
     <div>
+      <Head>
+        <title>Registracija My Dream World</title>
+      </Head>
       <Header />
       <RegisterForm />
       <Footer />

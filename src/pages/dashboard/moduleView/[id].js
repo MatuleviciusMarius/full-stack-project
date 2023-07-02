@@ -36,9 +36,12 @@ export default function ModuleView() {
   }
 
   return (
-    <div>
+    <>
+      <Head>
+        <title>My Dream World</title>
+      </Head>
       <DashboardHeader />
       {pickModule()}
-    </div>
+    </>
   );
 }
