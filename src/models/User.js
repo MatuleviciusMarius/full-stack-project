@@ -1,4 +1,4 @@
-import { Schema, model, models } from 'mongoose';
+import { Schema, model, models } from "mongoose";
 
 const userSchema = new Schema({
   email: {
@@ -22,20 +22,27 @@ const userSchema = new Schema({
   },
   role: {
     type: String,
-    default: 'user',
+    default: "user",
   },
   createdAt: {
     type: Date,
     default: Date.now(),
   },
+  phone: {
+    type: Number,
+  },
+  finishedModules: {
+    type: [Number],
+    default: [],
+  },
   groups: [
     {
       type: Schema.Types.ObjectId,
-      ref: 'Groups',
+      ref: "Groups",
     },
   ],
 });
 
-const User = models.Users || model('Users', userSchema);
+const User = models.Users || model("Users", userSchema);
 
 export default User;

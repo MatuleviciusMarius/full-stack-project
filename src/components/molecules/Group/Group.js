@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import User from '../User/User';
-import { DateTimePicker } from '@mantine/dates';
-import { TextInput, NumberInput, Button, Table } from '@mantine/core';
-import axios from 'axios';
+import React, { useState } from "react";
+import User from "../User/User";
+import { DateTimePicker } from "@mantine/dates";
+import { TextInput, NumberInput, Button, Table } from "@mantine/core";
+import axios from "axios";
 
 export default function Group({ startDate, name, users, id, openLessons }) {
   const [showUsers, setShowUsers] = useState(false);
@@ -12,7 +12,7 @@ export default function Group({ startDate, name, users, id, openLessons }) {
 
   async function handleUpdate() {
     try {
-      axios.post('/api/group/updateGroup', {
+      axios.post("/api/group/updateGroup", {
         groupId: id,
         name: nameState,
         openLessons: openLessonsState,
@@ -33,7 +33,10 @@ export default function Group({ startDate, name, users, id, openLessons }) {
           <DateTimePicker value={startDateState} onChange={(date) => setStartDateState(date)} />
         </td>
         <td>
-          <NumberInput value={openLessonsState} onChange={(number) => setOpenLessonsState(number)} />
+          <NumberInput
+            value={openLessonsState}
+            onChange={(number) => setOpenLessonsState(number)}
+          />
         </td>
         <td>
           <Button onClick={() => setShowUsers((prev) => !prev)} color="green" radius="md">
@@ -55,6 +58,7 @@ export default function Group({ startDate, name, users, id, openLessons }) {
                 <th>Vardas</th>
                 <th>El. Pastas</th>
                 <th>Registracijos laikas</th>
+                <th>Pabaigtos Pamokos</th>
                 <th>Pašalinti iš grupės</th>
               </tr>
               {users.map((user) => {

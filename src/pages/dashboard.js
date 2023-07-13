@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import { useSession } from 'next-auth/react';
-import DashboardHeader from '@/components/DashboardHeader/DashboardHeader';
-import { useRouter } from 'next/router';
-import Loading from '@/components/atoms/Loading/Loading';
-import axios from 'axios';
-import ModuleList from '@/components/molecules/ModuleList/ModuleList';
-import Head from 'next/head';
+import React, { useState, useEffect } from "react";
+import { useSession } from "next-auth/react";
+import DashboardHeader from "@/components/DashboardHeader/DashboardHeader";
+import { useRouter } from "next/router";
+import Loading from "@/components/atoms/Loading/Loading";
+import axios from "axios";
+import ModuleList from "@/components/molecules/ModuleList/ModuleList";
+import Head from "next/head";
 
 function dashboard() {
   const router = useRouter();
@@ -16,10 +16,11 @@ function dashboard() {
   const [groups, setGroups] = useState([]);
 
   useEffect(() => {
-    if (status === 'authenticated') {
+    if (status === "authenticated") {
       axios
         .get(`/api/user/getUser/${user.id}`)
         .then((response) => {
+          console.log(response);
           setUserInfo(response.data);
           setGroups(response.data.groups);
         })
@@ -27,12 +28,12 @@ function dashboard() {
     }
   }, [status]);
 
-  if (status === 'loading') {
+  if (status === "loading") {
     return <Loading />;
   }
 
-  if (status === 'unauthenticated') {
-    router.push('/login');
+  if (status === "unauthenticated") {
+    router.push("/login");
     return <p>Access Denied</p>;
   }
 
@@ -44,8 +45,9 @@ function dashboard() {
       {user && (
         <>
           <DashboardHeader />
+          {userInfo.name && <h1>Labas, {userInfo.name}</h1>}
           {groups.length && <h1>Grupės Pavadinimas: {groups[0].name}</h1>}
-          {groups.length && <ModuleList openModules={groups[0].openLessons} />}
+          {groups.length && <ModuleList openModules={groups[0].openLessons} userInfo={userInfo} />}
         </>
       )}
     </>

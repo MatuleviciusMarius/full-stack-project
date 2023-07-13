@@ -8,7 +8,7 @@ export default function register() {
   return (
     <div>
       <Head>
-        <title>Registracija My Dream World</title>
+        <title>Registracija - My Dream World</title>
       </Head>
       <Header />
       <RegisterForm />

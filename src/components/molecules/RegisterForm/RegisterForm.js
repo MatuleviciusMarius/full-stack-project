@@ -1,34 +1,37 @@
-import React, { useEffect, useState } from 'react';
-import styles from './RegisterForm.module.css';
-import Input from '@/components/atoms/Input/Input';
-import Button from '@/components/atoms/Button/Button';
-import axios from 'axios';
-import Loading from '@/components/atoms/Loading/Loading';
+import React, { useEffect, useState } from "react";
+import styles from "./RegisterForm.module.css";
+import Input from "@/components/atoms/Input/Input";
+import Button from "@/components/atoms/Button/Button";
+import axios from "axios";
+import Loading from "@/components/atoms/Loading/Loading";
 
 const loadingStates = {
-  idle: 'idle',
-  loading: 'loading',
-  finished: 'finished',
-  error: 'error',
+  idle: "idle",
+  loading: "loading",
+  finished: "finished",
+  error: "error",
 };
 
 export default function RegisterForm() {
   const [loadingState, setIsLoadingState] = useState(loadingStates.idle);
 
-  const [registrationError, setRegistrationError] = useState('');
+  const [registrationError, setRegistrationError] = useState("");
 
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState("");
   const [isEmailValid, setIsEmailValid] = useState(true);
 
-  const [repeatEmail, setRepeatEmail] = useState('');
+  const [phone, setPhone] = useState("");
+  const [isPhoneValid, setIsPhoneValid] = useState(true);
+
+  const [repeatEmail, setRepeatEmail] = useState("");
   const [isRepeatEmailValid, setIsRepeatEmailValid] = useState(true);
 
-  const [password, setPassword] = useState('');
+  const [password, setPassword] = useState("");
   const [isPasswordValid, setIsPasswordValid] = useState(true);
 
-  const [repeatPassword, setRepeatPassword] = useState('');
+  const [repeatPassword, setRepeatPassword] = useState("");
   const [isRepeatPasswordValid, setIsRepeatPasswordValid] = useState(true);
-  const [name, setName] = useState('');
+  const [name, setName] = useState("");
 
   function handleSetEmail(e) {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -36,6 +39,14 @@ export default function RegisterForm() {
 
     setEmail(value);
     regex.test(value) ? setIsEmailValid(true) : setIsEmailValid(false);
+  }
+
+  function handleSetPhone(e) {
+    const value = e.target.value;
+    const phoneRegex = /^(\+370|8)(5|6)\d{7}$/;
+
+    setPhone(value);
+    phoneRegex.test(value) ? setIsPhoneValid(true) : setIsPhoneValid(false);
   }
 
   function handleSetRepeatEmail(e) {
@@ -64,14 +75,14 @@ export default function RegisterForm() {
     e.preventDefault();
     setIsLoadingState(loadingStates.loading);
     try {
-      await axios.post('/api/auth/register', { email, password, name });
+      await axios.post("/api/auth/register", { email, password, name, phone });
       setIsLoadingState(loadingStates.finished);
     } catch (error) {
       const errorCode = error.response.status;
       if (errorCode === 409) {
-        setRegistrationError('Vartotojas su tokiu elektroniniu paštu jau egzistuoja');
+        setRegistrationError("Vartotojas su tokiu elektroniniu paštu jau egzistuoja");
       } else {
-        setRegistrationError('Kažkas negerai pabandykite vėliau');
+        setRegistrationError("Kažkas negerai pabandykite vėliau");
       }
       setIsLoadingState(loadingStates.error);
       setTimeout(() => {
@@ -90,7 +101,7 @@ export default function RegisterForm() {
 
   function showLoadingState() {
     if (loadingState === loadingStates.idle) {
-      return <Button text={'Registruotis'} />;
+      return <Button text={"Registruotis"} />;
     } else if (loadingState === loadingStates.loading) {
       return <Loading />;
     } else if (loadingState === loadingStates.finished) {
@@ -104,47 +115,56 @@ export default function RegisterForm() {
     <form className={styles.form} onSubmit={handleSubmit}>
       <h1>Registruotis</h1>
       {registrationError && (
-        <div class={styles['warning-message']}>
+        <div class={styles["warning-message"]}>
           <p>{registrationError}</p>
         </div>
       )}
 
-      <Input text={'Vardas:'} id={'name'} value={name} setValue={handleSetName} />
+      <Input text={"Vardas:"} id={"name"} value={name} setValue={handleSetName} />
       <Input
-        text={'Emailas:'}
-        id={'email'}
-        type={'email'}
+        text={"Telefono Numeris:"}
+        id={"phone"}
+        type={"tel"}
+        value={phone}
+        setValue={handleSetPhone}
+        isValid={isPhoneValid}
+        invalidText={"Įrašykite teisingą numerį"}
+      />
+      <Input
+        text={"Emailas:"}
+        id={"email"}
+        type={"email"}
         value={email}
         setValue={handleSetEmail}
         isValid={isEmailValid}
-        invalidText={'Emailas neteisingas'}
+        invalidText={"Emailas neteisingas"}
       />
       <Input
-        text={'Pakartoti Emailą:'}
-        id={'repeatEmail'}
-        type={'email'}
+        text={"Pakartoti Emailą:"}
+        id={"repeatEmail"}
+        type={"email"}
         value={repeatEmail}
         setValue={handleSetRepeatEmail}
         isValid={isRepeatEmailValid}
-        invalidText={'Emailai nesutampa'}
+        invalidText={"Emailai nesutampa"}
       />
       <Input
-        text={'Slaptažodis:'}
-        id={'password'}
-        type={'password'}
+        text={"Slaptažodis:"}
+        id={"password"}
+        type={"password"}
         value={password}
         setValue={handleSetPassword}
         isValid={isPasswordValid}
-        invalidText={'* Slaptaždis turi būti bent 8 simbolių ilgumo'}
+        invalidText={"* Slaptaždis turi būti bent 8 simbolių ilgumo"}
       />
       <Input
-        text={'Pakartoti slaptažodį:'}
-        id={'repeatPassword'}
-        type={'password'}
+        text={"Pakartoti slaptažodį:"}
+        id={"repeatPassword"}
+        type={"password"}
         value={repeatPassword}
         setValue={handleSetRepeatPassword}
         isValid={isRepeatPasswordValid}
-        invalidText={'Slaptažodžiai nesutampa'}
+        invalidText={"Slaptažodžiai nesutampa"}
       />
       {showLoadingState()}
     </form>
