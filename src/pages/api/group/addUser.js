@@ -1,27 +1,26 @@
-import User from '@/models/User';
-import Group from '@/models/Group';
-import connectMongo from '@/utils/connectMongo';
-import { Types } from 'mongoose';
+import User from "@/models/User";
+import Group from "@/models/Group";
+import connectMongo from "@/utils/connectMongo";
+import { Types } from "mongoose";
 
 export default async function addUser(req, res) {
-  const { userid, groupid } = req.headers;
-  console.log(userid, groupid);
+  const { userId, groupId } = req.body;
 
   try {
     await connectMongo();
 
-    const user = await User.findById(userid);
-    const group = await Group.findById(groupid);
+    const user = await User.findById(userId);
+    const group = await Group.findById(groupId);
 
     if (!user) {
-      return res.status(400).json({ message: 'User with this id does not exist' });
+      return res.status(400).json({ message: "User with this id does not exist" });
     }
     if (!group) {
-      return res.status(400).json({ message: 'Group with this id does not exist' });
+      return res.status(400).json({ message: "Group with this id does not exist" });
     }
 
-    const mongooseuserid = new Types.ObjectId(userid);
-    const mongoosegroupid = new Types.ObjectId(groupid);
+    const mongooseuserid = new Types.ObjectId(userId);
+    const mongoosegroupid = new Types.ObjectId(groupId);
 
     if (!group.users.includes(mongooseuserid)) {
       group.users.push(mongooseuserid);
@@ -33,9 +32,9 @@ export default async function addUser(req, res) {
       await user.save();
     }
 
-    res.status(200).json({ message: 'User added to group successfully' });
+    res.status(200).json({ message: "User added to group successfully" });
   } catch (error) {
     console.log(error);
-    res.status(500).json({ error: 'server error' });
+    res.status(500).json({ error: "server error" });
   }
 }

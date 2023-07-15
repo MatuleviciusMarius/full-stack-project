@@ -6,6 +6,7 @@ import Loading from "@/components/atoms/Loading/Loading";
 import axios from "axios";
 import ModuleList from "@/components/molecules/ModuleList/ModuleList";
 import Head from "next/head";
+import Purchase from "@/components/Purchase/Purchase";
 
 function dashboard() {
   const router = useRouter();
@@ -20,7 +21,6 @@ function dashboard() {
       axios
         .get(`/api/user/getUser/${user.id}`)
         .then((response) => {
-          console.log(response);
           setUserInfo(response.data);
           setGroups(response.data.groups);
         })
@@ -45,9 +45,13 @@ function dashboard() {
       {user && (
         <>
           <DashboardHeader />
-          {userInfo.name && <h1>Labas, {userInfo.name}</h1>}
-          {groups.length && <h1>Grupės Pavadinimas: {groups[0].name}</h1>}
-          {groups.length && <ModuleList openModules={groups[0].openLessons} userInfo={userInfo} />}
+          {userInfo.name && <h1 className="center-text">Labas, {userInfo.name}</h1>}
+          {groups.length && <h1 className="center-text">Grupės Pavadinimas: {groups[0].name}</h1>}
+          {groups.length ? (
+            <ModuleList openModules={groups[0].openLessons} userInfo={userInfo} />
+          ) : (
+            <Purchase userId={user.id} />
+          )}
         </>
       )}
     </>

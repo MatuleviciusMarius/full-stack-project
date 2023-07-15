@@ -20,11 +20,29 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 #__next {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.payment-preview {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  width: 50%;
+  margin: auto;
+}
+
+.payment-preview > table {
+  width: 50%;
 }

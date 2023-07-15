@@ -44,8 +44,8 @@ export default async function registerHandler(req, res) {
       from: '"noreply" <noreply@mariusmatulevicius.site>',
       to: email,
       subject: "Email Confirmation",
-      text: `Thank you for signing up. Please confirm your email by clicking the following link: ${confirmationUrl}`,
-      html: `<b>Thank you for signing up. Please confirm your email by clicking the following link: <a href="${confirmationUrl}">${confirmationUrl}</a></b>`,
+      text: `Ačiū už registraciją. Patvirtinkite savo emailą paspausdami šią nuorodą: ${confirmationUrl}`,
+      html: `<b>Ačiū už registraciją. Patvirtinkite savo emailą paspausdami šią nuorodą: <a href="${confirmationUrl}">${confirmationUrl}</a></b>`,
     };
 
     await transporter.sendMail(mailOptions);

@@ -33,6 +33,23 @@ export default function RegisterForm() {
   const [isRepeatPasswordValid, setIsRepeatPasswordValid] = useState(true);
   const [name, setName] = useState("");
 
+  const [isButtonDisabled, setIsButtonDisabled] = useState(true);
+
+  useEffect(() => {
+    setIsButtonDisabled(checkIfButtonDisabled());
+    console.log(checkIfButtonDisabled());
+  }, [isEmailValid, isPasswordValid, isPhoneValid, isRepeatEmailValid, isRepeatPasswordValid]);
+
+  function checkIfButtonDisabled() {
+    const disabled =
+      isEmailValid &&
+      isPhoneValid &&
+      isRepeatEmailValid &&
+      isPasswordValid &&
+      isRepeatPasswordValid;
+    return !disabled;
+  }
+
   function handleSetEmail(e) {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const value = e.target.value;
@@ -101,7 +118,7 @@ export default function RegisterForm() {
 
   function showLoadingState() {
     if (loadingState === loadingStates.idle) {
-      return <Button text={"Registruotis"} />;
+      return <Button text={"Registruotis"} disabled={isButtonDisabled} />;
     } else if (loadingState === loadingStates.loading) {
       return <Loading />;
     } else if (loadingState === loadingStates.finished) {

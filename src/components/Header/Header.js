@@ -1,12 +1,12 @@
-import React from 'react';
-import styles from './Header.module.css';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
+import React from "react";
+import styles from "./Header.module.css";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function Header() {
   const router = useRouter();
   function handleLogoClick() {
-    router.push('/');
+    router.push("/");
   }
 
   return (
@@ -14,7 +14,7 @@ export default function Header() {
       <img
         onClick={handleLogoClick}
         className={styles.logo}
-        src="https://capp.nicepage.com/2283ddb46f95b85bcf751635c7c78a8b8cc2ce4c/images/default-logo.png"
+        src="/images/logo-min.png"
         alt="LOGO"
       />
       <ul className={styles.navigation}>
