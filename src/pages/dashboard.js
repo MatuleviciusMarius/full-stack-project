@@ -46,7 +46,6 @@ function dashboard() {
         <>
           <DashboardHeader />
           {userInfo.name && <h1 className="center-text">Labas, {userInfo.name}</h1>}
-          {groups.length && <h1 className="center-text">Grupės Pavadinimas: {groups[0].name}</h1>}
           {groups.length ? (
             <ModuleList openModules={groups[0].openLessons} userInfo={userInfo} />
           ) : (

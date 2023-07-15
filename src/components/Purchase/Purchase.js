@@ -4,6 +4,7 @@ import { Button } from "@mantine/core";
 import axios from "axios";
 import { useRouter } from "next/router";
 import { formatDate } from "@/utils/util";
+import styles from "./Purchase.module.css";
 
 export default function Purchase({ userId }) {
   const [groups, setGroups] = useState([]);
@@ -32,8 +33,8 @@ export default function Purchase({ userId }) {
   }
 
   return (
-    <div>
-      <GroupPicker groups={groups} handleChange={setSelectedGroupId} />
+    <div className={styles.container}>
+      <GroupPicker groups={groups} handleChange={setSelectedGroupId} value={selectedGroupId} />
       <Button
         onClick={handlePayButton}
         variant="gradient"
