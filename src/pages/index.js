@@ -1,10 +1,10 @@
-import Head from 'next/head';
-import Main from '@/components/Main/Main';
-import { Inter } from 'next/font/google';
-import Header from '@/components/Header/Header';
-import Footer from '@/components/Footer/Footer';
+import Head from "next/head";
+import Main from "@/components/Main/Main";
+import { Inter } from "next/font/google";
+import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
@@ -15,8 +15,11 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+          rel="stylesheet"
+        />
         <title>My Dream World</title>
       </Head>
       <Header />
