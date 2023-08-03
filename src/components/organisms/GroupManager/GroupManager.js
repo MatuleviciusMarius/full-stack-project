@@ -1,19 +1,12 @@
 import Group from "@/components/molecules/Group/Group";
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Box, Table, TextInput, Button } from "@mantine/core";
 import { DateTimePicker } from "@mantine/dates";
 
-export default function GroupManager() {
-  const [groups, setGroups] = useState([]);
+export default function GroupManager({ groups }) {
   const [groupName, setGroupName] = useState("");
   const [startDate, setStartDate] = useState("");
-
-  useEffect(() => {
-    axios.get("/api/group/getAll").then((response) => {
-      setGroups(response.data.groups);
-    });
-  }, []);
 
   function submitHandler(e) {
     e.preventDefault();
@@ -59,18 +52,16 @@ export default function GroupManager() {
           </tr>
         </thead>
         <tbody>
-          {groups
-            .sort((a, b) => new Date(a.startDate) - new Date(b.startDate))
-            .map((group) => (
-              <Group
-                key={group._id}
-                id={group._id}
-                startDate={new Date(group.startDate)}
-                name={group.name}
-                users={group.users}
-                openLessons={group.openLessons}
-              />
-            ))}
+          {groups.map((group) => (
+            <Group
+              key={group._id}
+              id={group._id}
+              startDate={new Date(group.startDate)}
+              name={group.name}
+              users={group.users}
+              openLessons={group.openLessons}
+            />
+          ))}
         </tbody>
       </Table>
     </div>
