@@ -49,6 +49,7 @@ export default function GroupManager({ groups }) {
             <th>Atidarytos pamokos</th>
             <th>Rodyti Narius</th>
             <th>Atnaujinti</th>
+            <th>Startuoti</th>
           </tr>
         </thead>
         <tbody>
@@ -60,6 +61,7 @@ export default function GroupManager({ groups }) {
               name={group.name}
               users={group.users}
               openLessons={group.openLessons}
+              isStarted={group.isStarted}
             />
           ))}
         </tbody>

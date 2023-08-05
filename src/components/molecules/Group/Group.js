@@ -4,11 +4,12 @@ import { DateTimePicker } from "@mantine/dates";
 import { TextInput, NumberInput, Button, Table } from "@mantine/core";
 import axios from "axios";
 
-export default function Group({ startDate, name, users, id, openLessons }) {
+export default function Group({ startDate, name, users, id, openLessons, isStarted }) {
   const [showUsers, setShowUsers] = useState(false);
   const [nameState, setNameState] = useState(name);
   const [startDateState, setStartDateState] = useState(startDate);
   const [openLessonsState, setOpenLessonsState] = useState(openLessons);
+  const [isGroupStarted, setIsStarted] = useState(isStarted);
 
   async function handleUpdate() {
     try {
@@ -18,6 +19,15 @@ export default function Group({ startDate, name, users, id, openLessons }) {
         openLessons: openLessonsState,
         startDate: startDateState,
       });
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  async function startGroupHandler() {
+    try {
+      await axios.get(`/api/group/toggleStart?groupId=${id}`);
+      setIsStarted((prev) => !prev);
     } catch (error) {
       console.log(error);
     }
@@ -48,9 +58,14 @@ export default function Group({ startDate, name, users, id, openLessons }) {
             Atnaujinti
           </Button>
         </td>
+        <td>
+          <Button onClick={startGroupHandler} color={isGroupStarted ? "red" : "green"}>
+            {isGroupStarted ? "Stabdyti grupę" : "Startuoti grupę"}
+          </Button>
+        </td>
       </tr>
       <tr>
-        <td colSpan={5}>
+        <td colSpan={6}>
           {showUsers && (
             <Table>
               <tr>

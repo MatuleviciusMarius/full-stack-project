@@ -14,6 +14,17 @@ export default function PeopleManager({ groups }) {
   const [selectedGroupToChangeId, setSelectedGroupToChangeId] = useState();
   const [isLoadingChangeGroup, setIsLoadingChangeGroup] = useState(false);
 
+  const hardcodedSelects = [
+    {
+      value: "all",
+      label: "Visi Žmonės",
+    },
+    {
+      value: "noGroup",
+      label: "Visi be grupių",
+    },
+  ];
+
   const allPeopleMapped = useMemo(() => {
     const people = groups.reduce((acc, item) => {
       if (item.users && Array.isArray(item.users)) {
@@ -53,24 +64,12 @@ export default function PeopleManager({ groups }) {
   });
 
   useEffect(() => {
-    const hardcodedSelects = [
-      {
-        value: "all",
-        label: "Visi Žmonės",
-      },
-      {
-        value: "noGroup",
-        label: "Visi be grupių",
-      },
-    ];
-
-    setGroupData([
-      ...groups.map((x) => ({
+    setGroupData(
+      groups.map((x) => ({
         value: x._id,
         label: `${x.name} ${formatDate(x.startDate)}`,
-      })),
-      ...hardcodedSelects,
-    ]);
+      }))
+    );
   }, [groups]);
 
   function handleGroupChange(value) {
@@ -128,7 +127,7 @@ export default function PeopleManager({ groups }) {
         nothingFound="Nieko nerasta"
         label="Pasirikti grupe kurios zmones rodyti"
         placeholder="Pick one"
-        data={groupData}
+        data={[...hardcodedSelects, ...groupData]}
         onChange={handleGroupChange}
         value={selectedGroupId}
       />
@@ -159,7 +158,11 @@ export default function PeopleManager({ groups }) {
               <td>{selectedPerson.email}</td>
               <td>{selectedPerson.name}</td>
               <td>{selectedPerson.group}</td>
-              <td>{selectedPerson.finishedModules}</td>
+              <td>
+                {selectedPerson.finishedModules && selectedPerson.finishedModules.length !== 0
+                  ? selectedPerson.finishedModules.join(", ")
+                  : ""}
+              </td>
             </tr>
           </tbody>
         </Table>
