@@ -1,7 +1,9 @@
 import React, { useState, useEffect, useMemo } from "react";
 import styles from "./PeopleManager.module.css";
-import { Select, Table } from "@mantine/core";
+import { Button, Select, Table } from "@mantine/core";
 import { formatDate } from "@/utils/util";
+import axios from "axios";
+import Loading from "@/components/atoms/Loading/Loading";
 
 export default function PeopleManager({ groups }) {
   const [groupData, setGroupData] = useState([]);
@@ -9,8 +11,8 @@ export default function PeopleManager({ groups }) {
   const [peopleListData, setPeopleListData] = useState([]);
   const [selectedPersonId, setSelectedPersonId] = useState({});
   const [selectedPerson, setSelectedPerson] = useState({});
-
-  const selectedGroup = groups.find((g) => g._id === selectedGroupId);
+  const [selectedGroupToChangeId, setSelectedGroupToChangeId] = useState();
+  const [isLoadingChangeGroup, setIsLoadingChangeGroup] = useState(false);
 
   const allPeopleMapped = useMemo(() => {
     const people = groups.reduce((acc, item) => {
@@ -96,6 +98,29 @@ export default function PeopleManager({ groups }) {
     setSelectedPerson(allPeople.find((p) => p._id === value));
   }
 
+  async function handleChangeGroupButton() {
+    setIsLoadingChangeGroup(true);
+    try {
+      if (selectedPerson.group) {
+        await axios.delete(
+          `/api/group/removeUser?userid=${selectedPerson._id}&groupid=${selectedPerson.group}`
+        );
+        await axios.post("/api/group/addUser", {
+          userId: selectedPerson._id,
+          groupId: selectedGroupToChangeId,
+        });
+      } else {
+        await axios.post("/api/group/addUser", {
+          userId: selectedPerson._id,
+          groupId: selectedGroupToChangeId,
+        });
+      }
+    } catch (error) {
+      console.log(error);
+    }
+    setIsLoadingChangeGroup(false);
+  }
+
   return (
     <div className={styles.container}>
       <Select
@@ -138,6 +163,28 @@ export default function PeopleManager({ groups }) {
             </tr>
           </tbody>
         </Table>
+        <div>
+          {selectedPerson._id && (
+            <>
+              <Select
+                searchable
+                nothingFound="Nieko nerasta"
+                label="Pridėti arba pakeisti pasirinkto žmogaus grupę"
+                placeholder="Pick one"
+                data={groupData}
+                onChange={setSelectedGroupToChangeId}
+                value={selectedGroupToChangeId}
+              />
+              {isLoadingChangeGroup ? (
+                <Loading />
+              ) : (
+                <Button onClick={handleChangeGroupButton} color="red">
+                  Keisti Grupę
+                </Button>
+              )}
+            </>
+          )}
+        </div>
       </div>
     </div>
   );

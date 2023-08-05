@@ -26,9 +26,6 @@ export default async function addUser(req, res) {
       group.users.push(mongooseuserid);
       await group.save();
     }
-    console.log("here");
-    console.log(user.group);
-    console.log(!user.group === mongoosegroupid);
     user.group = mongoosegroupid;
     await user.save();
 
