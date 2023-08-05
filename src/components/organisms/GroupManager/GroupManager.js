@@ -6,7 +6,7 @@ import { DateTimePicker } from "@mantine/dates";
 
 export default function GroupManager({ groups }) {
   const [groupName, setGroupName] = useState("");
-  const [startDate, setStartDate] = useState("");
+  const [startDate, setStartDate] = useState(new Date());
 
   function submitHandler(e) {
     e.preventDefault();
@@ -33,7 +33,7 @@ export default function GroupManager({ groups }) {
         />
         <DateTimePicker
           clearable
-          defaultValue={new Date()}
+          value={startDate}
           label={"Starto data"}
           placeholder="Pasirinkti starto laiką"
           onChange={(value) => setStartDate(value)}

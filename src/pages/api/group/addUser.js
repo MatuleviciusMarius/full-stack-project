@@ -26,11 +26,11 @@ export default async function addUser(req, res) {
       group.users.push(mongooseuserid);
       await group.save();
     }
-
-    if (!user.groups.includes(mongoosegroupid)) {
-      user.groups.push(mongoosegroupid);
-      await user.save();
-    }
+    console.log("here");
+    console.log(user.group);
+    console.log(!user.group === mongoosegroupid);
+    user.group = mongoosegroupid;
+    await user.save();
 
     res.status(200).json({ message: "User added to group successfully" });
   } catch (error) {

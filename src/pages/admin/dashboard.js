@@ -16,6 +16,7 @@ export default function Dashboard() {
   const sortedGroups = useMemo(() => {
     return groups.sort((a, b) => new Date(a.startDate) - new Date(b.startDate));
   }, [groups]);
+
   useEffect(() => {
     axios.get("/api/group/getAll").then((response) => {
       const sortedGroups = response.data.groups.sort(

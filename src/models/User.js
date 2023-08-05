@@ -35,12 +35,10 @@ const userSchema = new Schema({
     type: [Number],
     default: [],
   },
-  groups: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: "Groups",
-    },
-  ],
+  group: {
+    type: Schema.Types.ObjectId,
+    ref: "Groups",
+  },
 });
 
 const User = models.Users || model("Users", userSchema);

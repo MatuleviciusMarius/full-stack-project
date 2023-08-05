@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import styles from "./PeopleManager.module.css";
 import { Select, Table } from "@mantine/core";
 import { formatDate } from "@/utils/util";
 
 export default function PeopleManager({ groups }) {
-  console.log(groups);
   const [groupData, setGroupData] = useState([]);
   const [selectedGroupId, setSelectedGroupId] = useState({});
   const [peopleListData, setPeopleListData] = useState([]);
@@ -13,38 +12,95 @@ export default function PeopleManager({ groups }) {
 
   const selectedGroup = groups.find((g) => g._id === selectedGroupId);
 
+  const allPeopleMapped = useMemo(() => {
+    const people = groups.reduce((acc, item) => {
+      if (item.users && Array.isArray(item.users)) {
+        return [...acc, ...item.users.map((user) => ({ value: user._id, label: user.name }))];
+      } else {
+        return acc;
+      }
+    }, []);
+    return people.sort((a, b) => a.label.localeCompare(b.label));
+  }, [groups]);
+
+  const allPeople = useMemo(() => {
+    const people = groups.reduce((acc, item) => {
+      if (item.users && Array.isArray(item.users)) {
+        return [...acc, ...item.users];
+      } else {
+        return acc;
+      }
+    }, []);
+    return people.sort((a, b) => a.name.localeCompare(b.name));
+  }, [groups]);
+
+  const allPeopleMappedWithNoGroups = useMemo(() => {
+    const people = allPeople.reduce(
+      (acc, item) => {
+        if (item.users && Array.isArray(item.users)) {
+          return [...acc, ...item.map((user) => ({ value: user._id, label: user.name }))];
+        } else {
+          return acc;
+        }
+      },
+      [allPeopleMapped]
+    );
+
+    const peopleWithoutGroup = people.filter((person) => person.group);
+    return peopleWithoutGroup.sort((a, b) => a.label.localeCompare(b.label));
+  });
+
   useEffect(() => {
-    setGroupData(
-      groups.map((x) => ({
+    const hardcodedSelects = [
+      {
+        value: "all",
+        label: "Visi Žmonės",
+      },
+      {
+        value: "noGroup",
+        label: "Visi be grupių",
+      },
+    ];
+
+    setGroupData([
+      ...groups.map((x) => ({
         value: x._id,
         label: `${x.name} ${formatDate(x.startDate)}`,
-      }))
-    );
+      })),
+      ...hardcodedSelects,
+    ]);
   }, [groups]);
 
   function handleGroupChange(value) {
-    const group = groups.find((gr) => gr._id === value);
-    setSelectedGroupId(value);
-
-    if (group.users) {
-      setPeopleListData(
-        group.users.map((person) => ({
-          value: person._id,
-          label: person.name,
-        }))
-      );
+    if (value === "all") {
+      setPeopleListData(allPeopleMapped);
+    } else if (value === "noGroup") {
+      setPeopleListData(allPeopleMappedWithNoGroups);
+    } else {
+      const group = groups.find((gr) => gr._id === value);
+      if (group.users) {
+        setPeopleListData(
+          group.users.map((person) => ({
+            value: person._id,
+            label: person.name,
+          }))
+        );
+      }
     }
+    setSelectedGroupId(value);
   }
 
   function handleSelectPerson(value) {
     setSelectedPersonId(value);
-    console.log(selectedGroup);
-    setSelectedPerson(selectedGroup.users.find((p) => p._id === value));
+    console.log(allPeople.find((p) => p._id === value));
+    setSelectedPerson(allPeople.find((p) => p._id === value));
   }
 
   return (
     <div className={styles.container}>
       <Select
+        searchable
+        nothingFound="Nieko nerasta"
         label="Pasirikti grupe kurios zmones rodyti"
         placeholder="Pick one"
         data={groupData}
@@ -52,6 +108,8 @@ export default function PeopleManager({ groups }) {
         value={selectedGroupId}
       />
       <Select
+        searchable
+        nothingFound="Nieko nerasta"
         label="Pasirinkti zmogu is grupes"
         placeholder="Pick one"
         data={peopleListData}
@@ -60,11 +118,23 @@ export default function PeopleManager({ groups }) {
       />
       <div>
         <h3>Informacija</h3>
-        <Table>
+        <Table withColumnBorders>
+          <thead>
+            <tr>
+              <th>ID:</th>
+              <th>Email</th>
+              <th>Vardas</th>
+              <th>grupė</th>
+              <th>Pabaigti moduliai</th>
+            </tr>
+          </thead>
           <tbody>
             <tr>
-              <td>ID:</td>
-              <td></td>
+              <td>{selectedPerson._id}</td>
+              <td>{selectedPerson.email}</td>
+              <td>{selectedPerson.name}</td>
+              <td>{selectedPerson.group}</td>
+              <td>{selectedPerson.finishedModules}</td>
             </tr>
           </tbody>
         </Table>

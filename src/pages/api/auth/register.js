@@ -41,7 +41,7 @@ export default async function registerHandler(req, res) {
     const confirmationUrl = `${process.env.HOST}/api/auth/confirm/${emailToken}`;
 
     let mailOptions = {
-      from: '"noreply" <noreply@mariusmatulevicius.site>',
+      from: '"noreply" <noreply@mydreamworld.lt>',
       to: email,
       subject: "Email Confirmation",
       text: `Ačiū už registraciją. Patvirtinkite savo emailą paspausdami šią nuorodą: ${confirmationUrl}`,

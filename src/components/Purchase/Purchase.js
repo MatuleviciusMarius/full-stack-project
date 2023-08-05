@@ -23,6 +23,7 @@ export default function Purchase({ userId }) {
             label: `${group.name}-${formatDate(group.startDate)}`,
           };
         });
+        console.log(groupsArr);
         setGroups(groupsArr);
       })
       .catch((err) => console.log(err));
@@ -39,6 +40,7 @@ export default function Purchase({ userId }) {
         onClick={handlePayButton}
         variant="gradient"
         gradient={{ from: "teal", to: "lime", deg: 105 }}
+        disabled={!selectedGroupId}
       >
         Susimokėti
       </Button>

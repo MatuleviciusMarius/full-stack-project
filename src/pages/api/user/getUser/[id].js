@@ -11,7 +11,7 @@ export default async (req, res) => {
       __v: false,
       password: false,
       emailToken: false,
-    }).populate("groups");
+    }).populate("group");
 
     res.status(200).json(user);
   } catch (error) {

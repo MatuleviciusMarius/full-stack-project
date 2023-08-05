@@ -37,7 +37,6 @@ export default function RegisterForm() {
 
   useEffect(() => {
     setIsButtonDisabled(checkIfButtonDisabled());
-    console.log(checkIfButtonDisabled());
   }, [isEmailValid, isPasswordValid, isPhoneValid, isRepeatEmailValid, isRepeatPasswordValid]);
 
   function checkIfButtonDisabled() {

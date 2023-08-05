@@ -14,7 +14,7 @@ function dashboard() {
   const user = session?.user;
 
   const [userInfo, setUserInfo] = useState({});
-  const [groups, setGroups] = useState([]);
+  const [group, setGroup] = useState();
 
   useEffect(() => {
     if (status === "authenticated") {
@@ -22,7 +22,7 @@ function dashboard() {
         .get(`/api/user/getUser/${user.id}`)
         .then((response) => {
           setUserInfo(response.data);
-          setGroups(response.data.groups);
+          setGroup(response.data.group);
         })
         .catch((err) => console.log(err));
     }
@@ -46,8 +46,8 @@ function dashboard() {
         <>
           <DashboardHeader />
           {userInfo.name && <h1 className="center-text">Labas, {userInfo.name}</h1>}
-          {groups.length ? (
-            <ModuleList openModules={groups[0].openLessons} userInfo={userInfo} />
+          {group ? (
+            <ModuleList openModules={group.openLessons} userInfo={userInfo} />
           ) : (
             <Purchase userId={user.id} />
           )}

@@ -5,11 +5,11 @@ export default function GroupPicker({ groups, handleChange, value }) {
   return (
     groups.length && (
       <Select
-        label="Grupės:"
+        label="Pasirinkite grupę"
         placeholder="Pasrinkite grupę"
         data={groups}
         onChange={handleChange}
-        value={value || groups[0].value}
+        value={value}
       />
     )
   );
