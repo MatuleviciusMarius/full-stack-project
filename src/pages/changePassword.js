@@ -1,7 +1,7 @@
 import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
 import Loading from "@/components/atoms/Loading/Loading";
-import { TextInput, Button, Group, Box, Notification } from "@mantine/core";
+import { Button, Group, Box, Notification, PasswordInput } from "@mantine/core";
 import axios from "axios";
 import { useRouter } from "next/router";
 import React, { useState, useEffect } from "react";
@@ -40,24 +40,22 @@ export default function forgotPassword() {
   return (
     <>
       <Header />
-      <Box maw={320} mx="auto">
-        <TextInput
-          mt="md"
+      <Box maw={400} mx="auto" className="flex-container">
+        <PasswordInput
+          className="input-width"
           label="Naujas slaptažodis"
           placeholder="password"
           value={password}
           onChange={handleChangePassword}
         />
         {error && <Notification color="red">{error}</Notification>}
-        <Group position="center" mt="xl">
-          {loading ? (
-            <Loading />
-          ) : (
-            <Button variant="outline" onClick={handleButton}>
-              Keisti slaptažodį
-            </Button>
-          )}
-        </Group>
+        {loading ? (
+          <Loading />
+        ) : (
+          <Button variant="outline" onClick={handleButton}>
+            Keisti slaptažodį
+          </Button>
+        )}
       </Box>
       <Footer />
     </>
