@@ -5,7 +5,6 @@ export default async function createHandler(req, res) {
   const { name, startDate } = req.body;
   try {
     await connectMongo();
-    console.log(name, startDate);
     const newGroup = new Group({
       name,
       startDate,

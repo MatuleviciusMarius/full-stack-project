@@ -17,9 +17,7 @@ export default function payment() {
 
       axios
         .post("/api/group/addUser", body)
-        .then((res) => {
-          console.log(res);
-        })
+        .then((res) => {})
         .catch((err) => {
           console.log(err.response);
         });

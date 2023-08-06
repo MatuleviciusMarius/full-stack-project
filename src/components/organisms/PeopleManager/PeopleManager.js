@@ -93,7 +93,6 @@ export default function PeopleManager({ groups }) {
 
   function handleSelectPerson(value) {
     setSelectedPersonId(value);
-    console.log(allPeople.find((p) => p._id === value));
     setSelectedPerson(allPeople.find((p) => p._id === value));
   }
 
