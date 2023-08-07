@@ -59,26 +59,31 @@ export default function Group({ startDate, name, users, id, openLessons, isStart
           </Button>
         </td>
         <td>
-          <Button onClick={startGroupHandler} color={isGroupStarted ? "red" : "green"}>
-            {isGroupStarted ? "Stabdyti grupę" : "Startuoti grupę"}
+          <Button onClick={startGroupHandler} color={isGroupStarted ? "green" : "red"}>
+            {isGroupStarted ? "Tęsti registraciją" : "Stabdyti registraciją"}
           </Button>
         </td>
       </tr>
       <tr>
         <td colSpan={6}>
           {showUsers && (
-            <Table>
-              <tr>
-                <th>ID.</th>
-                <th>Vardas</th>
-                <th>El. Pastas</th>
-                <th>Registracijos laikas</th>
-                <th>Pabaigtos Pamokos</th>
-                <th>Pašalinti iš grupės</th>
-              </tr>
-              {users.map((user) => {
-                return <User user={user} groupId={id} />;
-              })}
+            <Table withColumnBorders withBorder>
+              <thead>
+                <tr>
+                  <th>ID.</th>
+                  <th>Vardas</th>
+                  <th>El. Pastas</th>
+                  <th>Telefonas</th>
+                  <th>Registracijos laikas</th>
+                  <th>Pabaigtos Pamokos</th>
+                  <th>Pašalinti iš grupės</th>
+                </tr>
+              </thead>
+              <tbody>
+                {users.map((user) => {
+                  return <User user={user} groupId={id} />;
+                })}
+              </tbody>
             </Table>
           )}
         </td>

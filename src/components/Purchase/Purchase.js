@@ -36,6 +36,7 @@ export default function Purchase({ userId }) {
     <div className={styles.container}>
       <GroupPicker groups={groups} handleChange={setSelectedGroupId} value={selectedGroupId} />
       <Button
+        mx={"md"}
         onClick={handlePayButton}
         variant="gradient"
         gradient={{ from: "teal", to: "lime", deg: 105 }}

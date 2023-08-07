@@ -1,13 +1,8 @@
 import React from "react";
-import styles from "./Loading.module.css";
+import { Loader } from "@mantine/core";
 
 function Loading() {
-  return (
-    <div className={styles.loadingContainer}>
-      <div className={styles.loadingAnimation}></div>
-      <div className={styles.loadingText}>Kraunasi...</div>
-    </div>
-  );
+  return <Loader variant="dots" />;
 }
 
 export default Loading;

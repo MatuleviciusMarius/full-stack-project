@@ -17,6 +17,7 @@
     "@mantine/hooks": "^6.0.14",
     "@mantine/next": "^6.0.14",
     "@stripe/stripe-js": "^1.54.1",
+    "@tabler/icons-react": "^2.30.0",
     "axios": "^1.4.0",
     "bcryptjs": "^2.4.3",
     "dayjs": "^1.11.8",

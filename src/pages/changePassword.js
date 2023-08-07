@@ -1,8 +1,10 @@
 import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
 import Loading from "@/components/atoms/Loading/Loading";
-import { Button, Group, Box, Notification, PasswordInput } from "@mantine/core";
+import { Button, Box, Notification, PasswordInput } from "@mantine/core";
+import { IconCheck, IconX } from "@tabler/icons-react";
 import axios from "axios";
+import Head from "next/head";
 import { useRouter } from "next/router";
 import React, { useState, useEffect } from "react";
 
@@ -11,13 +13,13 @@ export default function forgotPassword() {
   const [error, setError] = useState(null);
   const [userId, setUserId] = useState("");
   const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState("");
 
   const router = useRouter();
 
   useEffect(() => {
     if (router.isReady) {
       const id = router.query.userid;
-      console.log(id);
       setUserId(id);
     }
   }, [router.isReady, router.query]);
@@ -30,17 +32,29 @@ export default function forgotPassword() {
     if (password.length < 8) {
       setError("Slaptažodis turi būti bent 8 simbolių ilgumo");
     } else {
-      setLoading(true);
-      setError(null);
-      await axios.put(`/api/user/changePassword?id=${userId}&password=${password}`);
-      setLoading(false);
+      try {
+        setLoading(true);
+        setError(null);
+        await axios.put(`/api/user/changePassword?id=${userId}&password=${password}`);
+        setPassword("");
+        setLoading(false);
+        setMessage("Slaptažodis pakeistas, galite prisijungti");
+      } catch (error) {
+        setLoading(false);
+        setMessage("Kažkas nepavyko - bandykite vėliau");
+      }
     }
   }
 
   return (
     <>
+      <Head>
+        <title>Keisti Slaptažodį</title>
+      </Head>
       <Header />
       <Box maw={400} mx="auto" className="flex-container">
+        {message && <Notification>{message}</Notification>}
+        {error && <Notification color="red">{error}</Notification>}
         <PasswordInput
           className="input-width"
           label="Naujas slaptažodis"
@@ -48,13 +62,14 @@ export default function forgotPassword() {
           value={password}
           onChange={handleChangePassword}
         />
-        {error && <Notification color="red">{error}</Notification>}
         {loading ? (
           <Loading />
         ) : (
-          <Button variant="outline" onClick={handleButton}>
-            Keisti slaptažodį
-          </Button>
+          <>
+            <Button variant="outline" onClick={handleButton}>
+              Keisti slaptažodį
+            </Button>
+          </>
         )}
       </Box>
       <Footer />

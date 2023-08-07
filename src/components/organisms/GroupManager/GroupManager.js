@@ -41,7 +41,7 @@ export default function GroupManager({ groups }) {
         <Button onClick={submitHandler}>Sukurti!</Button>
       </Box>
       <h1>Grupių sąrašas</h1>
-      <Table>
+      <Table withColumnBorders withBorder>
         <thead>
           <tr>
             <th>Pavadinimas</th>

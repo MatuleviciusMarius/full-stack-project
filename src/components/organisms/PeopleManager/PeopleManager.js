@@ -146,6 +146,7 @@ export default function PeopleManager({ groups }) {
             <tr>
               <th>ID:</th>
               <th>Email</th>
+              <th>Telefonas</th>
               <th>Vardas</th>
               <th>grupė</th>
               <th>Pabaigti moduliai</th>
@@ -155,6 +156,7 @@ export default function PeopleManager({ groups }) {
             <tr>
               <td>{selectedPerson._id}</td>
               <td>{selectedPerson.email}</td>
+              <td>{selectedPerson.phone}</td>
               <td>{selectedPerson.name}</td>
               <td>{selectedPerson.group}</td>
               <td>
