@@ -11,7 +11,7 @@ export default function CheckBox({ onChange, isModuleCompleted }) {
       labelPosition="left"
       label="Baigtas"
       color="green"
-      size={"xl"}
+      size={"md"}
       onClick={(e) => e.stopPropagation()}
       onChange={onChange}
       checked={isModuleCompleted}

@@ -29,7 +29,6 @@ export default function LinkToModule({ moduleId, userInfo, color, isFinished = f
         backgroundColor: color,
         padding: theme.spacing.xl,
         borderRadius: theme.radius.md,
-        fontWeight: "bold",
         cursor: "pointer",
         width: "70%",
         color: "#333333",
@@ -41,6 +40,9 @@ export default function LinkToModule({ moduleId, userInfo, color, isFinished = f
         "&:hover": {
           backgroundColor:
             theme.colorScheme === "dark" ? theme.colors.dark[5] : theme.colors.gray[1],
+        },
+        "@media screen and (max-width: 500px)": {
+          justifyContent: "space-between",
         },
       })}
     >
