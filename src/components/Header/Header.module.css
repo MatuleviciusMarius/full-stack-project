@@ -2,30 +2,38 @@
   display: flex;
   justify-content: space-between;
   padding: 0.5rem 1rem 0.5rem 1rem;
+  flex-wrap: wrap;
 }
 
-.navigation li a {
+.navigation a {
   text-decoration: none;
   color: black;
   font-weight: 600;
   letter-spacing: 0.06em;
 }
 
-.navigation li a:hover {
+.navigation a:hover {
   color: #007bff;
   text-decoration: underline;
+}
+
+.navigation a:last-child {
+  padding-left: 1rem;
 }
 
 .navigation {
   display: flex;
 }
 
-.navigation li {
-  list-style: none;
-  padding-left: 1rem;
-}
-
 .logo {
   cursor: pointer;
   height: 50px;
+}
+
+@media screen and (max-width: 500px) {
+  .header {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 }

@@ -18,12 +18,8 @@ export default function Header() {
         alt="LOGO"
       />
       <ul className={styles.navigation}>
-        <li>
-          <Link href="/register">Registracija</Link>
-        </li>
-        <li>
-          <Link href="/login">Prisijungti</Link>
-        </li>
+        <Link href="/register">Registracija</Link>
+        <Link href="/login">Prisijungti</Link>
       </ul>
     </header>
   );

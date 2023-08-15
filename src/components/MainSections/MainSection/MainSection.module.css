@@ -1,5 +1,5 @@
 .section {
-  background-image: url('/images/main-section-image.jpg');
+  background-image: url("/images/main-section-image.jpg");
   background-position: center center;
   height: max-content;
   color: white;
@@ -50,4 +50,21 @@
   font-weight: bold;
   font-size: 1rem;
   cursor: pointer;
+}
+
+@media screen and (max-width: 500px) {
+  .section ul {
+    display: none;
+  }
+
+  .container {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .section h1 {
+    font-size: 2rem;
+  }
 }

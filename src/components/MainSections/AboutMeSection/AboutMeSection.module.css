@@ -26,3 +26,18 @@
   justify-content: center;
   gap: 1rem;
 }
+
+@media screen and (max-width: 500px) {
+  .heading {
+    margin: 0;
+    font-size: 2rem;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .text-container {
+    width: 100%;
+  }
+}
