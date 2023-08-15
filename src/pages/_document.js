@@ -1,24 +1,28 @@
-import { Html, Head, Main, NextScript } from "next/document";
 import { createGetInitialProps } from "@mantine/next";
+import Document, { Head, Html, Main, NextScript } from "next/document";
 
 const getInitialProps = createGetInitialProps();
 
-function Document() {
-  return (
-    <Html lang="en">
-      <Head />
-      <body>
-        <Main />
-        <NextScript />
-      </body>
-    </Html>
-  );
+export default class _Document extends Document {
+  static getInitialProps = getInitialProps;
+
+  render() {
+    return (
+      <Html lang="en">
+        <Head>
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+            rel="stylesheet"
+            crossOrigin="true"
+          />
+        </Head>
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    );
+  }
 }
-
-Document.getInitialProp = async (ctx) => {
-  const initialProps = await getInitialProps(ctx);
-
-  return { ...initialProps };
-};
-
-export default Document;
