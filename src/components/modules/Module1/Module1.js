@@ -30,15 +30,18 @@ export default function Module1() {
       </p>
       <p>P.S. Norų ir gyvenimo energija yra ta pati.</p>
       <p className="center-text">~~~***~~~</p>
-      <p>
+      <p className="margin-bottom-none">
         Bendra taisyklė visiems moduliams geresniam temų įsisąmoninimui ir užduočių efektyvesniam
-        atlikimui: Tekstas skaitomas tris kartus garsiai. Tuomet greitai ir lengvai ne tik
-        suprantama, bet ir įsisąmoninama tai, kas skaitoma. Tris kartus perskaičius tris kartus
-        labiau įsigilinama į tekstą. Na, o kam garsiai? O gi tam, kad būtų išgirsta informacija
-        savuoju balsu. Tai svarbu. Skaitant garsiai sujungiami du skirtingi informacijos priėmimo
-        būdai: akimis ir ausimis. Skaičius trys pats savaime savyje turi magiškos, kuriančios
-        galios. Pvz. Trikampis yra pirminė figūra, iš kurios kuriasi visos kitos formos. Trikampis
-        yra pati stabiliausia forma. Mūsų čakros formos sudarytos iš besisukančių trikampių ir t.t.
+        atlikimui:
+      </p>
+      <p className="padding-left margin-top-none">
+        Tekstas skaitomas tris kartus garsiai. Tuomet greitai ir lengvai ne tik suprantama, bet ir
+        įsisąmoninama tai, kas skaitoma. Tris kartus perskaičius tris kartus labiau įsigilinama į
+        tekstą. Na, o kam garsiai? O gi tam, kad būtų išgirsta informacija savuoju balsu. Tai
+        svarbu. Skaitant garsiai sujungiami du skirtingi informacijos priėmimo būdai: akimis ir
+        ausimis. Skaičius trys pats savaime savyje turi magiškos, kuriančios galios. Pvz. Trikampis
+        yra pirminė figūra, iš kurios kuriasi visos kitos formos. Trikampis yra pati stabiliausia
+        forma. Mūsų čakros formos sudarytos iš besisukančių trikampių ir t.t.
       </p>
       <p className="center-text">~~~***~~~</p>
       <p>
