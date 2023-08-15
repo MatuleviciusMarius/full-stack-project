@@ -84,3 +84,16 @@ button:hover {
 .payment-preview > table {
   width: 100%;
 }
+
+.justify-text {
+  text-align: justify;
+}
+
+.price-text {
+  font-weight: bold;
+  margin-top: 0;
+}
+
+.color {
+  color: #20124d;
+}

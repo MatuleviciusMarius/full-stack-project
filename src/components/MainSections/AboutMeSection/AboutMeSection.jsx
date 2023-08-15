@@ -4,20 +4,20 @@ import Card from "@/components/molecules/Card/Card";
 
 export default function AboutMeSection() {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="aboutMe">
       <div className={styles["text-container"]}>
         <h2 className={styles.heading}>Apie mane</h2>
-        <p>Trokštu tik tikro gyvenimo</p>
+        <p>Noriu tikro gyvenimo</p>
       </div>
       <div className={styles.container}>
         <Card
-          title={"Apie mane"}
+          title={"APIE MANE"}
           text={`Aš esu Jūratė Lajauskaitė
           Asmeninio augimo trenerė
           Holistinė koučerė
-          Mano siūlomas praktinis vedlys 
+          Mano siūloma praktika
           žmonių gyvenimus verčia 
-          sėkmingesniais, laimingesniais.
+          sėkmingesniais, laimingesniais
           `}
           link={"/details/aboutme"}
         />

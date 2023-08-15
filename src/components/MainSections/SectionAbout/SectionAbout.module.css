@@ -20,9 +20,15 @@
   gap: 1rem;
 }
 
-@media screen and (max-width: 500px) {
+.flex-container > div {
+  flex: 1;
+}
+
+@media screen and (max-width: 700px) {
   .flex-container {
     flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
   }
   .container h1 {
     margin: 0;
