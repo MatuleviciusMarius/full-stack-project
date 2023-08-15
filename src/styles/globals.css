@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .input-width {
   width: 200px;
 }
@@ -8,10 +12,6 @@
   align-items: center;
   gap: 1rem;
   flex-direction: column;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 .module-text {
