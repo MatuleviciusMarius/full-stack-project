@@ -58,30 +58,32 @@ export default {
         pateikiama informacija apie einamąją temą, užduotys, užduočių atlikimo išaiškinimas.
       </p>
       <p className="justify-text">
-        Taip, noriu dalyvauti Norų išsipildyme! Tuomet turite registruotis, pasirinkti starto laiką
-        ir apmokėti Kelionę. Į savo elektroninį paštą gausite patvirtinimą apie sėkmingai įvykdytą
-        mokėjimą. Starto dieną prisijungus prie interneto svetainės www.mydreamworld.lt su
-        asmeniniu, registracijos metu susikurtu slaptažodžiu, turėsite individualią prieigą prie
-        Jums skirtų modulių. Starto dieną Jums atsivers pirmieji vartai į Norų išsipildymo pirmąjį
-        modulį. Vienam moduliui skiriamos 3 dienos. Sekančių modulių vartai atsidarys kas tris
-        dienas.
+        Puiku, jei norite dalyvauti “Norų išsipildyme”! <br /> Tuomet turite registruotis,
+        prisijungti, pasirinkti starto laiką ir apmokėti Kelionę. Po sėkmingo mokėjimo gausite
+        patvirtinimo laišką į savo elektroninį paštą. Starto dieną prisijunkite prie
+        www.mydreamworld.lt svetainės naudodami asmeninį slaptažodį, kurį sukūrėte registracijos
+        metu. Tai suteiks Jums individualią prieigą prie Jums skirtų modulių. Starto dieną Jums
+        atsivers pirmieji vartai į Norų išsipildymo pirmąjį modulį. Kiekvienam moduliui skiriamos 3
+        dienos, per kurias galėsite įsisavinti medžiagą ir atlikti užduotis. Sekančių modulių vartai
+        atsidarys kas tris dienas.
       </p>
       <p className="justify-text">
         Visos kelionės metu būsite lydimos grįžtamuoju ryšiu, bus išlaikomas smalsumas, intriga,
         žaidybinė forma ir holistinis požiūris. Keliausite per modulius vieningu ritmu ir tam
         tikromis palankiomis dienomis. Todėl svarbu laiku atlikus užduotis apie jas tinkamai
-        informuoti (apie tai detaliau sužinosite pirmojo modulio metu). Priešingu atveju kelionė
+        informuoti (išsamesnę informaciją sužinosite pirmojo modulio metu). Priešingu atveju kelionė
         stabdoma. Norint dalyvauti Norų išsipildyme, kelionę teks pradėti nuo pradžių su kitu
         srautu. Rekomenduojame susipažinti su Taisyklėmis.
       </p>
       <p className="justify-text">
-        Kelionės metu tarpusavyje galėsime aktyviai bendrauti, dalintis savo patirtimis, pasakoti
-        apie naujus pokyčius gyvenime privačioje grupėje. Ši privati erdvė yra neatsiejama ir būtina
-        Norų išsipildymo kelionės dalis. Joje bus talpinama aktuali informacija kaip tinklapyje
-        www.mydreamworld.lt esančių modulių papildymas, gyvas pagalbininkas užduočių atlikime.
-        Turėsite galimybę užduoti aktualius klausimus, pasitarti, siųsti info apie atliktas užduotis
-        ir gauti grįžtamąjį ryšį. Sklandžiai eigai užtikrinti rekomenduojame susipažinti su
-        techninėmis sąlygomis, kurios pateikiamos Taisyklėse.
+        Kelionės metu mes aktyviai bendrausime ir dalinsimės savo patirtimis. Turėsite galimybę
+        pasakoti apie naujus pokyčius gyvenime mūsų privačioje grupėje. Ši privati erdvė yra
+        neatsiejama ir būtina Norų išsipildymo Kelionės dalis. Čia mes talpinsime aktualią
+        informaciją, kaip www.mydreamworld.lt modulių papildymą. Ši erdvė Jums taps gyvu
+        pagalbininku atliekant užduotis. Taip pat turėsite galimybę užduoti aktualius klausimus,
+        pasitarti, siųsti info apie atliktas užduotis ir gauti grįžtamąjį ryšį. Sklandžiai eigai
+        užtikrinti rekomenduojame susipažinti su techninėmis sąlygomis, kurios pateikiamos
+        Taisyklėse.
       </p>
       <p className="center-text">~~~***~~~</p>
       <p className="center-text">

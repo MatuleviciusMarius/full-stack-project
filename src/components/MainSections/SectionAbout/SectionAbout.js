@@ -11,10 +11,10 @@ export default function SectionAbout() {
         <Card
           className={styles.card}
           title={"APIE KELIONĘ"}
-          text={`Norų išsipildymas, tai pasiūlymas,
-          kuris leidžia kiekvienai iš mūsų tapti 
+          text={`Norų išsipildymas, tai ypatingas pasiūlymas,
+          kuris atveria galimybę kiekvienai iš mūsų tapti 
           savo gyvenimo architekte ir dovanoja 
-          galią savo norus paversti realybe
+          galią savo norus ir troškimus paversti tikrove
           `}
           link={"/details/about"}
         />
