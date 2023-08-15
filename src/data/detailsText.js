@@ -4,11 +4,11 @@ export default {
       <p className="justify-text">
         Baigiau Vilniaus Universiteto ekonomikos sisteminės analizės studijas, Kanados Erickson
         Coaching International mokymų programą. Buvau ICF (International Coaching Federation) Global
-        ir ICF Lietuva narė, LUMA (Lietuvos universitetų moterų asociacijos) narė. Dalyvavau
-        daugybėje seminarų, mokymų, paskaitų, dirbau žmogiškųjų išteklių srityje, vadovavau
-        pardavimų grupėms ir tarptautiniams projektams.
+        ir ICF Lietuva narė, LUMA (Lietuvos universitetų moterų asociacijos) narė. Man teko
+        dalyvauti įvairiuose seminaruose, mokymuose ir paskaitose bei dirbti žmogiškųjų išteklių
+        srityje. Be to, vadovavau pardavimų grupėms ir tarptautiniams projektams.
       </p>
-      <p className="justify-text">Esu dviejų vaikų mama.</p>
+      <p className="justify-text">Taip pat esu dviejų vaikų mama.</p>
       <p className="center-text">~~~***~~~</p>
       <p className="justify-text">
         Norų išsipildymo praktinis gidas yra sukurtas remiantis mano kelis dešimtmečius kauptomis
