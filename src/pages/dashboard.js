@@ -29,7 +29,11 @@ function dashboard() {
   }, [status]);
 
   if (status === "loading") {
-    return <Loading />;
+    return (
+      <div className="center-text">
+        <Loading />
+      </div>
+    );
   }
 
   if (status === "unauthenticated") {
@@ -45,7 +49,13 @@ function dashboard() {
       {user && (
         <>
           <DashboardHeader />
-          {userInfo.name && <h1 className="center-text">Labas, {userInfo.name}</h1>}
+          {userInfo.name ? (
+            <h1 className="center-text">Labas, {userInfo.name}</h1>
+          ) : (
+            <div className="center-text">
+              <Loading />
+            </div>
+          )}
           {group ? (
             <ModuleList openModules={group.openLessons} userInfo={userInfo} />
           ) : (

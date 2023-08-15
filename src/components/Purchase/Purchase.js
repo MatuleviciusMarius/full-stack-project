@@ -5,6 +5,7 @@ import axios from "axios";
 import { useRouter } from "next/router";
 import { formatDate } from "@/utils/util";
 import styles from "./Purchase.module.css";
+import Loading from "../atoms/Loading/Loading";
 
 export default function Purchase({ userId }) {
   const [groups, setGroups] = useState([]);
@@ -34,16 +35,24 @@ export default function Purchase({ userId }) {
 
   return (
     <div className={styles.container}>
-      <GroupPicker groups={groups} handleChange={setSelectedGroupId} value={selectedGroupId} />
-      <Button
-        mx={"md"}
-        onClick={handlePayButton}
-        variant="gradient"
-        gradient={{ from: "teal", to: "lime", deg: 105 }}
-        disabled={!selectedGroupId}
-      >
-        Mokėti
-      </Button>
+      {groups.length ? (
+        <>
+          <GroupPicker groups={groups} handleChange={setSelectedGroupId} value={selectedGroupId} />
+          <Button
+            mx={"md"}
+            onClick={handlePayButton}
+            variant="gradient"
+            gradient={{ from: "teal", to: "lime", deg: 105 }}
+            disabled={!selectedGroupId}
+          >
+            Mokėti
+          </Button>
+        </>
+      ) : (
+        <div className="center-text">
+          <Loading />
+        </div>
+      )}
     </div>
   );
 }
