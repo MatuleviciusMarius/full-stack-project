@@ -52,7 +52,7 @@ export default function PaymentPreview() {
             <input type="hidden" name="groupId" value={groupId} />
             <section>
               <button type="submit" role="link">
-                Susismokėti
+                Mokėti
               </button>
             </section>
             <style jsx>
