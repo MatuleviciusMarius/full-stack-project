@@ -26,9 +26,9 @@ export default function LinkToModule({ moduleId, userInfo, color, isFinished = f
     <Box
       onClick={handleClick}
       sx={(theme) => ({
-        backgroundColor: color,
+        background: "linear-gradient(to right, #536BFE, #E64EFA)",
         padding: theme.spacing.xl,
-        borderRadius: theme.radius.md,
+        borderRadius: "60px",
         cursor: "pointer",
         width: "70%",
         color: "#333333",
@@ -46,7 +46,7 @@ export default function LinkToModule({ moduleId, userInfo, color, isFinished = f
         },
       })}
     >
-      <span>Modulis {moduleId}</span>
+      <span className="white large-text">Modulis {moduleId}</span>
       <CheckBox onChange={onChange} isModuleCompleted={isModuleCompleted} />
     </Box>
   );

@@ -9,8 +9,8 @@ export default function CheckBox({ onChange, isModuleCompleted }) {
         right: "1rem",
       })}
       labelPosition="left"
-      label="Baigtas"
-      color="green"
+      label={<span className="white">Atlikta</span>}
+      color="#566AFE"
       size={"md"}
       onClick={(e) => e.stopPropagation()}
       onChange={onChange}

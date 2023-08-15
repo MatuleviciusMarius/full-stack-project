@@ -37,13 +37,37 @@ export default function Purchase({ userId }) {
     <div className={styles.container}>
       {groups.length ? (
         <>
-          <GroupPicker groups={groups} handleChange={setSelectedGroupId} value={selectedGroupId} />
+          <div className="center-text">
+            <p>
+              Laimingos būname tuomet, <br />
+              kai ateina tai ko tikrai norime <br />
+              ir tai ateina norimu metu
+            </p>
+            <p>
+              Neprivalai būti patenkinta mažais dalykais, <br /> kai esi pajėgi naudotis ir mėgautis
+              didesniais
+            </p>
+            <p>~~~***~~~</p>
+            <p>
+              Nori dalyvauti Norų išsipildymo Kelionėje, <br /> pasirink starto datą ir apmokėk
+            </p>
+            <p>9 moduliai per 27 dienas</p>
+            <p className="price-text">Kaina 126 eurai</p>
+          </div>
+          <span className={styles.margin}>
+            <GroupPicker
+              groups={groups}
+              handleChange={setSelectedGroupId}
+              value={selectedGroupId}
+            />
+          </span>
           <Button
             mx={"md"}
             onClick={handlePayButton}
             variant="gradient"
             gradient={{ from: "teal", to: "lime", deg: 105 }}
             disabled={!selectedGroupId}
+            className={styles.button}
           >
             Mokėti
           </Button>

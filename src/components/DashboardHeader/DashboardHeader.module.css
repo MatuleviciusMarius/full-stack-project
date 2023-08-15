@@ -3,25 +3,8 @@
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
-  background-color: #ffe382;
 }
 
-.header__logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #333;
-}
-
-.header__signout {
-  font-size: 1rem;
-  color: #333;
-  background-color: #fff;
-  border: none;
-  border-radius: 0.5rem;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-}
-
-.header__signout:hover {
-  background-color: #eee;
+.logo {
+  height: 50px;
 }

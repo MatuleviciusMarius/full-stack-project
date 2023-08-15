@@ -50,7 +50,7 @@ function dashboard() {
         <>
           <DashboardHeader />
           {userInfo.name ? (
-            <h1 className="center-text">Labas, {userInfo.name}</h1>
+            <h1 className="center-text">Sveika, {userInfo.name}</h1>
           ) : (
             <div className="center-text">
               <Loading />

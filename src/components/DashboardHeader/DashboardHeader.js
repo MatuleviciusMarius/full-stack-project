@@ -1,18 +1,19 @@
-import React from 'react';
-import styles from './DashboardHeader.module.css';
-import { signOut } from 'next-auth/react';
+import React from "react";
+import styles from "./DashboardHeader.module.css";
+import { signOut } from "next-auth/react";
+import { Button } from "@mantine/core";
 
 export default function DashboardHeader() {
   function handleSignOut() {
-    signOut({ callbackUrl: '/' });
+    signOut({ callbackUrl: "/" });
   }
 
   return (
     <div className={styles.header}>
-      <div className={styles.header__logo}>My App</div>
-      <button className={styles.header__signout} onClick={handleSignOut}>
+      <img className={styles.logo} src="/images/logo-min.png" alt="LOGO" />
+      <Button variant="outline" radius="xl" size="md" onClick={handleSignOut}>
         Atsijungti
-      </button>
+      </Button>
     </div>
   );
 }

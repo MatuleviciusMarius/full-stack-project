@@ -97,3 +97,23 @@ button:hover {
 .color {
   color: #20124d;
 }
+
+.white {
+  color: white;
+}
+
+.large-text {
+  font-size: 1.5rem;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.bigger-text {
+  font-size: 1.1rem;
+}
+
+.indent {
+  text-indent: 20px;
+}

@@ -8,27 +8,6 @@ export default function ModuleView() {
   const router = useRouter();
   const id = router.query.id;
 
-  // function pickModule() {
-  //   switch (id) {
-  //     case "1":
-  //       return <Module1 />;
-  //     case "2":
-  //       return <Module2 />;
-  //     case "3":
-  //       return <Module3 />;
-  //     case "4":
-  //       return <Module4 />;
-  //     case "5":
-  //       return <Module5 />;
-  //     case "6":
-  //       return <Module6 />;
-  //     case "7":
-  //       return <Module7 />;
-  //     case "8":
-  //       return <Module8 />;
-  //   }
-  // }
-
   return (
     <>
       <Head>
