@@ -9,6 +9,7 @@ export default function Card({ title, text, link, photo }) {
       {text && <p className={styles["preserve-line-breaks"]}>{text}</p>}
       {link && <Link href={link}>Daugiau</Link>}
       {photo && <img src={photo} />}
+      {/* test */}
     </div>
   );
 }
