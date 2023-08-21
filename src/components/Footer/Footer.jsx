@@ -11,11 +11,7 @@ export default function Footer() {
           <br />
           Tel: +37061280062
         </p>
-        <ul className={styles["flex-container"]}>
-          <li>
-            <Link href={"/rules"}>Taisyklės</Link>
-          </li>
-        </ul>
+        <Link href={"/rules"}>Taisyklės</Link>
       </div>
     </footer>
   );
