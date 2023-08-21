@@ -148,7 +148,11 @@ export default function Module8() {
         <li>Informuok apie atliktas užduotis.</li>
       </ol>
 
+      <p className="center-text">~~~***~~~</p>
+
       <p className="center-text bold">TROKŠTU TIKRO GYVENIMO</p>
+
+      <p className="center-text">~~~***~~~</p>
 
       <p className="center-text">Ačiū!</p>
     </div>

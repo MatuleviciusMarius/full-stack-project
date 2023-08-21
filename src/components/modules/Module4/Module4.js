@@ -193,7 +193,7 @@ export default function Module4() {
       <p>
         Mintys, jausmai ir veiksmai tarpusavyje susiję, vieni iš kitų gimsta. Jei sąmoningai niekas
         nekeičiama, tai žmogus atsiduria uždarame rate. Gerai būna tik vienu atveju, jei užsisuka
-        sėkmės ratas ir tavo norai pildosi. Bet pradėti visuomet reikia nuo minčių.
+        sėkmės ratas ir tavo norai pildosi. Bet <b>pradėti visuomet reikia nuo minčių.</b>
       </p>
 
       <p className="center-text">~~~***~~~</p>

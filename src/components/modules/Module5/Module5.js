@@ -24,7 +24,7 @@ export default function Module5() {
         gamtai, ir be fizinio darbo kurti materialius dalykus iš beformės substancijos minties
         pagalba. Teko aptikti literatūros, kurioje aprašomi tokie gebėjimai (materializavimas),
         tačiau didžioji dauguma mūsų to padaryti negebame. Tad turime ne tik mąstyti, bet ir savo
-        mintis išreikšti atitinkamais veiksmais.
+        mintis išreikšti atitinkamais <b>veiksmais.</b>
       </p>
       <p className="bold">
         Tavo mintys paskatina tavo noro išsipildymą judėti link tavęs. Svarbu. Pakartoju. Tavo
