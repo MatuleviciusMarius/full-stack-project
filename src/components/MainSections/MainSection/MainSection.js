@@ -10,26 +10,14 @@ export default function MainSection() {
     <section className={styles.section}>
       <div className={styles.container}>
         <h1>
-          TIKRAS gyvenimas <br />
-          būna tuomet, <br />
-          kai ateina tai ko <br />
-          TIKRAI NORIME ir tai <br />
-          ateina NORIMU metu
+          TIKRAS gyvenimas būna tuomet, <br />
+          kai ateina tai, ko TIKRAI NORIME <br />
+          ir tai ateina NORIMU metu
         </h1>
-        <ul>
-          <li>
-            <a href="#about">Apie Kelionę</a>
-          </li>
-          |
-          <li>
-            <a href="#about">Praktinis gidas</a>
-          </li>
-          |
-          <li>
-            <a href="#aboutMe">Apie mane</a>
-          </li>
-        </ul>
-        <Button text={"Registracija"} action={() => router.push("/register")} />
+        <div className={styles.buttonContainer}>
+          <Button text={"REGISTRUOTIS"} action={() => router.push("/register")} filled />
+          <Button text={"APIE KELIONĘ"} action={() => router.push("/register")} />
+        </div>
       </div>
     </section>
   );

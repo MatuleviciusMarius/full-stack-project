@@ -14,7 +14,6 @@
   font-family: var(--font-satoshi);
   font-size: 16px;
   font-style: normal;
-  /* font-weight: 400; */
   line-height: normal;
   letter-spacing: 1.12px;
   cursor: pointer;
@@ -40,12 +39,4 @@
   line-height: normal;
   letter-spacing: 1.68px;
   padding-left: 10px;
-}
-
-@media screen and (max-width: 500px) {
-  .header {
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
 }
