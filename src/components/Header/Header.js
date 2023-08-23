@@ -11,15 +11,14 @@ export default function Header() {
 
   return (
     <header className={styles.header}>
-      <img
-        onClick={handleLogoClick}
-        className={styles.logo}
-        src="/images/logo-min.png"
-        alt="LOGO"
-      />
+      <div>
+        <img onClick={handleLogoClick} className={styles.logo} src="/images/logo.svg" alt="LOGO" />
+        <span className={styles.brandText}>MY DREAM WORLD</span>
+      </div>
       <ul className={styles.navigation}>
-        <Link href="/register">Registracija</Link>
-        <Link href="/login">Prisijungti</Link>
+        <a>PRAKTINIS GIDAS</a>
+        <a>APIE MANE</a>
+        <Link href="/login">PRISIJUNGTI</Link>
       </ul>
     </header>
   );

@@ -1,33 +1,45 @@
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 0.5rem 1rem 0.5rem 1rem;
+  padding-top: 26px;
   flex-wrap: wrap;
+  max-width: 1052px;
+  margin: auto;
+  height: 180px;
 }
 
 .navigation a {
   text-decoration: none;
-  color: black;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-}
-
-.navigation a:hover {
-  color: #007bff;
-  text-decoration: underline;
-}
-
-.navigation a:last-child {
-  padding-left: 1rem;
+  color: #000;
+  font-family: var(--font-satoshi);
+  font-size: 16px;
+  font-style: normal;
+  /* font-weight: 400; */
+  line-height: normal;
+  letter-spacing: 1.12px;
+  cursor: pointer;
 }
 
 .navigation {
   display: flex;
+  gap: 36px;
 }
 
 .logo {
-  cursor: pointer;
-  height: 50px;
+  width: 43px;
+  height: 43px;
+  flex-shrink: 0;
+}
+
+.brandText {
+  color: #000;
+  font-family: "League Spartan", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 1.68px;
+  padding-left: 10px;
 }
 
 @media screen and (max-width: 500px) {

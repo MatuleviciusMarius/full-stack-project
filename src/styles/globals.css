@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Satoshi";
+  src: url("../../fonts/Satoshi-Black.otf") format("otf");
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -31,8 +36,9 @@ html {
 }
 
 body {
+  font-size: 16px;
   margin: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Satoshi", sans-serif;
 }
 
 #__next {
