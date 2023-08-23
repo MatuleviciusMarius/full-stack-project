@@ -1,32 +1,46 @@
 .card {
-  border-left: 10px solid #34c1f4;
-  border-radius: 20px;
-  padding: 20px;
+  box-sizing: border-box;
+  border: 1px solid #584c62;
+  width: 402px;
+  height: 402px;
+  position: relative;
+}
+
+.title {
+  color: #000;
+  font-family: "League Spartan", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 1.4px;
   text-align: left;
-  background-color: white;
-  box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, 0.1);
 }
 
-.card p {
-  font-style: italic;
-  white-space: pre-line;
-  font-size: 1.2rem;
-  line-height: 1.6rem;
+.bodyText {
+  color: #000;
+  font-family: var(--font-satoshi-light);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 1.12px;
+  text-align: left;
 }
 
-.card a {
-  text-decoration: underline;
-  text-decoration-thickness: 0.1em;
-  text-underline-offset: 0.2em;
-  cursor: pointer;
-}
-
-.card a:hover {
-  color: #007bff;
-  text-decoration-color: #007bff;
+.link {
+  color: #000;
+  font-family: var(--font-satoshi-light);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 1.12px;
+  text-decoration-line: underline;
+  position: absolute;
+  left: 85px;
+  bottom: 58px;
 }
 
 .card img {
   width: 100%;
-  border-radius: 10px;
 }

@@ -1,21 +1,20 @@
-import React from 'react';
-import styles from './CTASection.module.css';
-import Button from '@/components/atoms/Button/Button';
-import { useRouter } from 'next/router';
+import React from "react";
+import styles from "./CTASection.module.css";
+import Button from "@/components/atoms/Button/Button";
+import { useRouter } from "next/router";
 
 export default function CTASection() {
   const router = useRouter();
   return (
     <section className={styles.section}>
-      <div className={styles['text-container']}>
-        <h2>Prisijunk prie mūsų</h2>
-        <p>
-          Neprivalai būti patenkinta mažais dalykais, kai <br /> esi pajėgi naudotis ir mėgautis didesniais
-        </p>
-      </div>
-      <div className={styles['button-container']}>
-        <Button text={'Registracija'} action={() => router.push('/register')} />
-        <Button text={'Prisijungti'} action={() => router.push('/login')} />
+      <h2 className={styles.ctaText}>PRISIJUNK PRIE MŪSŲ</h2>
+      <p className={styles.ctaBodyText}>
+        Neprivalai būti patenkinta mažais dalykais, kai <br /> esi pajėgi naudotis ir mėgautis
+        didesniais
+      </p>
+      <div className={styles["button-container"]}>
+        <Button text={"PRISIJUNGTI"} action={() => router.push("/register")} />
+        <Button text={"REGISTRUOTIS"} action={() => router.push("/login")} filled />
       </div>
     </section>
   );

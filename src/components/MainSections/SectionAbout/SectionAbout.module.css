@@ -1,38 +1,43 @@
 .container {
   text-align: center;
-  background-color: #e0e5eb;
-  padding: 5rem;
+  padding-top: 174px;
 }
 
-.container h1 {
-  margin: 0;
-  font-size: 3rem;
+.container > h1 {
+  color: #000;
+  font-family: "League Spartan", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 1.68px;
 }
 
-.container p {
-  font-size: 1em;
-  line-height: 2em;
+.topHeading {
+  margin-top: 0;
+}
+
+.container > p {
+  color: #000;
+  font-family: var(--font-satoshi-light);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 1.4px;
+  margin-bottom: 51px;
 }
 
 .flex-container {
+  margin: auto;
   display: flex;
+  flex-wrap: wrap;
+  grid-template-columns: 1fr 1fr;
   justify-content: center;
-  gap: 1rem;
+  align-items: center;
+  gap: 60px;
+  max-width: 1000px;
 }
 
-.flex-container > div {
-  flex: 1;
-  max-width: 400px;
-}
-
-@media screen and (max-width: 700px) {
-  .flex-container {
-    flex-direction: column;
-    justify-content: center;
-    align-items: stretch;
-  }
-  .container h1 {
-    margin: 0;
-    font-size: 2rem;
-  }
+.bottomHeading {
+  margin-top: 69px;
+  margin-bottom: 93px;
 }

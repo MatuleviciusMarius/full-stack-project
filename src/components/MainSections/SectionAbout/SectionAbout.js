@@ -5,11 +5,10 @@ import styles from "./SectionAbout.module.css";
 export default function SectionAbout() {
   return (
     <section className={styles.container} id="about">
-      <h1>Norų išsipildymas</h1>
+      <h1 className={styles.topHeading}>NORŲ IŠSIPILDYMAS</h1>
       <p>Holistinės praktinės žinios ir užduotys norų išsipildymui</p>
       <div className={styles["flex-container"]}>
         <Card
-          className={styles.card}
           title={"APIE KELIONĘ"}
           text={`Norų išsipildymas, tai ypatingas pasiūlymas,
           kuris atveria galimybę kiekvienai iš mūsų tapti 
@@ -19,7 +18,6 @@ export default function SectionAbout() {
           link={"/details/about"}
         />
         <Card
-          className={styles.card}
           title={"PRAKTINIS GIDAS"}
           text={`Skirtas kiekvienam žmogui, 
           kurio pagrindinis poreikis yra norų, 
@@ -29,7 +27,20 @@ export default function SectionAbout() {
           `}
           link={"/details/practicalGuidance"}
         />
+        <Card
+          title={"APIE MANE"}
+          text={`Aš esu Jūratė Lajauskaitė
+          Asmeninio augimo trenerė
+          Holistinė koučerė
+          Mano siūloma praktika
+          žmonių gyvenimus verčia 
+          sėkmingesniais, laimingesniais
+          `}
+          link={"/details/aboutme"}
+        />
+        <Card photo={"/images/profilis-min.jpg"} />
       </div>
+      <h1 className={styles.bottomHeading}>NORIU TIKRO GYVENIMO</h1>
     </section>
   );
 }
