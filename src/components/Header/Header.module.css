@@ -21,6 +21,10 @@
   cursor: pointer;
 }
 
+.navigation a:hover {
+  text-decoration: underline;
+}
+
 .navigation {
   display: flex;
   gap: 36px;

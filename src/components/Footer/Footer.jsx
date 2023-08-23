@@ -7,11 +7,13 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.container}>
         <p>
-          El. Paštas: pagalba@mydreamworld.lt
+          El. Paštas: <a href="mailto:pagalba@mydreamworld.lt">pagalba@mydreamworld.lt</a>
           <br />
-          Tel: +37061280062
+          Tel: +<a href="tel:+37061280062">37061280062</a>
         </p>
-        <Link href={"/rules"}>TAISYKLĖS</Link>
+        <Link className={styles.rules} href={"/rules"}>
+          TAISYKLĖS
+        </Link>
       </div>
     </footer>
   );
