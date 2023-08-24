@@ -1,8 +1,15 @@
 import React from "react";
-import { Loader } from "@mantine/core";
+import styles from "./Loading.module.css";
 
 function Loading() {
-  return <Loader variant="dots" />;
+  return (
+    <div class={styles["lds-ellipsis"]}>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  );
 }
 
 export default Loading;

@@ -1,16 +1,24 @@
 .header {
   display: flex;
   justify-content: space-between;
-  padding-top: 26px;
   flex-wrap: wrap;
   max-width: 1052px;
-  margin: auto;
+  width: 100%;
+  margin: 0 auto;
   height: 180px;
   padding-right: 30px;
   padding-left: 30px;
+  padding-bottom: 111px;
+  align-items: center;
 }
 
-.navigation a {
+.brandContainer {
+  display: flex;
+  align-items: center;
+}
+
+.navigation a,
+.navigation button {
   text-decoration: none;
   color: #000;
   font-family: var(--font-satoshi);
@@ -21,7 +29,13 @@
   cursor: pointer;
 }
 
-.navigation a:hover {
+.navigation button {
+  border: none;
+  background: none;
+}
+
+.navigation a:hover,
+.navigation button:hover {
   text-decoration: underline;
 }
 
@@ -38,10 +52,8 @@
 
 .brandText {
   color: #000;
-  font-family: "League Spartan", sans-serif;
+  font-family: var(--font-spartan-500);
   font-size: 24px;
-  font-style: normal;
-  font-weight: 500;
   line-height: normal;
   letter-spacing: 1.68px;
   padding-left: 10px;

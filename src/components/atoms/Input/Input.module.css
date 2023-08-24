@@ -1,30 +1,45 @@
 .container {
-  width: min-content;
+  width: 100%;
+  max-width: 355px;
 }
 
 .label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-size: 1rem;
-  font-weight: bold;
+  color: #000;
+  font-family: var(--font-satoshi-light);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 1.4px;
 }
 
 .input {
-  padding: 0.5rem;
-  font-size: 1rem;
-  border: 2px solid #ccc;
-  border-radius: 0.25rem;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  margin-top: 5px;
+  max-width: 355px;
+  width: 100%;
+  height: 51px;
+  border-radius: 10px;
+  border: 1px solid #b18a8a;
+  padding-left: 17px;
 }
 
-.input:focus {
-  outline: none;
-  border-color: #0070f3;
-  box-shadow: 0 0 0 3px rgba(0, 118, 255, 0.3);
+.input::placeholder {
+  color: #b3b3b3;
+  font-family: var(--font-satoshi-light);
+  font-size: 14px;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.98px;
 }
 
 .invalid-text {
-  color: red;
-  margin: 0.1rem 0 0 0;
-  font-size: 0.9rem;
+  font-family: var(--font-inter);
+  font-size: 15px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.75px;
+  text-align: right;
+  margin: 0;
+  margin-top: 3px;
 }

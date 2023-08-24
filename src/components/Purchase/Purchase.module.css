@@ -12,3 +12,28 @@
 .button {
   width: 200px;
 }
+
+.textContainer {
+  width: 367px;
+  color: #000;
+  font-family: var(--font-satoshi);
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 1.4px;
+}
+
+.split {
+  height: 1px;
+  width: 542px;
+  background: #b18a8a;
+  border: none;
+}
+
+.biggerMargin {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.priceText {
+  margin-bottom: 46px;
+}

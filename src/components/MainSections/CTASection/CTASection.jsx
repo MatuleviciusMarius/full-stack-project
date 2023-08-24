@@ -13,8 +13,8 @@ export default function CTASection() {
         didesniais
       </p>
       <div className={styles["button-container"]}>
-        <Button text={"PRISIJUNGTI"} action={() => router.push("/register")} />
-        <Button text={"REGISTRUOTIS"} action={() => router.push("/login")} filled />
+        <Button text={"PRISIJUNGTI"} action={() => router.push("/login")} />
+        <Button text={"REGISTRUOTIS"} action={() => router.push("/register")} filled />
       </div>
     </section>
   );

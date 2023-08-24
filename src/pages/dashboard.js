@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { useSession } from "next-auth/react";
-import DashboardHeader from "@/components/DashboardHeader/DashboardHeader";
 import { useRouter } from "next/router";
 import Loading from "@/components/atoms/Loading/Loading";
 import axios from "axios";
 import ModuleList from "@/components/molecules/ModuleList/ModuleList";
 import Head from "next/head";
 import Purchase from "@/components/Purchase/Purchase";
+import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
+import styles from "../styles/dashboard.module.css";
 
 function dashboard() {
   const router = useRouter();
@@ -46,11 +48,13 @@ function dashboard() {
       <Head>
         <title>My Dream World</title>
       </Head>
+      <Header isDashboard />
       {user && (
-        <>
-          <DashboardHeader />
+        <div>
           {userInfo.name ? (
-            <h1 className="center-text">Sveika, {userInfo.name}</h1>
+            <div className={styles.greetingContainer}>
+              <h1 className={styles.greetings}>SVEIKA, {userInfo.name.toUpperCase()}</h1>
+            </div>
           ) : (
             <div className="center-text">
               <Loading />
@@ -61,8 +65,9 @@ function dashboard() {
           ) : (
             <Purchase userId={user.id} />
           )}
-        </>
+        </div>
       )}
+      <Footer />
     </>
   );
 }

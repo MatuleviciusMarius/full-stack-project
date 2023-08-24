@@ -1,6 +1,5 @@
-@font-face {
-  font-family: "Satoshi";
-  src: url("../../fonts/Satoshi-Black.otf") format("otf");
+* {
+  box-sizing: border-box;
 }
 
 html {
@@ -43,8 +42,13 @@ body {
 
 #__next {
   min-height: 100vh;
+}
+
+.container {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .center-text {

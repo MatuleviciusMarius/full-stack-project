@@ -22,9 +22,8 @@
 
 .section h1 {
   color: #000;
-  font-family: "League Spartan", sans-serif;
+  font-family: var(--font-spartan-300);
   font-size: 36px;
-  font-weight: 300;
   line-height: 46px;
   letter-spacing: 2.52px;
 }

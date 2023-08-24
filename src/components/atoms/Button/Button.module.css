@@ -1,11 +1,12 @@
 .button {
   border: 1px solid #584c62;
-  font-family: "League Spartan", sans-serif;
+  font-family: var(--font-spartan-700);
   font-size: 16px;
   font-style: normal;
   line-height: normal;
   letter-spacing: 1.12px;
   padding: 14px 19px;
+  cursor: pointer;
 }
 
 .button:hover {
@@ -15,4 +16,5 @@
 
 .button:disabled {
   opacity: 0.5;
+  cursor: default;
 }

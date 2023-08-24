@@ -8,10 +8,9 @@
 
 .title {
   color: #000;
-  font-family: "League Spartan", sans-serif;
+  font-family: var(--font-spartan-500);
   font-size: 20px;
   font-style: normal;
-  font-weight: 500;
   line-height: normal;
   letter-spacing: 1.4px;
   text-align: left;

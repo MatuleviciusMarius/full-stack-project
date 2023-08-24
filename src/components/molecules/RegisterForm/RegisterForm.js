@@ -4,6 +4,7 @@ import Input from "@/components/atoms/Input/Input";
 import Button from "@/components/atoms/Button/Button";
 import axios from "axios";
 import Loading from "@/components/atoms/Loading/Loading";
+import Success from "./Success/Success";
 
 const loadingStates = {
   idle: "idle",
@@ -14,7 +15,6 @@ const loadingStates = {
 
 export default function RegisterForm() {
   const [loadingState, setIsLoadingState] = useState(loadingStates.idle);
-
   const [registrationError, setRegistrationError] = useState("");
 
   const [email, setEmail] = useState("");
@@ -115,13 +115,15 @@ export default function RegisterForm() {
     email === repeatEmail ? setIsRepeatEmailValid(true) : setIsRepeatEmailValid(false);
   }, [email, repeatEmail]);
 
+  if (loadingState === loadingStates.finished) {
+    return <Success />;
+  }
+
   function showLoadingState() {
     if (loadingState === loadingStates.idle) {
-      return <Button text={"Registruotis"} disabled={isButtonDisabled} />;
+      return <Button filled text={"REGISTRUOTIS"} disabled={isButtonDisabled} />;
     } else if (loadingState === loadingStates.loading) {
       return <Loading />;
-    } else if (loadingState === loadingStates.finished) {
-      return <p>Sėkmingai užsiregistravote, galite prisijungti</p>;
     } else if (loadingState === loadingStates.error) {
       return <p>Įvyko klaida, bandykite dar kartą</p>;
     }
@@ -129,60 +131,71 @@ export default function RegisterForm() {
 
   return (
     <form className={styles.form} onSubmit={handleSubmit}>
-      <h1>Registruotis</h1>
+      <h1 className={styles.heading}>REGISTRACIJA</h1>
       {registrationError && (
         <div class={styles["warning-message"]}>
           <p>{registrationError}</p>
         </div>
       )}
 
-      <Input text={"Vardas:"} id={"name"} value={name} setValue={handleSetName} />
       <Input
-        text={"Telefono Numeris:"}
+        text={"Vardas"}
+        id={"name"}
+        value={name}
+        setValue={handleSetName}
+        placeholderText={"Kornelija"}
+      />
+      <Input
+        text={"Telefono numeris"}
         id={"phone"}
         type={"tel"}
         value={phone}
         setValue={handleSetPhone}
         isValid={isPhoneValid}
         invalidText={"Įrašykite teisingą numerį"}
+        placeholderText={"+3706..."}
       />
       <Input
-        text={"Emailas:"}
+        text={"El. paštas"}
         id={"email"}
         type={"email"}
         value={email}
         setValue={handleSetEmail}
         isValid={isEmailValid}
         invalidText={"Emailas neteisingas"}
+        placeholderText={"paštas@paštas.lt"}
       />
       <Input
-        text={"Pakartoti Emailą:"}
+        text={"Pakartoti el. paštą"}
         id={"repeatEmail"}
         type={"email"}
         value={repeatEmail}
         setValue={handleSetRepeatEmail}
         isValid={isRepeatEmailValid}
         invalidText={"Emailai nesutampa"}
+        placeholderText={"paštas@paštas.lt"}
       />
       <Input
-        text={"Slaptažodis:"}
+        text={"Slaptažodis"}
         id={"password"}
         type={"password"}
         value={password}
         setValue={handleSetPassword}
         isValid={isPasswordValid}
         invalidText={"* Slaptaždis turi būti bent 8 simbolių ilgumo"}
+        placeholderText={"**********"}
       />
       <Input
-        text={"Pakartoti slaptažodį:"}
+        text={"Pakartoti slaptažodį"}
         id={"repeatPassword"}
         type={"password"}
         value={repeatPassword}
         setValue={handleSetRepeatPassword}
         isValid={isRepeatPasswordValid}
         invalidText={"Slaptažodžiai nesutampa"}
+        placeholderText={"**********"}
       />
-      {showLoadingState()}
+      <div className={styles.buttonContainer}>{showLoadingState()}</div>
     </form>
   );
 }

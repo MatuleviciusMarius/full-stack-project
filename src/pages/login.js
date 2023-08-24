@@ -1,10 +1,10 @@
-import Footer from '@/components/Footer/Footer';
-import Header from '@/components/Header/Header';
-import LoginForm from '@/components/molecules/LoginForm/LoginForm';
-import React, { useEffect } from 'react';
-import Head from 'next/head';
-import { useSession } from 'next-auth/react';
-import { useRouter } from 'next/router';
+import Footer from "@/components/Footer/Footer";
+import Header from "@/components/Header/Header";
+import LoginForm from "@/components/molecules/LoginForm/LoginForm";
+import React, { useEffect } from "react";
+import Head from "next/head";
+import { useSession } from "next-auth/react";
+import { useRouter } from "next/router";
 
 export default function login() {
   const router = useRouter();
@@ -13,13 +13,13 @@ export default function login() {
 
   useEffect(() => {
     if (session) {
-      router.push('/dashboard');
+      router.push("/dashboard");
     }
   }, [session, router]);
   return (
     <>
       <Head>
-        <title>Prisijungti - My Dream World</title>
+        <title>Prisijungimas - My Dream World</title>
       </Head>
       <Header />
       <LoginForm />
