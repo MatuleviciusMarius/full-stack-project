@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import GroupPicker from "./GroupPicker/GroupPicker";
 import axios from "axios";
-import { useRouter } from "next/router";
-import { formatDate } from "@/utils/util";
+import { getDayFromDate } from "@/utils/util";
 import styles from "./Purchase.module.css";
 import Loading from "../atoms/Loading/Loading";
 import Button from "../atoms/Button/Button";
@@ -10,8 +9,6 @@ import Button from "../atoms/Button/Button";
 export default function Purchase({ userId }) {
   const [groups, setGroups] = useState([]);
   const [selectedGroupId, setSelectedGroupId] = useState("");
-
-  const router = useRouter();
 
   useEffect(() => {
     axios
@@ -21,17 +18,13 @@ export default function Purchase({ userId }) {
         const groupsArr = notStartedGroups.map((group) => {
           return {
             value: group._id,
-            label: `${group.name}-${formatDate(group.startDate)}`,
+            label: `${group.name} ${getDayFromDate(group.startDate)} d.`,
           };
         });
         setGroups(groupsArr);
       })
       .catch((err) => console.log(err));
   }, []);
-
-  function handlePayButton() {
-    router.push(`/paymentPreview?groupId=${selectedGroupId}&userId=${userId}`);
-  }
 
   return (
     <div className={styles.container}>
@@ -66,12 +59,17 @@ export default function Purchase({ userId }) {
                 value={selectedGroupId}
               />
             </span>
-            <Button
-              text={"EITI Į APMOKĖJIMĄ"}
-              action={handlePayButton}
-              disabled={!selectedGroupId}
-              filled
-            />
+            <form action="/api/checkout_sessions" method="POST" className={styles.form}>
+              <input type="hidden" name="userId" value={userId} />
+              <input type="hidden" name="groupId" value={selectedGroupId} />
+              <Button
+                text={"EITI Į APMOKĖJIMĄ"}
+                disabled={!selectedGroupId}
+                filled
+                type={"submit"}
+                role={"link"}
+              />
+            </form>
           </div>
         </>
       ) : (

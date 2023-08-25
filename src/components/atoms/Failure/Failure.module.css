@@ -1,0 +1,27 @@
+.container {
+  text-align: center;
+}
+.imageContainer {
+  position: relative;
+  width: min-content;
+  margin: 0 auto;
+}
+
+.x {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.successText {
+  color: #000;
+  font-family: var(--font-spartan-400);
+  font-size: 24px;
+  font-style: normal;
+  line-height: 28px;
+  letter-spacing: 1.68px;
+  text-transform: uppercase;
+  margin-top: 75px;
+  margin-bottom: 25px;
+}

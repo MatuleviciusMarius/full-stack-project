@@ -52,7 +52,13 @@ function dashboard() {
       {user && (
         <div>
           {userInfo.name ? (
-            <div className={styles.greetingContainer}>
+            <div
+              className={styles.greetingContainer}
+              style={{
+                textAlign: group ? "center" : "left",
+                marginBottom: group ? "74px" : "auto",
+              }}
+            >
               <h1 className={styles.greetings}>SVEIKA, {userInfo.name.toUpperCase()}</h1>
             </div>
           ) : (

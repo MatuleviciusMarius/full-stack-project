@@ -1,13 +1,24 @@
 .paper {
-  width: 90%;
+  width: 80%;
   margin: auto;
   margin-bottom: 3rem;
   margin-top: 3rem;
-  line-height: 1.6;
 }
 
-@media screen and (max-width: 500px) {
-  .paper {
-    width: 95%;
-  }
+.paper > a {
+  color: #000;
+  font-family: var(--font-satoshi-light);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 1.26px;
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  text-decoration: none;
+}
+
+.paper > a:hover {
+  text-decoration: underline;
 }

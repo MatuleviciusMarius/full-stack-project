@@ -3,7 +3,7 @@ import styles from "./Success.module.css";
 import Button from "@/components/atoms/Button/Button";
 import { useRouter } from "next/router";
 
-export default function Success() {
+export default function Success({ text }) {
   const router = useRouter();
 
   return (
@@ -34,7 +34,7 @@ export default function Success() {
           />
         </svg>
       </div>
-      <h2 className={styles.successText}>Registracija sėkminga!</h2>
+      <h2 className={styles.successText}>{text}</h2>
       <Button text={"PRISIJUNGTI"} filled action={() => router.push("/login")} />
     </div>
   );

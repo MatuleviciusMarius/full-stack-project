@@ -3,6 +3,8 @@ import { useRouter } from "next/router";
 import axios from "axios";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
+import Success from "@/components/atoms/Success/Success";
+import Failure from "@/components/atoms/Failure/Failure";
 
 export default function payment() {
   const router = useRouter();
@@ -27,13 +29,8 @@ export default function payment() {
     <>
       <Header />
       <div>
-        {success && (
-          <h1 className="center-text">
-            Sėkmingai apmokėjote <br />
-            Galite prisijungti
-          </h1>
-        )}
-        {canceled && <h1 className="center-text">Mokėjimas atšauktas</h1>}
+        {canceled && <Failure text={"KAŽKAS ĮVYKO NE TAIP"} />}
+        {success && <Success text={"APMOKĖTA SĖKMINGAI"} />}
       </div>
       <Footer />
     </>

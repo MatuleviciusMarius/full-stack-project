@@ -1,0 +1,53 @@
+.container {
+  border-radius: 15px;
+  border: 3px solid #b18a8a;
+  width: 261px;
+  height: 190px;
+  position: relative;
+}
+
+.container:hover {
+  background: #ebe2e3;
+}
+
+.container:hover > .interactionText {
+  display: flex;
+}
+
+.moduleText {
+  position: absolute;
+  color: #000;
+  font-family: var(--font-spartan-400);
+  font-size: 20px;
+  letter-spacing: 1.4px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.moduleText:hover {
+  text-decoration-line: underline;
+}
+
+.interactionText {
+  display: none;
+  position: absolute;
+  color: #000;
+  font-family: var(--font-satoshi-light);
+  font-size: 16px;
+  letter-spacing: 1.12px;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+}
+
+.interactionText:hover {
+  text-decoration-line: underline;
+}

@@ -4,7 +4,7 @@ import Input from "@/components/atoms/Input/Input";
 import Button from "@/components/atoms/Button/Button";
 import axios from "axios";
 import Loading from "@/components/atoms/Loading/Loading";
-import Success from "./Success/Success";
+import Success from "../../atoms/Success/Success";
 
 const loadingStates = {
   idle: "idle",
@@ -116,7 +116,7 @@ export default function RegisterForm() {
   }, [email, repeatEmail]);
 
   if (loadingState === loadingStates.finished) {
-    return <Success />;
+    return <Success text={"Registracija sėkminga!"} />;
   }
 
   function showLoadingState() {
@@ -133,7 +133,7 @@ export default function RegisterForm() {
     <form className={styles.form} onSubmit={handleSubmit}>
       <h1 className={styles.heading}>REGISTRACIJA</h1>
       {registrationError && (
-        <div class={styles["warning-message"]}>
+        <div className={styles["warning-message"]}>
           <p>{registrationError}</p>
         </div>
       )}

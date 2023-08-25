@@ -1,5 +1,6 @@
 import LinkToModule from "@/components/atoms/LinkToModule/LinkToModule";
 import React from "react";
+import styles from "./ModuleList.module.css";
 
 export default function ModuleList({ openModules = 0, userInfo }) {
   const links = [];
@@ -15,5 +16,5 @@ export default function ModuleList({ openModules = 0, userInfo }) {
     );
   }
 
-  return <div>{links}</div>;
+  return <div className={styles.container}>{links}</div>;
 }

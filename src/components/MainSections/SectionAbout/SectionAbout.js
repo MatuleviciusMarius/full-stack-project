@@ -27,6 +27,9 @@ export default function SectionAbout() {
           `}
           link={"/details/practicalGuidance"}
         />
+      </div>
+      <h1 className={styles.middleHeading}>NORIU TIKRO GYVENIMO</h1>
+      <div className={styles["flex-container"]}>
         <Card
           title={"APIE MANE"}
           text={`Aš esu Jūratė Lajauskaitė
@@ -40,7 +43,6 @@ export default function SectionAbout() {
         />
         <Card photo={"/images/profilis-min.jpg"} />
       </div>
-      <h1 className={styles.bottomHeading}>NORIU TIKRO GYVENIMO</h1>
     </section>
   );
 }

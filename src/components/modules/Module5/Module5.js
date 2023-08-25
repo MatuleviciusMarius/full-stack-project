@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Module5() {
   return (
-    <div className="color justify-text">
+    <div className="color justify-text moduleContainer">
       <h1 className="center-text">5 Modulis</h1>
       <br />
       <p className="bold center-text">Sveika atvykusi į Norų išsipildymo pasaulį!</p>

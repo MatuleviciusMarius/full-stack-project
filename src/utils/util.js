@@ -9,3 +9,13 @@ export function formatDate(date) {
 
   return [year, month, day].join("-");
 }
+
+export function getDayFromDate(dateStr) {
+  try {
+    const dateObj = new Date(dateStr);
+    const day = dateObj.getUTCDate();
+    return day;
+  } catch (error) {
+    return null;
+  }
+}

@@ -1,39 +1,5 @@
-.select {
-  width: 338px;
-  height: 52px;
-  background: none;
-  border-radius: 10px;
-  border: 1px solid #b18a8a;
-  appearance: none;
-  background-image: url("/images/triangle.svg");
-  background-repeat: no-repeat;
-  background-position: right 20px top 50%;
-  background-size: 13px 20px;
-}
-
-.option {
-  color: #000;
-  font-family: var(--font-satoshi-light);
-  font-size: 18px;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: 1.26px;
-  padding: 20px;
-}
-
-.optionText {
-  color: #000;
-  font-family: var(--font-satoshi-light);
-  font-size: 18px;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: 1.26px;
-}
-
-/* CustomSelect.module.css */
 .customSelect {
   position: relative;
-  margin-bottom: 100px;
 }
 
 .selectedValue {

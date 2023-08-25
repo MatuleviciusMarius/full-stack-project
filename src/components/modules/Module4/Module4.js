@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Module4() {
   return (
-    <div className="justify-text color">
+    <div className="justify-text color moduleContainer">
       <h1 className="center-text">4 MODULIS</h1>
       <br />
 

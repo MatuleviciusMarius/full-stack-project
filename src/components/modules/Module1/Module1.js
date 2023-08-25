@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Module1() {
   return (
-    <div className="color justify-text">
+    <div className="color justify-text moduleContainer">
       <h1 className="center-text">1 MODULIS</h1>
       <br />
       <p className="center-text bigger-text bold">Sveika atvykusi į Norų išsipildymo pasaulį!</p>
@@ -51,7 +51,7 @@ export default function Module1() {
         išsipildyti reiks daug laiko; ką žmonės pagalvos sužinoję apie mano norus; bijau, kad dabar
         noriu, o ryt gal jau ir nebenorėsiu; o kas jei noras išsipildys, tai kas toliau. Kai norai
         nesuformuluoti, padriki, netikslūs arba nežinai ko nori, tai ir gyvenimas yra toks pats.
-        <span className="bold">Pirmiausia reikia žinoti, ko TIKRAI nori.</span>
+        <span className="bold"> Pirmiausia reikia žinoti, ko TIKRAI nori. </span>
         Šis klausimas lydės per aštuonis modulius. Jų metu išsigryninsi savo tikruosius norus.
         Devintas modulis - tai triumfas: žinai ko tikrai nori ir tai manifestuoji galingu metodu.
       </p>
