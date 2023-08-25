@@ -1,8 +1,9 @@
 import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
+import Input from "@/components/atoms/Input/Input";
 import Loading from "@/components/atoms/Loading/Loading";
-import { Button, Box, Notification, PasswordInput } from "@mantine/core";
-import { IconCheck, IconX } from "@tabler/icons-react";
+import { Box, Notification } from "@mantine/core";
+import Button from "@/components/atoms/Button/Button";
 import axios from "axios";
 import Head from "next/head";
 import { useRouter } from "next/router";
@@ -52,26 +53,28 @@ export default function forgotPassword() {
         <title>Keisti Slaptažodį</title>
       </Head>
       <Header />
-      <Box maw={400} mx="auto" className="flex-container">
-        {message && <Notification>{message}</Notification>}
-        {error && <Notification color="red">{error}</Notification>}
-        <PasswordInput
+      <div className="flex-container">
+        <Input
+          text={"Naujas slaptažodis"}
+          setValue={handleChangePassword}
+          placeholderText={"********"}
           className="input-width"
           label="Naujas slaptažodis"
           placeholder="password"
           value={password}
-          onChange={handleChangePassword}
         />
         {loading ? (
           <Loading />
         ) : (
           <>
-            <Button variant="outline" onClick={handleButton}>
+            {message && <Notification>{message}</Notification>}
+            {error && <Notification color="red">{error}</Notification>}
+            <Button text={"Keisti"} filled action={handleButton}>
               Keisti slaptažodį
             </Button>
           </>
         )}
-      </Box>
+      </div>
       <Footer />
     </>
   );

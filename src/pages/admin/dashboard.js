@@ -8,6 +8,8 @@ import DashboardHeader from "@/components/DashboardHeader/DashboardHeader";
 import AdminAside from "@/components/molecules/AdminAside/AdminAside";
 import GroupManager from "@/components/organisms/GroupManager/GroupManager";
 import PeopleManager from "@/components/organisms/PeopleManager/PeopleManager";
+import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
 
 export default function Dashboard() {
   const [displayState, setDisplayState] = useState("");
@@ -48,10 +50,11 @@ export default function Dashboard() {
   }
 
   return (
-    <div>
-      <DashboardHeader />
+    <>
+      <Header isDashboard />
       <AdminAside setDisplayState={setDisplayState} />
       <main className={styles.main}>{displayData()}</main>
-    </div>
+      <Footer />
+    </>
   );
 }
