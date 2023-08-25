@@ -1,10 +1,9 @@
 import React from "react";
 import styles from "./RulesSection.module.css";
-import { Paper } from "@mantine/core";
 
 export default function RulesSection() {
   return (
-    <Paper className={styles.container} shadow="xs" p="md">
+    <div className={styles.container}>
       <h1>TAISYKLĖS:</h1>
       <ol>
         <li>
@@ -79,6 +78,6 @@ export default function RulesSection() {
           apmokėjimą būtina pažymėti varnele, kad sutinkate su Taisyklėmis.
         </li>
       </ol>
-    </Paper>
+    </div>
   );
 }
