@@ -17,7 +17,7 @@ export default function Module3() {
         Tavo neišsipildę norai turi trukdžių. Juos reikia sužinoti. Iš karto nuraminsiu, tai
         padaryti labai paprasta.
       </p>
-      <p className="center-text">~~~***~~~</p>
+      <hr className="hr"/>
       <p>
         Išsirink savo norą iš sąrašo ir atlik vizualizaciją. Įsivaizduok, kad tas noras jau
         išsipildė (ar jau turi tam tikrą daiktą, ar kažko pasiekei). Stebėk kaip pati jautiesi, ar
@@ -60,7 +60,7 @@ export default function Module3() {
           tarp “Gyventi” ir ”Tikrai gyventi”.
         </b>
       </p>
-      <p className="center-text">~~~***~~~</p>
+      <hr className="hr"/>
       <p className="bold center-text">Modulio užduotis</p>
       <ol>
         <li>
@@ -78,9 +78,9 @@ export default function Module3() {
         <li>Jei pradėjo keistis tavo norai, juos rašyk savo užrašinėje.</li>
         <li>Laiku informuok apie atliktas užduotis.</li>
       </ol>
-      <p className="center-text">~~~***~~~</p>
+      <hr className="hr"/>
       <p className="center-text bold">Verta stengtis tik dėl tikrų norų</p>
-      <p className="center-text">~~~***~~~</p>
+      <hr className="hr"/>
       <p className="center-text">Ačiū!</p>
     </div>
   );

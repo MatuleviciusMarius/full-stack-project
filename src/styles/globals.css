@@ -164,3 +164,7 @@ button:hover {
   font-size: 20px;
   letter-spacing: 1.4px;
 }
+
+.hr {
+  width: 100px;
+}

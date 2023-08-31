@@ -25,7 +25,7 @@ export default function Module6() {
         širdimi, visomis jėgomis ir visu protu veik <b>čia ir dabar</b>.
       </p>
 
-      <p className="center-text">~~~***~~~</p>
+      <hr className="hr"/>
 
       <p>
         Veikti reikia <b>efektyviai.</b> Tik tokie veiksmai yra sėkmingi. Tu gali kiekvieną savo
@@ -42,7 +42,7 @@ export default function Module6() {
         viskas Visatoje juda gausesnio link, vis daugiau jėgų prisijungia ir taip norai stiprėja.
       </p>
 
-      <p className="center-text">~~~***~~~</p>
+      <hr className="hr"/>
       <p>
         Būtina <b>vaizduotėje susikurti</b> detalią viziją ir apmąstyti sugalvotas detales. Tai
         daryti reikia kaip galima dažniau, kol detalės įsirėžia į atmintį. Jei nori itin greitų
@@ -105,7 +105,7 @@ export default function Module6() {
           Pagrindinis filmuko dalyvis esi tu. Visur matyk save judančią.
         </li>
       </ol>
-      <p className="center-text">~~~***~~~</p>
+      <hr className="hr"/>
       <p className="center-text bold">Modulio užduotis</p>
       <ol>
         <li>
@@ -122,9 +122,9 @@ export default function Module6() {
         </li>
         <li>Informuok apie atliktas užduotis.</li>
       </ol>
-      <p className="center-text">~~~***~~~</p>
+      <hr className="hr"/>
       <p className="center-text bold">Čia ir dabar pagrindinis filmuko dalyvis esi TU</p>
-      <p className="center-text">~~~***~~~</p>
+      <hr className="hr"/>
 
       <p className="center-text">Ačiū!</p>
     </div>

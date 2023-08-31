@@ -17,7 +17,7 @@ export default function Module2() {
         turėčiau tapti laiminga. Teko ir nusivilti, ieškoti naujų, ir vėl grįžti prie senų metodų.
         Taip gilindamasi pasiekiau tokį gylį, kad jau galėjau atpažinti pirminius šaltinius.
       </p>
-      <p className="center-text">~~~***~~~</p>
+      <hr className="hr"/>
       <p>
         Sėkmės formulei sukurti visuomet reikia 5 dedamųjų. Ir šios dalys turi būti jungiamos
         tarpusavyje vienu metu. Atsitinka taip, kad kai kuriuos metodus atmetus kaip neveikiančius,
@@ -25,7 +25,7 @@ export default function Module2() {
         jungimo galią būtent vienu metu. Tuo asmeniškai įsitikinau daugybę kartų. Praėjusi visą
         Kelionę iki galo, tu susirinksi ir sujungsi visas dalis, kurių tau reikia norų išsipildymui.
       </p>
-      <p className="center-text">~~~***~~~</p>
+      <hr className="hr"/>
       <p>
         Šiame modulyje suprantamai paaiškinsiu apie <b>įsitikinimus</b>, kuo jie svarbūs, kaip
         susiformuoja, koks įsitikinimų keitimo metodas efektyviausias ir kokie įsitikinimai yra
@@ -64,7 +64,7 @@ export default function Module2() {
         įvairių šaltinių, taip pat turi įtakos mūsų įsitikinimams. Jei žmogus įgyja naujų žinių ar
         suvokimų, tai keičia jo požiūrį į tam tikrus klausimus.
       </p>
-      <p className="center-text">~~~***~~~</p>
+      <hr className="hr"/>
       <p>
         Iki šiol tavo įsitikinimai daugiausia formavosi nesąmoningai, net tau nežinant, kad jie
         užsimezgė. Netrukus tu įsitikinsi kaip kai kurie įsitikinimai tau kenkia ir trukdo pildytis
@@ -73,7 +73,7 @@ export default function Module2() {
         šeimoje, ir tikėtis, kad būsi turtinga. Toks tikėjimas tavęs nenukreipia į gausos ir visokio
         gėrio pripildytą gyvenimą.
       </p>
-      <p className="center-text">~~~***~~~</p>
+      <hr className="hr"/>
       <p>
         O dabar apie du įsitikinimus, kurie tave išjudins, suteiks sparnus. Tai įsitikimai, kurie
         užprogramuos tavo protą sėkmei: <b> “Man sekasi”</b> ir <b>“Viskas paprasta”</b>. Noriu
@@ -112,7 +112,7 @@ export default function Module2() {
         pagauti savo sėkmės akimirkas, galėsi pridurti “Man visada sekasi” ir protas
         nebeprieštaraus.
       </p>
-      <p className="center-text">~~~***~~~</p>
+      <hr className="hr"/>
       <p>
         Atlikusi darbą su praeitimi, kai jau tavo sėkmingi gyvenimo įvykiai sujungti su nauju
         įsitikinu “Man sekasi”, turi jį gilinti, kad jis taptų stipriu. Ir tai reikia daryti
@@ -129,7 +129,7 @@ export default function Module2() {
         sujungs į bendrą sistemą ir taps tavimi. Po to 2 minutes pabūk be minčių meditacinėje
         būsenoje. Tą patį pakartok su fraze “Viskas paprasta”.
       </p>
-      <p className="center-text">~~~***~~~</p>
+      <hr className="hr"/>
       <p>
         Dienos bėgyje naudinga kartoti frazes “Man sekasi” ir “Viskas paprasta” kiek nori kartų ir
         kada nori. Tik stebėk, kad tuo metu būtum geroje būsenoje, kad frazės neprieštarautų tavo
@@ -146,7 +146,7 @@ export default function Module2() {
         Pvz. Kartu Jūratė man sekasi dabar. Kartu Jūratė viskas paprasta dabar. Žodis KARTU sujungia
         sąmonę su pasąmone. Žodis DABAR užspaudžia, užrakina.
       </p>
-      <p className="center-text">~~~***~~~</p>
+      <hr className="hr"/>
       <p className="center-text bold">Modulio užduotis</p>
       <ol>
         <li>
@@ -186,9 +186,9 @@ export default function Module2() {
           Jau žinai. Apie užduočių atlikimą informuok ir sekančio modulio vartai tau atsidarys.
         </li>
       </ol>
-      <p className="center-text">~~~***~~~</p>
+      <hr className="hr"/>
       <p className="bold center-text">Sėkmės! Tai paprasta!</p>
-      <p className="center-text">~~~***~~~</p>
+      <hr className="hr"/>
       <p className="center-text">Ačiū!</p>
     </div>
   );

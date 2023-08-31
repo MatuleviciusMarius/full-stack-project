@@ -23,7 +23,7 @@ export default function Module7() {
         <li className="bold">Jauti substancijai/Visatai gilų ir nuoširdų dėkingumą.</li>
       </ol>
 
-      <p className="center-text">~~~***~~~</p>
+      <hr className="hr"/>
       <p>
         Daugumos norai taip ir lieka neišsipildę, nors daug ką ir daro teisingai, nes stokoja
         dėkingumo.{" "}
@@ -33,7 +33,7 @@ export default function Module7() {
         .
       </p>
 
-      <p className="center-text">~~~***~~~</p>
+      <hr className="hr"/>
       <p>
         <b>
           Kuo dažniau nutikus geriems dalykams sutelksi dėmesį į Aukštesniąją jėgą, tuo daugiau ir
@@ -105,7 +105,7 @@ export default function Module7() {
         <li>Trečias kartas vakare, laike nuo saulės nusileidimo per 40 minučių.</li>
       </ol>
 
-      <p className="center-text">~~~***~~~</p>
+      <hr className="hr"/>
       <p className="center-text bold">Modulio užduotys</p>
 
       <ol>
@@ -132,7 +132,7 @@ export default function Module7() {
         </li>
       </ol>
 
-      <p className="center-text">~~~***~~~</p>
+      <hr className="hr"/>
       <p className="center-text bold">
         Kai nuolat jauti stiprą dėkingumą,
         <br />
@@ -140,7 +140,7 @@ export default function Module7() {
         ir tau tuomet nuolat siunčiami dalykai, kurių trokšti
       </p>
 
-      <p className="center-text">~~~***~~~</p>
+      <hr className="hr"/>
       <p className="center-text">Ačiū!</p>
     </div>
   );

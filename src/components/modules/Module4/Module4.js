@@ -61,7 +61,7 @@ export default function Module4() {
 
       <p>Mintys mums leidžia suvokti, kurti ir bendrauti su pasauliu ir kitais žmonėmis.</p>
 
-      <p className="center-text">~~~***~~~</p>
+      <hr className="hr"/>
 
       <p>
         Minčių autoriai yra žmonės. Viskas, kas sukurta žmonių rankomis, pradžioje tai buvo kažkieno
@@ -74,7 +74,7 @@ export default function Module4() {
         atsakingesnei už savo mintis.
       </p>
 
-      <p className="center-text">~~~***~~~</p>
+      <hr className="hr"/>
 
       <p>
         Viskas, kas yra jau sukurta, buvo kuriama iš vienos <b>pirminės substancijos</b>. Ta
@@ -111,7 +111,7 @@ export default function Module4() {
         negriausi savo norų išsipildymo, būsi pasirengusi priimti tai ko nori.
       </p>
 
-      <p className="center-text">~~~***~~~</p>
+      <hr className="hr"/>
 
       <p>
         Turbūt teko išbandyti įvairių praktikų kaip keisti savo mintis, kaip jas kurti, kaip keisti
@@ -162,7 +162,7 @@ export default function Module4() {
         </li>
       </ol>
 
-      <p className="center-text">~~~***~~~</p>
+      <hr className="hr"/>
 
       <p className="center-text bold">Modulio užduotis</p>
       <ol>
@@ -182,7 +182,7 @@ export default function Module4() {
         <li>Laiku informuok apie atliktas užduotis.</li>
       </ol>
 
-      <p className="center-text">~~~***~~~</p>
+      <hr className="hr"/>
 
       <p>
         Šiame modulyje atlik tik aukščiau aprašyto metodo pirmus du žingsnius. Likusiems dviems
@@ -196,19 +196,19 @@ export default function Module4() {
         sėkmės ratas ir tavo norai pildosi. Bet <b>pradėti visuomet reikia nuo minčių.</b>
       </p>
 
-      <p className="center-text">~~~***~~~</p>
+      <hr className="hr"/>
 
       <p className="center-text bold">
         Kiekviena tavo mintis yra <br /> neatšaukiamas užsakymas Visatai tą mintį išpildyti
       </p>
 
-      <p className="center-text">~~~***~~~</p>
+      <hr className="hr"/>
 
       <p className="center-text">
         Rūpinkitės savo mintimis, nes aukščiau nei Jūsų mintys Jūs nepakilsite
       </p>
 
-      <p className="center-text">~~~***~~~</p>
+      <hr className="hr"/>
 
       <p className="center-text">Ačiū!</p>
     </div>

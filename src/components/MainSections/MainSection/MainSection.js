@@ -16,7 +16,7 @@ export default function MainSection() {
         </h1>
         <div className={styles.buttonContainer}>
           <Button text={"REGISTRUOTIS"} action={() => router.push("/register")} filled />
-          <Button text={"APIE KELIONĘ"} action={() => router.push("/register")} />
+          <Button text={"APIE KELIONĘ"} action={() => router.push("/details/about")} />
         </div>
       </div>
     </section>

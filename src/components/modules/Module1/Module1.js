@@ -29,7 +29,7 @@ export default function Module1() {
         sumažinus norą ateities baimė sumažėja - klystate.
       </p>
       <p>P.S. Norų ir gyvenimo energija yra ta pati.</p>
-      <p className="center-text">~~~***~~~</p>
+      <hr className="hr"/>
       <p className="margin-bottom-none">
         Bendra taisyklė visiems moduliams geresniam temų įsisąmoninimui ir užduočių efektyvesniam
         atlikimui:
@@ -43,7 +43,7 @@ export default function Module1() {
         yra pirminė figūra, iš kurios kuriasi visos kitos formos. Trikampis yra pati stabiliausia
         forma. Mūsų čakros formos sudarytos iš besisukančių trikampių ir t.t.
       </p>
-      <p className="center-text">~~~***~~~</p>
+      <hr className="hr"/>
       <p>
         Tai ir pradėkime nuo svarbiausio, nuo savo norų. Taip, iš karto natūraliai kyla mintys: ko
         aš noriu; ko gi būtų galima norėti; aš dar nežinau ko noriu; kažko noriu ir net nežinau kaip
@@ -55,7 +55,7 @@ export default function Module1() {
         Šis klausimas lydės per aštuonis modulius. Jų metu išsigryninsi savo tikruosius norus.
         Devintas modulis - tai triumfas: žinai ko tikrai nori ir tai manifestuoji galingu metodu.
       </p>
-      <p className="center-text">~~~***~~~</p>
+      <hr className="hr"/>
       <p>
         Užrašytas noras pradeda įgauti materialią formą. Todėl savo norus reikia užrašyti. Tik ne
         bet kaip. Kaip suformuluojamas noras, toks jis ir išsipildo. Noro formuluotė turi atitikti
@@ -93,7 +93,7 @@ export default function Module1() {
         </ol>
       </p>
       <p>Tavo užduotis yra koncentruotis į tai, ko tikrai trokšti.</p>
-      <p className="center-text">~~~***~~~</p>
+      <hr className="hr"/>
       <p className="center-text bold">Modulio užduotis</p>
       <ol>
         <li>
@@ -163,16 +163,16 @@ export default function Module1() {
           apie užduočių įvykdymą, dalyvė nebegali keliauti kartu su kitomis, yra šalinama.
         </li>
       </ol>
-      <p className="center-text">~~~***~~~</p>
+      <hr className="hr"/>
       <p>
         <b>Savo norų niekada niekam nepasakok, kol dar jie neišsipildė. </b>
         Išimtis gali būti tik tie žmonės, kurie susiję su noro įgyvendinimu arba tau artimi, kuriais
         tu tikrai pasitiki ir žinai, kad tau jie nuoširdžiai linki tik gero.
       </p>
-      <p className="center-text">~~~***~~~</p>
+      <hr className="hr"/>
       <p className="center-text bold">VEIK IR ŠOKIRUOK ŽMONES SAVO REZULTATAIS</p>
       <p className="center-text bold">VERSK JUOS STEBĖTIS TAVIMI</p>
-      <p className="center-text">~~~***~~~</p>
+      <hr className="hr"/>
       <p className="center-text">Ačiū!</p>
     </div>
   );

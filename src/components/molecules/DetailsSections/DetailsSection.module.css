@@ -5,5 +5,11 @@
 
 .container p {
   white-space: pre-line;
-  line-height: 1.6rem;
+  color: #000;
+  font-family: var(--font-satoshi-light);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: 1.26px;
 }

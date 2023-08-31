@@ -7,75 +7,93 @@ export default function RulesSection() {
       <h1>TAISYKLĖS:</h1>
       <ol>
         <li>
-          Dalyvavimas ”Norų išsipildymo” praktikos programoje, toliau Kelionė, yra savanoriškas.
+          Dalyvavimas &rdquo;Norų išsipildymo&rdquo; praktikos programoje,
+          toliau Kelionė, yra savanoriškas.
         </li>
-        <li>Dalyvauti gali visi asmenys nuo 18 metų.</li>
-        <li>Kelionėje galima dalyvauti sumokėjus pilną kainą iki starto datos pradžios.</li>
-        <li>Starto mėnesį galima pasirinkti atliekant registraciją.</li>
-        <li>Kelionė startuoja mėnesio trečią dieną.</li>
-        <li>Modulių pradžios mėnesio dienomis: 3, 6, 9, 12, 15, 18, 21, 24 ir 27.</li>
-        <li>Prisijungti prie jau vykstančios Kelionės negalima.</li>
+        <li>Dalyvauti gali kiekvienas žmogus.</li>
         <li>
-          Prisiregistravus ir apmokėjus už dalyvavimą į Jūsų elektroninį paštą atsiunčiami
-          prisijungimo duomenys. Prisijungiant prie šio tinklapio, pradedant nuo Jūsų pasirinktos
-          starto pradžios, Jums bus suteikiama asmeninė prieiga prie einamojo modulio.
+          Kelionėje galima dalyvauti apmokėjus programą iki pasirinkto starto
+          datos pradžios.
         </li>
         <li>
-          Modulio tema, medžiaga ir užduotys pateikiamos modulio pirmąją dieną. Visas užduočių
-          sąrašas ir modulių temos iš anksto nepateikiamos. Taip siekiama išlaikyti dalyvių
-          smalsumą, intrigą, žaidybinę formą.
+          Mokėjimams vykdyti mes naudojame &ldquo;Stripe&rdquo;, kuris yra
+          atsakingas už saugias transakcijas. Stripe yra pasaulyje gerai žinoma
+          įmonė, turinti PCI level 1 saugumo standartą mokėjimų srityje.
         </li>
         <li>
-          Pirmojo modulio metu detaliai supažindinama su subtiliomis rekomendacijomis kaip lengvai
-          ir paprastai įsisąmoninti žinias ir efektyviai atlikti užduotis.
+          Registracija šiame tinklapyje yra būtina. Jos metu Jūs susikuriate
+          asmenį slaptažodį.
         </li>
         <li>
-          Apie užduoties atlikimą informuojama prisijungus prie einamojo modulio ir parašius apie
-          tai.
-        </li>
-        <li>Apie užduoties atlikimą informuojama iki sekančio modulio pradžios.</li>
-        <li>
-          Neinformavus laiku apie užduoties atlikimą, dalyvis negali tęsti Kelionės, iškrenta iš
-          srauto. Panaikinami prisijungimo duomenys. Pinigai negrąžinami. Dalyvavimas nemokamai
-          neperkeliamas į sekantį srautą.
+          Prisijungus su asmeniniu slaptažodžiu Jūs galite pasirinkti Kelionės
+          datą ir apmokėti.
         </li>
         <li>
-          Kelionės pradžios datą galima keisti likus mažiausiai dienai iki numatytos pradžios, tai
-          derinant elektroniniu paštu.
+          Sėkmingai apmokėjus, į Jūsų registracijos metu nurodytą elektroninio
+          pašto adresą, atsiunčiamas patvirtinimas.
         </li>
         <li>
-          Jei dalyvis prasidėjusios Kelionės metu atsisako toliau dalyvauti, pinigai negrąžinami.
+          Starto dieną prisijungiant prie interneto svetainės
+          www.mydreamworld.lt, Jums bus suteikiama asmeninė prieiga prie 1
+          Modulio.
         </li>
         <li>
-          Draudžiama kitų paslaugų ar prekių reklama bei prekyba šios programos erdvėse, online
-          grupėse.
+          Kelionė susideda iš 9 modulių:
+        <li>
+          Modulių pradžios mėnesio dienomis: 3, 6, 9, 12, 15, 18, 21, 24 ir 27.
+        </li>
+        </li>
+        <li>Prisijungti prie jau vykstančios Kelionės nėra galimybės.</li>
+        <li>
+          Modulio tema, medžiaga ir užduotys pateikiamos modulio pirmąją dieną.
+          Visas užduočių sąrašas ir modulių temos iš anksto nepateikiamos. Taip
+          siekiama išlaikyti Kelionės loginę seką, dalyvių smalsumą, intrigą,
+          žaidybinę formą.
         </li>
         <li>
-          Draudžiama bendrose šio projekto online grupėse bendrauti su dalyviais pašalinėmis
-          temomis.
+          Apie užduočių atlikimą būtina informuoti einamojo modulio skiltyje iki
+          sekančio modulio pradžios, pažymint varnele.
         </li>
         <li>
-          Jei dalyvis grupiniuose pokalbiuose ar susirašinėjimuose elgiasi nepagarbiai, menkina,
-          žemina ar kritikuoja kitą dalyvį ar Kelionę, naudoja necenzūrinius žodžius, negatyviai
-          atsiliepia apie dalyvaujančius asmenis ar Kelionę, ar kitaip trukdo Kelionės dalyviams ir
-          organizatoriams, yra šalinamas. Pinigai negrąžinami.
+          Neinformavus laiku apie užduočių atlikimą, dalyvė nebegali tęsti
+          Kelionės, iškrenta iš srauto, stabdoma prieiga prie modulių ir
+          dalyvavimas privačioje grupėje. Pinigai negrąžinami. Dalyvavimas
+          nemokamai neperkeliamas į kitą srautą.
         </li>
         <li>
-          Kiekvienas dalyvis pats atsako už save, savo norus ir veiksmus, ir pretenzijos
-          nepriimamos.
+          Kelionės pradžios datą/grupę galima keisti likus mažiausiai trims
+          dienoms iki starto, tai derinant elektroniniu paštu{" "}
+          <a href="mailto:pagalba@mydreamworld.lt">pagalba@mydreamworld.lt</a>.
         </li>
         <li>
-          Jūsų asmeniniai duomenys, kuriuos pildote registracijos formoje, naudojami tik įmonės
-          veikloje. Gerbiame ir saugome Jūsų privatumą.
+          Jei dalyvė prasidėjusios Kelionės metu atsisako toliau dalyvauti,
+          pinigai negrąžinami.
         </li>
         <li>
-          Organizatoriai pasilieka teisę keisti taisykles ir apie tai informuoti internetiniame
-          tinklapyje.
+          Kiekviena dalyvė pati atsako už save, savo norus ir veiksmus,
+          pretenzijos nepriimamos.
         </li>
         <li>
-          Dalyviai, apmokėdami už dalyvavimą Kelionėje, patvirtina, kad susipažino su šioje
-          svetainėje pateikta informacija ir sutinka su dalyvavimo sąlygomis bei taisyklėmis. Prieš
-          apmokėjimą būtina pažymėti varnele, kad sutinkate su Taisyklėmis.
+          Draudžiama kitų paslaugų ar prekių reklama bei prekyba šios programos
+          erdvėse, privačiose grupėse.
+        </li>
+        <li>
+          Jūsų asmeniniai duomenys, kuriuos pildote registracijos formoje,
+          naudojami tik įmonės veikloje. Gerbiame ir saugome Jūsų privatumą.
+        </li>
+        <li>
+          Kelionės metu būtina naudotis WhatsApp ir Facebook. Aktyvi
+          komunikacija privačioje grupėje vyksta per WhatsApp. Organizatoriai
+          prašo iš anksto atsisiųsti ir pasiruošti naudojimui šias programėles.
+        </li>
+        <li>
+          Organizatoriai pasilieka teisę keisti taisykles ir apie tai informuoti
+          šiame internetiniame tinklapyje.
+        </li>
+        <li>
+          Dalyvė, apmokėdama už dalyvavimą Kelionėje, patvirtina, kad susipažino
+          su šioje svetainėje pateikta informacija ir sutinka su dalyvavimo
+          sąlygomis bei taisyklėmis.
         </li>
       </ol>
     </div>

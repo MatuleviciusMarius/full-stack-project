@@ -31,7 +31,7 @@ export default function Module5() {
         mintys sukuria ir skatina pristatyti tau sukurtus trokštamus dalykus, o tu savo veiksmais
         privalai sukurti galimybes priimti tai, ko trokšti, kai tai tave pasiekia.
       </p>
-      <p className="center-text">~~~***~~~</p>
+      <hr className="hr"/>
 
       <p>
         Vadovauti kūrybinių jėgų procesams ar juos prižiūrėti nepavyks. Tai atlieka paleista mintis
@@ -44,7 +44,7 @@ export default function Module5() {
         šiuos dalykus.
       </p>
 
-      <p className="center-text">~~~***~~~</p>
+      <hr className="hr"/>
 
       <p>
         Tad eime prie veiksmų. Pirmiausia reikia atsisakyti to, kas tau nereikalinga, trukdo,
@@ -57,7 +57,7 @@ export default function Module5() {
         Šis valymasis atliekamas su savimi ir savo aplinka.
       </p>
 
-      <p className="center-text">~~~***~~~</p>
+      <hr className="hr"/>
 
       <p className="center-text bold">Modulio užduotis</p>
       <ol>
@@ -139,15 +139,15 @@ export default function Module5() {
         <li>Laiku informuok apie atliktas užduotis.</li>
       </ol>
 
-      <p className="center-text">~~~***~~~</p>
+      <hr className="hr"/>
 
       <p className="bold center-text">Veiksmai sukuria galimybes priimti tai, ko trokšti</p>
 
-      <p className="center-text">~~~***~~~</p>
+      <hr className="hr"/>
 
       <p className="center-text">Tau visi linki laimės</p>
 
-      <p className="center-text">~~~***~~~</p>
+      <hr className="hr"/>
 
       <p className="center-text">Ačiū!</p>
     </div>

@@ -31,6 +31,7 @@ export default function SectionAbout() {
       <h1 className={styles.middleHeading}>NORIU TIKRO GYVENIMO</h1>
       <div className={styles["flex-container"]}>
         <Card
+          id={'aboutMe'}
           title={"APIE MANE"}
           text={`Aš esu Jūratė Lajauskaitė
           Asmeninio augimo trenerė

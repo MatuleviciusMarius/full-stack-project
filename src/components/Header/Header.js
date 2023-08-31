@@ -25,7 +25,7 @@ export default function Header({ isDashboard = false }) {
         {pathname === "/" ? (
           <>
             <a href="#about">PRAKTINIS GIDAS</a>
-            <a href="#about">APIE MANE</a>
+            <a href="#aboutMe">APIE MANE</a>
           </>
         ) : (
           <>

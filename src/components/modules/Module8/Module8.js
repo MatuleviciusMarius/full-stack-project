@@ -63,7 +63,7 @@ export default function Module8() {
         susikūrei savo programą ir skleidi tam tikros rūšies kvapą, kuris pritraukia atitinkamas
         situacijas. Norisi pokyčio? Labai kviečiu.
       </p>
-      <p className="center-text">~~~***~~~</p>
+      <hr className="hr"/>
       <p>
         Tavo programinė įranga/karma nėra problema. Bėdų kyla tada, kai ji tampa tavo gyvenimo
         valdytoja. Tai priklauso nuo tavęs. Karma yra tavo individualumo pagrindas ir tuo pačiu ji
@@ -111,7 +111,7 @@ export default function Module8() {
         pakankamai galinga ir vizualizacija pakankamai ryški, - tai netgi gali įveikti karmos
         ryšius. Tai žinodama ir atitinkamai veikdama tampi savo likimo kūrėja.
       </p>
-      <p className="center-text">~~~***~~~</p>
+      <hr className="hr"/>
 
       <p className="center-text bold">Modulio užduotis</p>
 
@@ -148,11 +148,11 @@ export default function Module8() {
         <li>Informuok apie atliktas užduotis.</li>
       </ol>
 
-      <p className="center-text">~~~***~~~</p>
+      <hr className="hr"/>
 
       <p className="center-text bold">TROKŠTU TIKRO GYVENIMO</p>
 
-      <p className="center-text">~~~***~~~</p>
+      <hr className="hr"/>
 
       <p className="center-text">Ačiū!</p>
     </div>

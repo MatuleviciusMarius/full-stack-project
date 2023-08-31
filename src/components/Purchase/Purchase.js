@@ -36,8 +36,7 @@ export default function Purchase({ userId }) {
               kai ateina tai ko tikrai norime <br />
               ir tai ateina norimu metu
             </p>
-            <br />
-            <p>
+            <p className={styles.marginTop}>
               Neprivalai būti patenkinta mažais dalykais, kai esi pajėgi naudotis ir mėgautis
               didesniais
             </p>
