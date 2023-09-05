@@ -35,3 +35,35 @@
   max-width: 355px;
   width: 100%;
 }
+
+@media screen and (max-width: 800px) {
+  .form {
+    width: 90%;
+    height: auto;
+    padding: 34px;
+    gap: 0px;
+  }
+
+  .heading {
+    font-size: 20px; 
+    letter-spacing: 1.4px; 
+    margin-top: 3px;
+    margin-bottom: 26px;
+  }
+
+  .warning-message {
+    font-size: 16px;
+  }
+
+  .buttonContainer {
+    text-align: center;
+    margin-bottom: 38px;
+  }
+
+  .buttonContainer > button {
+    width: 90%;
+    font-size: 18px; 
+    letter-spacing: 1.26px; 
+  }
+  
+}
