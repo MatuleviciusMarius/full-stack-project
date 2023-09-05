@@ -18,7 +18,12 @@ export default function Header({ isDashboard = false }) {
   return (
     <header className={styles.header}>
       <div className={styles.brandContainer}>
-        <img onClick={handleLogoClick} className={styles.logo} src="/images/logo.svg" alt="LOGO" />
+        <img
+          onClick={handleLogoClick}
+          className={styles.logo}
+          src="/images/logo.svg"
+          alt="LOGO"
+        />
         <span className={styles.brandText}>MY DREAM WORLD</span>
       </div>
       <ul className={styles.navigation}>
@@ -34,7 +39,9 @@ export default function Header({ isDashboard = false }) {
           </>
         )}
         {isDashboard ? (
-          <button onClick={handleSignOut}>ATSIJUNGTI</button>
+          <button className={styles.signOut} onClick={handleSignOut}>
+            ATSIJUNGTI
+          </button>
         ) : (
           <Link href="/login">PRISIJUNGTI</Link>
         )}
