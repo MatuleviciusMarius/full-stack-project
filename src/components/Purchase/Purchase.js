@@ -14,7 +14,9 @@ export default function Purchase({ userId }) {
     axios
       .get("/api/group/getAll")
       .then((response) => {
-        const notStartedGroups = response.data.groups.filter((group) => !group.isStarted);
+        const notStartedGroups = response.data.groups.filter(
+          (group) => !group.isStarted
+        );
         const groupsArr = notStartedGroups.map((group) => {
           return {
             value: group._id,
@@ -33,12 +35,12 @@ export default function Purchase({ userId }) {
           <div className={styles.textContainer}>
             <p>
               Laimingos būname tuomet, <br />
-              kai ateina tai ko tikrai norime <br />
+              kai ateina tai, ko tikrai norime <br />
               ir tai ateina norimu metu
             </p>
             <p className={styles.marginTop}>
-              Neprivalai būti patenkinta mažais dalykais, kai esi pajėgi naudotis ir mėgautis
-              didesniais
+              Neprivalai būti patenkinta mažais dalykais, kai esi pajėgi
+              naudotis ir mėgautis didesniais
             </p>
             <br />
           </div>
@@ -46,8 +48,8 @@ export default function Purchase({ userId }) {
           <div className={styles.textContainer}>
             <br />
             <p>
-              Norint dalyvauti Norų išsipildymo Kelionėje, pasirink pradžios datą ir atlik
-              apmokėjimą.
+              Norint dalyvauti Norų išsipildymo Kelionėje, pasirink pradžios
+              datą ir atlik apmokėjimą.
             </p>
             <p className={styles.biggerMargin}>9 moduliai per 27 dienas</p>
             <p className={styles.priceText}>Kaina 126 eur.</p>
@@ -58,7 +60,11 @@ export default function Purchase({ userId }) {
                 value={selectedGroupId}
               />
             </span>
-            <form action="/api/checkout_sessions" method="POST" className={styles.form}>
+            <form
+              action="/api/checkout_sessions"
+              method="POST"
+              className={styles.form}
+            >
               <input type="hidden" name="userId" value={userId} />
               <input type="hidden" name="groupId" value={selectedGroupId} />
               <Button

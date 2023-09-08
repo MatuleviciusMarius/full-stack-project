@@ -6,3 +6,11 @@
   max-width: 900px;
   gap: 20px;
 }
+
+@media screen and (max-width: 800px) {
+  .container {
+    max-width: 90%;
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}

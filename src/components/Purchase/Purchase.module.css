@@ -46,3 +46,23 @@
 .marginTop {
   margin-top: 25px;
 }
+
+@media screen and (max-width: 500px) {
+  .split {
+    width: 90%;
+  }
+
+  .textContainer {
+    width: 70%;
+  }
+
+  .form {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .form > button {
+    width: 100%;
+  }
+}
