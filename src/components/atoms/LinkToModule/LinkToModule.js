@@ -66,7 +66,7 @@ export default function LinkToModule({ moduleId, userInfo, isFinished = false })
         </div>
       ) : (
         <div className={styles.mobileContainer}>
-          <div className={styles.mobileTextContainer}>
+          <div className={styles.mobileTextContainer} onClick={handleClick}>
             <p>MODULIS {moduleId}</p>
           </div>
           <div
