@@ -3,11 +3,7 @@ import { useRouter } from "next/router";
 import axios from "axios";
 import styles from "./LinkToModule.module.css";
 
-export default function LinkToModule({
-  moduleId,
-  userInfo,
-  isFinished = false,
-}) {
+export default function LinkToModule({ moduleId, userInfo, isFinished = false }) {
   const router = useRouter();
   const [isModuleCompleted, setIsModuleCompleted] = useState(isFinished);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -16,16 +12,12 @@ export default function LinkToModule({
     router.push(`/dashboard/moduleView/${moduleId}`);
   }
 
-  function onChange(isFinished) {
-    if (isFinished) {
-      axios.post(
-        `/api/user/module?moduleId=${moduleId}&userId=${userInfo._id}`
-      );
+  function onChange(finished) {
+    if (finished) {
+      axios.post(`/api/user/module?moduleId=${moduleId}&userId=${userInfo._id}`);
       setIsModuleCompleted(true);
     } else {
-      axios.delete(
-        `/api/user/module?moduleId=${moduleId}&userId=${userInfo._id}`
-      );
+      axios.delete(`/api/user/module?moduleId=${moduleId}&userId=${userInfo._id}`);
       setIsModuleCompleted(false);
     }
   }
@@ -51,10 +43,7 @@ export default function LinkToModule({
             MODULIS {moduleId}
           </span>
           {isModuleCompleted ? (
-            <span
-              onClick={() => onChange(false)}
-              className={styles.interactionText}
-            >
+            <span onClick={() => onChange(false)} className={styles.interactionText}>
               Atlikta
               <svg
                 width="24"
@@ -70,10 +59,7 @@ export default function LinkToModule({
               </svg>{" "}
             </span>
           ) : (
-            <span
-              onClick={() => onChange(true)}
-              className={styles.interactionText}
-            >
+            <span onClick={() => onChange(true)} className={styles.interactionText}>
               Pažymėti kaip atliktą
             </span>
           )}
@@ -84,7 +70,7 @@ export default function LinkToModule({
             <p>MODULIS {moduleId}</p>
           </div>
           <div
-            onClick={() => onChange(isFinished ? false : true)}
+            onClick={() => onChange(isModuleCompleted ? false : true)}
             className={styles.mobileButtonContainer}
             style={{
               background: isModuleCompleted ? "#B18A8A" : "transparent",
