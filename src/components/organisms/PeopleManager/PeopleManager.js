@@ -5,7 +5,7 @@ import { formatDate } from "@/utils/util";
 import axios from "axios";
 import Loading from "@/components/atoms/Loading/Loading";
 
-export default function PeopleManager({ groups }) {
+export default function PeopleManager({ groups = [], people = [] }) {
   const [groupData, setGroupData] = useState([]);
   const [selectedGroupId, setSelectedGroupId] = useState({});
   const [peopleListData, setPeopleListData] = useState([]);
@@ -25,44 +25,6 @@ export default function PeopleManager({ groups }) {
     },
   ];
 
-  const allPeopleMapped = useMemo(() => {
-    const people = groups.reduce((acc, item) => {
-      if (item.users && Array.isArray(item.users)) {
-        return [...acc, ...item.users.map((user) => ({ value: user._id, label: user.name }))];
-      } else {
-        return acc;
-      }
-    }, []);
-    return people.sort((a, b) => a.label.localeCompare(b.label));
-  }, [groups]);
-
-  const allPeople = useMemo(() => {
-    const people = groups.reduce((acc, item) => {
-      if (item.users && Array.isArray(item.users)) {
-        return [...acc, ...item.users];
-      } else {
-        return acc;
-      }
-    }, []);
-    return people.sort((a, b) => a.name.localeCompare(b.name));
-  }, [groups]);
-
-  const allPeopleMappedWithNoGroups = useMemo(() => {
-    const people = allPeople.reduce(
-      (acc, item) => {
-        if (item.users && Array.isArray(item.users)) {
-          return [...acc, ...item.map((user) => ({ value: user._id, label: user.name }))];
-        } else {
-          return acc;
-        }
-      },
-      [allPeopleMapped]
-    );
-
-    const peopleWithoutGroup = people.filter((person) => person.group);
-    return peopleWithoutGroup.sort((a, b) => a.label.localeCompare(b.label));
-  });
-
   useEffect(() => {
     setGroupData(
       groups.map((x) => ({
@@ -72,11 +34,27 @@ export default function PeopleManager({ groups }) {
     );
   }, [groups]);
 
+  const allPeopleMapped = useMemo(() => {
+    return people.map((person) => ({
+      label: person.name,
+      value: person.id,
+    }));
+  }, [people]);
+
+  const allPeopleWithNoGroupMapped = useMemo(() => {
+    return people
+      .filter((person) => !person.group)
+      .map((person) => ({
+        label: person.name,
+        value: person.id,
+      }));
+  }, [people]);
+
   function handleGroupChange(value) {
     if (value === "all") {
       setPeopleListData(allPeopleMapped);
     } else if (value === "noGroup") {
-      setPeopleListData(allPeopleMappedWithNoGroups);
+      setPeopleListData(allPeopleWithNoGroupMapped);
     } else {
       const group = groups.find((gr) => gr._id === value);
       if (group.users) {
@@ -160,7 +138,8 @@ export default function PeopleManager({ groups }) {
               <td>{selectedPerson.name}</td>
               <td>{selectedPerson.group}</td>
               <td>
-                {selectedPerson.finishedModules && selectedPerson.finishedModules.length !== 0
+                {selectedPerson.finishedModules &&
+                selectedPerson.finishedModules.length !== 0
                   ? selectedPerson.finishedModules.join(", ")
                   : ""}
               </td>

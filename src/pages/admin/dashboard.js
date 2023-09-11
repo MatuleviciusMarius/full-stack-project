@@ -14,6 +14,7 @@ import Footer from "@/components/Footer/Footer";
 export default function Dashboard() {
   const [displayState, setDisplayState] = useState("");
   const [groups, setGroups] = useState([]);
+  const [people, setPeople] = useState([]);
 
   const sortedGroups = useMemo(() => {
     return groups.sort((a, b) => new Date(a.startDate) - new Date(b.startDate));
@@ -25,6 +26,10 @@ export default function Dashboard() {
         (a, b) => new Date(a.startDate) - new Date(b.startDate)
       );
       setGroups(sortedGroups);
+    });
+
+    axios.get("/api/user/getAll").then((response) => {
+      setPeople(response.data);
     });
   }, []);
 
@@ -43,7 +48,7 @@ export default function Dashboard() {
 
   function displayData() {
     if (displayState === "people") {
-      return <PeopleManager groups={sortedGroups} />;
+      return <PeopleManager people={people} groups={groups} />;
     } else if (displayState === "groups") {
       return <GroupManager groups={sortedGroups} />;
     }
