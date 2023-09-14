@@ -8,10 +8,50 @@
   margin-bottom: 73px;
 }
 
+.textContainer {
+  max-width: 800px;
+  margin: auto;
+}
+
+.textContainer > h1 {
+  color: #000;
+  font-family: var(--font-spartan-500);
+  font-size: 18px;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.4px;
+  text-transform: capitalize;
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.textContainer > p {
+  color: #000;
+  font-family: var(--font-satoshi-light);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 1.12px;
+  text-align: justify;
+  margin-bottom: 30px;
+}
+
+.textContainer > .center {
+  text-align: center;
+}
+
+.textContainer > hr {
+  width: 100px;
+}
+
 @media screen and (max-width: 800px) {
   .container {
     max-width: 90%;
     grid-template-columns: 1fr;
     justify-items: center;
+  }
+
+  .textContainer {
+    max-width: 90%;
   }
 }
