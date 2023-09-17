@@ -136,7 +136,9 @@ export default function PeopleManager({ groups = [], people = [] }) {
               <td>{selectedPerson.email}</td>
               <td>{selectedPerson.phone}</td>
               <td>{selectedPerson.name}</td>
-              <td>{groups.find((gr) => gr._id === selectedPerson.group).name}</td>
+              <td>
+                {selectedPerson.group && groups.find((gr) => gr._id === selectedPerson.group).name}
+              </td>
               <td>
                 {selectedPerson.finishedModules && selectedPerson.finishedModules.length !== 0
                   ? selectedPerson.finishedModules.join(", ")
