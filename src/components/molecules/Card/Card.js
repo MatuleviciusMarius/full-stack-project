@@ -10,7 +10,7 @@ export default function Card({ title, text, link, photo, id }) {
       ) : (
         <>
           {title && <h2 className={styles.title}>{title}</h2>}
-          {text && <p className={styles.bodyText}>{text}</p>}
+          {text && <pre className={styles.bodyText}>{text}</pre>}
           {link && (
             <Link className={styles.link} href={link}>
               DAUGIAU

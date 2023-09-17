@@ -9,13 +9,13 @@ export default {
         srityje. Be to, vadovavau pardavimų grupėms ir tarptautiniams projektams.
       </p>
       <p className="justify-text">Taip pat esu dviejų vaikų mama.</p>
-      <hr className="hr"/>
+      <hr className="hr" />
       <p className="justify-text">
         Norų išsipildymo praktinis gidas yra sukurtas remiantis mano kelis dešimtmečius kauptomis
         žiniomis. Jos buvo kruopščiai atrinktos bei patvirtintos praktinio eksperimentavimo būdu.
         Jei norite džiaugtis šio praktinio gido teikiamais vaisiais, elkitės, kaip jis siūlo.
       </p>
-      <hr className="hr"/>
+      <hr className="hr" />
       <p className="center-text">Noriu tikro gyvenimo</p>
     </div>
   ),
@@ -41,7 +41,7 @@ export default {
         Tu neprivalai būti patenkinta mažais dalykais, kai esi pajėgi naudotis ir mėgautis
         didesniais!
       </p>
-      <hr className="hr"/>
+      <hr className="hr" />
       <p className="center-text">
         Neįmanoma Visatą priversti tave aprūpinti norimais dalykais labiau, nei ji jau daro. <br />
         Visata tau jau palanki. <br />
@@ -85,12 +85,12 @@ export default {
         užtikrinti rekomenduojame susipažinti su techninėmis sąlygomis, kurios pateikiamos
         Taisyklėse.
       </p>
-      <hr className="hr"/>
+      <hr className="hr" />
       <p className="center-text">
-        Mūsų gyvenimo tikslas - absoliuti laimė <br /> Laimingos būname tuomet, kai ateina tai ko
+        Mūsų gyvenimo tikslas - absoliuti laimė <br /> Laimingos būname tuomet, kai ateina tai, ko
         tikrai norime ir tai ateina norimu metu
       </p>
-      <hr className="hr"/>
+      <hr className="hr" />
       <p className="center-text">9 moduliai per 27 dienas</p>
       <p className="center-text price-text">Kaina 126 eurai</p>
     </div>

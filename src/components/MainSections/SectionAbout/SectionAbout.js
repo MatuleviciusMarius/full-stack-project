@@ -11,19 +11,19 @@ export default function SectionAbout() {
         <Card
           title={"APIE KELIONĘ"}
           text={`Norų išsipildymas, tai ypatingas pasiūlymas,
-          kuris atveria galimybę kiekvienai iš mūsų tapti 
-          savo gyvenimo architekte ir dovanoja 
-          galią savo norus ir troškimus paversti tikrove
+kuris atveria galimybę kiekvienai iš mūsų tapti 
+savo gyvenimo architekte ir dovanoja 
+galią savo norus ir troškimus paversti tikrove
           `}
           link={"/details/about"}
         />
         <Card
           title={"PRAKTINIS GIDAS"}
           text={`Skirtas kiekvienam žmogui, 
-          kurio pagrindinis poreikis yra norų, 
-          svajonių ir troškimų išsipildymas, 
-          ir kiekvienam, kuris trokšta 
-          apčiuopiamų rezultatų.
+kurio pagrindinis poreikis yra norų, 
+svajonių ir troškimų išsipildymas, 
+ir kiekvienam, kuris trokšta 
+apčiuopiamų rezultatų.
           `}
           link={"/details/practicalGuidance"}
         />
@@ -34,11 +34,11 @@ export default function SectionAbout() {
           id={"aboutMe"}
           title={"APIE MANE"}
           text={`Aš esu Jūratė Lajauskaitė
-          Asmeninio augimo trenerė
-          Holistinė koučerė
-          Mano siūloma praktika
-          žmonių gyvenimus verčia 
-          sėkmingesniais, laimingesniais
+Asmeninio augimo trenerė
+Holistinė koučerė
+Mano siūloma praktika
+žmonių gyvenimus verčia 
+sėkmingesniais, laimingesniais
           `}
           link={"/details/aboutme"}
         />
