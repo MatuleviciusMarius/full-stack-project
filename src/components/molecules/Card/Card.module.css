@@ -5,6 +5,7 @@
   height: 402px;
   position: relative;
   text-align: left;
+  overflow: hidden;
 }
 
 .title {

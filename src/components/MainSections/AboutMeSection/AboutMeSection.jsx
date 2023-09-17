@@ -21,7 +21,7 @@ export default function AboutMeSection() {
           `}
           link={"/details/aboutme"}
         />
-        <Card photo={"/images/profilis-min.jpg"} />
+        <Card photo={"/images/profilis-min.jpeg"} />
       </div>
     </section>
   );
