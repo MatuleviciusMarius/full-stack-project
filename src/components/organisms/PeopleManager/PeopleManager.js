@@ -37,7 +37,7 @@ export default function PeopleManager({ groups = [], people = [] }) {
   const allPeopleMapped = useMemo(() => {
     return people.map((person) => ({
       label: person.name,
-      value: person.id,
+      value: person._id,
     }));
   }, [people]);
 
@@ -71,7 +71,7 @@ export default function PeopleManager({ groups = [], people = [] }) {
 
   function handleSelectPerson(value) {
     setSelectedPersonId(value);
-    setSelectedPerson(allPeople.find((p) => p._id === value));
+    setSelectedPerson(people.find((p) => p._id === value));
   }
 
   async function handleChangeGroupButton() {
@@ -136,10 +136,9 @@ export default function PeopleManager({ groups = [], people = [] }) {
               <td>{selectedPerson.email}</td>
               <td>{selectedPerson.phone}</td>
               <td>{selectedPerson.name}</td>
-              <td>{selectedPerson.group}</td>
+              <td>{groups.find((gr) => gr._id === selectedPerson.group).name}</td>
               <td>
-                {selectedPerson.finishedModules &&
-                selectedPerson.finishedModules.length !== 0
+                {selectedPerson.finishedModules && selectedPerson.finishedModules.length !== 0
                   ? selectedPerson.finishedModules.join(", ")
                   : ""}
               </td>
