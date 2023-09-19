@@ -16,6 +16,11 @@ export default {
         Jei norite džiaugtis šio praktinio gido teikiamais vaisiais, elkitės, kaip jis siūlo.
       </p>
       <hr className="hr" />
+      <p>
+        Mane nuoširdžiai džiugina galimybė Čia ir Dabar su Jumis dalyvauti tame, kas įeis į Jūsų
+        gyvenimo istoriją, kaip Jūsų didžiausių gyvenimo permainų pradžia!
+      </p>
+      <hr className="hr" />
       <p className="center-text">Noriu tikro gyvenimo</p>
     </div>
   ),
