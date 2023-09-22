@@ -3,7 +3,8 @@
   margin: auto;
 }
 
-.container p {
+.container p,
+.container ul {
   white-space: pre-line;
   color: #000;
   font-family: var(--font-satoshi-light);
