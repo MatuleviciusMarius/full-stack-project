@@ -25,3 +25,7 @@
   margin-top: 75px;
   margin-bottom: 25px;
 }
+
+.container > button {
+  margin-bottom: 100px;
+}
