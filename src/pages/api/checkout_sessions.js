@@ -4,12 +4,11 @@ export default async function handler(req, res) {
   const { userId, groupId } = req.body;
   if (req.method === "POST") {
     try {
-      // Create Checkout Sessions from body params.
       const session = await stripe.checkout.sessions.create({
         line_items: [
           {
             // Provide the exact Price ID (for example, pr_1234) of the product you want to sell
-            price: "price_1NU6DfHuHf9FOqSAJHVoXpaL",
+            price: "price_1Nh8wIHuHf9FOqSAXLXIhX1d",
             quantity: 1,
           },
         ],
