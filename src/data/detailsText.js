@@ -102,6 +102,8 @@ export default {
         Ji nori suteikti tai, ko trokšti ir dar daugiau. <br />
         Tad neversk Visatos laukti tavęs!
       </p>
+      <hr className="hr" />
+      <p className="center-text">REGISTRUOKITĖS ir SUŽINOKITE KAINĄ</p>
     </div>
   ),
 
@@ -145,8 +147,7 @@ export default {
         tikrai norime ir tai ateina norimu metu
       </p>
       <hr className="hr" />
-      <p className="center-text">9 moduliai per 27 dienas</p>
-      <p className="center-text price-text">Kaina 126 eurai</p>
+      <p className="center-text">REGISTRUOKITĖS ir SUŽINOKITE KAINĄ</p>
     </div>
   ),
 };
