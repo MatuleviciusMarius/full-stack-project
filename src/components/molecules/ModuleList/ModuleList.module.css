@@ -17,10 +17,7 @@
   color: #000;
   font-family: var(--font-spartan-500);
   font-size: 18px;
-  font-style: normal;
-  line-height: normal;
   letter-spacing: 1.4px;
-  text-transform: capitalize;
   text-align: center;
   margin-bottom: 45px;
 }
@@ -28,7 +25,7 @@
 .textContainer > p {
   color: #000;
   font-family: var(--font-satoshi-light);
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 20px;
   letter-spacing: 1.12px;

@@ -9,13 +9,18 @@ export default {
         srityje. Be to, vadovavau pardavimų grupėms ir tarptautiniams projektams.
       </p>
       <p className="justify-text">Taip pat esu dviejų vaikų mama.</p>
-      <hr className="hr"/>
+      <hr className="hr" />
       <p className="justify-text">
         Norų išsipildymo praktinis gidas yra sukurtas remiantis mano kelis dešimtmečius kauptomis
         žiniomis. Jos buvo kruopščiai atrinktos bei patvirtintos praktinio eksperimentavimo būdu.
         Jei norite džiaugtis šio praktinio gido teikiamais vaisiais, elkitės, kaip jis siūlo.
       </p>
-      <hr className="hr"/>
+      <hr className="hr" />
+      <p>
+        Mane nuoširdžiai džiugina galimybė Čia ir Dabar su Jumis dalyvauti tame, kas įeis į Jūsų
+        gyvenimo istoriją, kaip Jūsų didžiausių gyvenimo permainų pradžia!
+      </p>
+      <hr className="hr" />
       <p className="center-text">Noriu tikro gyvenimo</p>
     </div>
   ),
@@ -41,7 +46,56 @@ export default {
         Tu neprivalai būti patenkinta mažais dalykais, kai esi pajėgi naudotis ir mėgautis
         didesniais!
       </p>
-      <hr className="hr"/>
+      <hr className="hr" />
+      <p>
+        Norų išsipildymo kelionės tikslas - išsipildę norai. <br />
+        Šios praktikos teikiamos naudos: sužinosi
+      </p>
+      <ul>
+        <li>kokie tikrieji tavo norai;</li>
+        <li>kas būtent tau trukdo tavo konkretaus noro išsipildymui ir kaip tai pašalinti;</li>
+        <li>kokia tavo asmeninė sėkmės formulė;</li>
+        <li>kurie tavo įsitikinimai tau trukdo, kaip juos atpažinti ir keisti į tau naudingus;</li>
+        <li>ką padaryti, kad tavo praeitis taptų tavo sąjungininke ir palaikytoja;</li>
+        <li>
+          kaip susitvarkyti su mintimis, kurios griauna tavo svajonių ateitį ir sąmoningai kurti
+          minties galios dėka;
+        </li>
+        <li>
+          ką tau reikia daryti, kad būtum pasiruošusi noro išsipildymui ir nepraleistum šanso jį
+          priimti;
+        </li>
+        <li>
+          kaip sukurti glaudų ryšį su Visata ir jį nuolat palaikyti, kad Visata išpildytų tavo
+          norus;
+        </li>
+        <li>ką daryti, kad lengvai išeiti iš savo karmos užsisukusio nesėkmių rato;</li>
+        <li>manifestuoti norą efektyviai;</li>
+        <li>
+          bonusas - galingas metodas, kurio pagalba galėsi gauti atsakymus į visus savo klausimus.
+        </li>
+      </ul>
+      <p>Po šios praktikos tau nereiks ieškoti atsakymų į klausimus kaip ir ką daryti, kad:</p>
+      <ul>
+        <li>pritraukti svajonių vyrą ar kaip gerinti esamus santykius;</li>
+        <li>pritraukti finansinę gausą į savo gyvenimą;</li>
+        <li>išeiti iš aukos pozicijos;</li>
+        <li>paleisti praeities nuoskaudas;</li>
+        <li>gyventi harmonijoje su savimi ir Visata;</li>
+        <li>išlaisvinti vidinę galią;</li>
+        <li>būti sraute;</li>
+        <li>būti savimi;</li>
+        <li>tobulinti save ir pan.</li>
+      </ul>
+      <p>
+        Kas tai yra? Ką daryti ir ko nedaryti, kad norai pildytųsi? Kaip daryti, kad norai
+        pildytųsi? Ir svarbiausia: kad tai būtų lengva, paprasta, greita, smagu ir pritaikyta tau
+        asmeniškai. Šis pasiūlymas - tai realiuoju laiku vykstanti kelionė per praktinių užduočių
+        atlikimą į norų išsipildymą su nenutrūkstamu ryšiu, pagalba ir palaikymu per visą kelionę.
+        Tai gyva transformacija tavo realybėje.
+      </p>
+
+      <hr className="hr" />
       <p className="center-text">
         Neįmanoma Visatą priversti tave aprūpinti norimais dalykais labiau, nei ji jau daro. <br />
         Visata tau jau palanki. <br />
@@ -85,12 +139,12 @@ export default {
         užtikrinti rekomenduojame susipažinti su techninėmis sąlygomis, kurios pateikiamos
         Taisyklėse.
       </p>
-      <hr className="hr"/>
+      <hr className="hr" />
       <p className="center-text">
-        Mūsų gyvenimo tikslas - absoliuti laimė <br /> Laimingos būname tuomet, kai ateina tai ko
+        Mūsų gyvenimo tikslas - absoliuti laimė <br /> Laimingos būname tuomet, kai ateina tai, ko
         tikrai norime ir tai ateina norimu metu
       </p>
-      <hr className="hr"/>
+      <hr className="hr" />
       <p className="center-text">9 moduliai per 27 dienas</p>
       <p className="center-text price-text">Kaina 126 eurai</p>
     </div>

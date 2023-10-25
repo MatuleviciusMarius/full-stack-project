@@ -12,16 +12,10 @@ export default function AboutMeSection() {
       <div className={styles.container}>
         <Card
           title={"APIE MANE"}
-          text={`Aš esu Jūratė Lajauskaitė
-          Asmeninio augimo trenerė
-          Holistinė koučerė
-          Mano siūloma praktika
-          žmonių gyvenimus verčia 
-          sėkmingesniais, laimingesniais
-          `}
+          text={`Aš esu Jūratė Lajauskaitė \nAsmeninio augimo trenerė \nHolistinė koučerė \nMano siūloma praktika \nžmonių gyvenimus verčia \nsėkmingesniais, laimingesniais`}
           link={"/details/aboutme"}
         />
-        <Card photo={"/images/profilis-min.jpg"} />
+        <Card photo={"/images/profilis-min.jpeg"} />
       </div>
     </section>
   );

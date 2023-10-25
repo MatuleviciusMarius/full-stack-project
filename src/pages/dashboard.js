@@ -51,7 +51,7 @@ function dashboard() {
       <Header isDashboard />
       {user && (
         <div>
-          {userInfo.name ? (
+          {userInfo?.name ? (
             <div
               className={styles.greetingContainer}
               style={{

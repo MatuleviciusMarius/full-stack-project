@@ -10,20 +10,13 @@ export default function SectionAbout() {
       <div className={styles["flex-container"]}>
         <Card
           title={"APIE KELIONĘ"}
-          text={`Norų išsipildymas, tai ypatingas pasiūlymas,
-          kuris atveria galimybę kiekvienai iš mūsų tapti 
-          savo gyvenimo architekte ir dovanoja 
-          galią savo norus ir troškimus paversti tikrove
+          text={`Norų išsipildymas, tai ypatingas pasiūlymas, kuris atveria galimybę kiekvienai iš mūsų tapti savo gyvenimo architekte ir dovanoja galią savo norus ir troškimus paversti tikrove
           `}
           link={"/details/about"}
         />
         <Card
           title={"PRAKTINIS GIDAS"}
-          text={`Skirtas kiekvienam žmogui, 
-          kurio pagrindinis poreikis yra norų, 
-          svajonių ir troškimų išsipildymas, 
-          ir kiekvienam, kuris trokšta 
-          apčiuopiamų rezultatų.
+          text={`Skirtas kiekvienam žmogui, kurio pagrindinis poreikis yra norų, svajonių ir troškimų išsipildymas, ir kiekvienam, kuris trokšta apčiuopiamų rezultatų.
           `}
           link={"/details/practicalGuidance"}
         />
@@ -31,18 +24,14 @@ export default function SectionAbout() {
       <h1 className={styles.middleHeading}>NORIU TIKRO GYVENIMO</h1>
       <div className={styles["flex-container"]}>
         <Card
-          id={'aboutMe'}
+          id={"aboutMe"}
           title={"APIE MANE"}
-          text={`Aš esu Jūratė Lajauskaitė
-          Asmeninio augimo trenerė
-          Holistinė koučerė
-          Mano siūloma praktika
-          žmonių gyvenimus verčia 
-          sėkmingesniais, laimingesniais
+          text={`Aš esu Jūratė Lajauskaitė Asmeninio augimo trenerė Holistinė koučerė \nMano siūloma praktika
+žmonių gyvenimus verčia sėkmingesniais, laimingesniais
           `}
           link={"/details/aboutme"}
         />
-        <Card photo={"/images/profilis-min.jpg"} />
+        <Card photo={"/images/profilis-min.jpeg"} />
       </div>
     </section>
   );

@@ -6,11 +6,13 @@ export default function Card({ title, text, link, photo, id }) {
   return (
     <div className={`${styles.card} ${photo ? "" : styles.padding}`} id={id}>
       {photo ? (
-        <img src={photo} />
+        <div className={styles.imageContainer}>
+          <img src={photo} />
+        </div>
       ) : (
         <>
           {title && <h2 className={styles.title}>{title}</h2>}
-          {text && <p className={styles.bodyText}>{text}</p>}
+          {text && <pre className={styles.bodyText}>{text}</pre>}
           {link && (
             <Link className={styles.link} href={link}>
               DAUGIAU

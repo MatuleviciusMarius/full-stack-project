@@ -37,13 +37,7 @@ export default function RegisterForm() {
 
   useEffect(() => {
     setIsButtonDisabled(checkIfButtonDisabled());
-  }, [
-    isEmailValid,
-    isPasswordValid,
-    isPhoneValid,
-    isRepeatEmailValid,
-    isRepeatPasswordValid,
-  ]);
+  }, [isEmailValid, isPasswordValid, isPhoneValid, isRepeatEmailValid, isRepeatPasswordValid]);
 
   function checkIfButtonDisabled() {
     const disabled =
@@ -51,7 +45,8 @@ export default function RegisterForm() {
       isPhoneValid &&
       isRepeatEmailValid &&
       isPasswordValid &&
-      isRepeatPasswordValid;
+      isRepeatPasswordValid &&
+      phone.length > 0;
     return !disabled;
   }
 
@@ -74,9 +69,7 @@ export default function RegisterForm() {
   function handleSetRepeatEmail(e) {
     const value = e.target.value;
     setRepeatEmail(value);
-    value === email
-      ? setIsRepeatEmailValid(true)
-      : setIsRepeatEmailValid(false);
+    value === email ? setIsRepeatEmailValid(true) : setIsRepeatEmailValid(false);
   }
 
   function handleSetPassword(e) {
@@ -104,9 +97,7 @@ export default function RegisterForm() {
     } catch (error) {
       const errorCode = error.response.status;
       if (errorCode === 409) {
-        setRegistrationError(
-          "Vartotojas su tokiu elektroniniu paštu jau egzistuoja"
-        );
+        setRegistrationError("Vartotojas su tokiu elektroniniu paštu jau egzistuoja");
       } else {
         setRegistrationError("Kažkas negerai pabandykite vėliau");
       }
@@ -118,15 +109,11 @@ export default function RegisterForm() {
   }
 
   useEffect(() => {
-    password === repeatPassword
-      ? setIsRepeatPasswordValid(true)
-      : setIsRepeatPasswordValid(false);
+    password === repeatPassword ? setIsRepeatPasswordValid(true) : setIsRepeatPasswordValid(false);
   }, [password, repeatPassword]);
 
   useEffect(() => {
-    email === repeatEmail
-      ? setIsRepeatEmailValid(true)
-      : setIsRepeatEmailValid(false);
+    email === repeatEmail ? setIsRepeatEmailValid(true) : setIsRepeatEmailValid(false);
   }, [email, repeatEmail]);
 
   if (loadingState === loadingStates.finished) {
@@ -135,9 +122,7 @@ export default function RegisterForm() {
 
   function showLoadingState() {
     if (loadingState === loadingStates.idle) {
-      return (
-        <Button filled text={"REGISTRUOTIS"} disabled={isButtonDisabled} />
-      );
+      return <Button filled text={"REGISTRUOTIS"} disabled={isButtonDisabled} />;
     } else if (loadingState === loadingStates.loading) {
       return <Loading />;
     } else if (loadingState === loadingStates.error) {
