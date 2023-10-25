@@ -58,17 +58,19 @@ export default function Module9() {
           Rytoj pakartok viską iš naujo. Jau tavo noro tekstai yra suformuluoti, tiesiog perrašinėk.
           Ir perskaityk garsiai.
         </li>
-        Jei norus rašysi ant atskirų popieriaus lapų, juos gali dėti į užrašinę. Arba gali dėti į
-        knygą. Tik atkreipk dėmesį į kokią knygą dedi, apie ką ji. Jei tai romanas, tai su laiminga
-        pabaiga.
+        <li>Poryt vėl pakartok visą rašymą. Ir perskaityk garsiai.</li>
       </ul>
       Noro rašymo formulė tokia:
       <ul>
-        <li>Poryt vėl pakartok visą rašymą. Ir perskaityk garsiai.</li>
         <li>1 diena: ryte 3, dieną 6, vakare 9. Perskaityti garsiai.</li>
         <li>2 diena: ryte 3, dieną 6, vakare 9. Perskaityti garsiai.</li>
         <li>3 diena: ryte 3, dieną 6, vakare 9. Perskaityti garsiai.</li>
       </ul>
+      <p>
+        Jei norus rašysi ant atskirų popieriaus lapų, juos gali dėti į užrašinę. Arba gali dėti į
+        knygą. Tik atkreipk dėmesį į kokią knygą dedi, apie ką ji. Jei tai romanas, tai su laiminga
+        pabaiga.
+      </p>
       <p>Ir ką gi daryti toliau?</p>
       <p>
         <b>Kulminacija - tavo noro paleidimas.</b> Tegul tavo aplinka, tu, situacijos, žmonės,
