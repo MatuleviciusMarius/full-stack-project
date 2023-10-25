@@ -67,7 +67,7 @@ function dashboard() {
             </div>
           )}
           {group ? (
-            <ModuleList openModules={group.openLessons} userInfo={userInfo} />
+            <ModuleList openModules={group.openLessons} userInfo={userInfo} groupId={group._id} />
           ) : (
             <Purchase userId={user.id} />
           )}

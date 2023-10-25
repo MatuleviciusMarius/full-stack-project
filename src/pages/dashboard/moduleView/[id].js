@@ -1,14 +1,15 @@
 import React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import DashboardHeader from "@/components/DashboardHeader/DashboardHeader";
 import ModuleViewer from "@/components/ModuleViewer/ModuleViewer";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 
 export default function ModuleView() {
   const router = useRouter();
-  const id = router.query.id;
+  const { id, groupId } = router.query;
+
+  console.log(router);
 
   return (
     <>
