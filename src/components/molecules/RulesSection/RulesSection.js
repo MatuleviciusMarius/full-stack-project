@@ -52,8 +52,8 @@ export default function RulesSection() {
         </li>
         <li>
           Kelionės pradžios datą/grupę galima keisti likus mažiausiai trims dienoms iki starto, tai
-          derinant elektroniniu paštu{" "}
-          <a href="mailto:pagalba@mydreamworld.lt">pagalba@mydreamworld.lt</a>.
+          derinant elektroniniu paštu <a href="mailto:info@mydreamworld.lt">info@mydreamworld.lt</a>
+          .
         </li>
         <li>
           Jei dalyvė prasidėjusios Kelionės metu atsisako toliau dalyvauti, pinigai negrąžinami.

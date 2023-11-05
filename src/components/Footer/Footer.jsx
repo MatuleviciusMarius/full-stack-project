@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.container}>
         <p>
-          El. Paštas: <a href="mailto:pagalba@mydreamworld.lt">pagalba@mydreamworld.lt</a>
+          El. Paštas: <a href="mailto:info@mydreamworld.lt">info@mydreamworld.lt</a>
           <br />
           Tel: +<a href="tel:+37061280062">37061280062</a>
         </p>
