@@ -3,8 +3,8 @@ import styles from "./Button.module.css";
 
 export default function Button({ text, action, disabled, filled = false, type, role }) {
   const style = {
-    backgroundColor: filled ? "#574141" : "transparent",
-    color: filled ? "#FFF" : "#000",
+    backgroundColor: filled ? "#9d467e" : "transparent",
+    color: filled ? "#FFF" : "#9d467e",
     fontWeight: filled ? 700 : 400,
   };
 

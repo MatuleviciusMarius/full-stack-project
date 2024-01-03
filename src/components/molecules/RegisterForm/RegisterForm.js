@@ -55,7 +55,7 @@ export default function RegisterForm() {
     const value = e.target.value;
 
     setEmail(value);
-    regex.test(value) ? setIsEmailValid(true) : setIsEmailValid(false);
+    setIsEmailValid(regex.test(value));
   }
 
   function handleSetPhone(e) {
@@ -98,6 +98,8 @@ export default function RegisterForm() {
       const errorCode = error.response.status;
       if (errorCode === 409) {
         setRegistrationError("Vartotojas su tokiu elektroniniu paštu jau egzistuoja");
+      } else if (errorCode === 400) {
+        setRegistrationError("Naudokite emailą, kuris buvo naudojamas pirkimui");
       } else {
         setRegistrationError("Kažkas negerai pabandykite vėliau");
       }

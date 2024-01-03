@@ -9,14 +9,13 @@ import Button from "../atoms/Button/Button";
 export default function Purchase({ userId }) {
   const [groups, setGroups] = useState([]);
   const [selectedGroupId, setSelectedGroupId] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     axios
       .get("/api/group/getAll")
       .then((response) => {
-        const notStartedGroups = response.data.groups.filter(
-          (group) => !group.isStarted
-        );
+        const notStartedGroups = response.data.groups.filter((group) => !group.isStarted);
         const groupsArr = notStartedGroups.map((group) => {
           return {
             value: group._id,
@@ -27,6 +26,16 @@ export default function Purchase({ userId }) {
       })
       .catch((err) => console.log(err));
   }, []);
+
+  async function addToGroup() {
+    setIsLoading(true);
+    await axios.post("/api/group/addUser", {
+      userId,
+      groupId: selectedGroupId,
+    });
+    setIsLoading(false);
+    window.location.reload();
+  }
 
   return (
     <div className={styles.container}>
@@ -39,8 +48,8 @@ export default function Purchase({ userId }) {
               ir tai ateina norimu metu
             </p>
             <p className={styles.marginTop}>
-              Neprivalai būti patenkinta mažais dalykais, kai esi pajėgi
-              naudotis ir mėgautis didesniais
+              Neprivalai būti patenkinta mažais dalykais, kai esi pajėgi naudotis ir mėgautis
+              didesniais
             </p>
             <br />
           </div>
@@ -48,11 +57,10 @@ export default function Purchase({ userId }) {
           <div className={styles.textContainer}>
             <br />
             <p>
-              Norint dalyvauti Norų išsipildymo Kelionėje, pasirink pradžios
-              datą ir atlik apmokėjimą.
+              Norint dalyvauti Norų išsipildymo Kelionėje, pasirink pradžios datą ir patvirtinkite
             </p>
-            <p className={styles.biggerMargin}>9 moduliai per 27 dienas</p>
-            <p className={styles.priceText}>Kaina 126 eur.</p>
+            {/* <p className={styles.biggerMargin}>9 moduliai per 27 dienas</p>
+            <p className={styles.priceText}>Kaina 126 eur.</p> */}
             <span className={styles.margin}>
               <GroupPicker
                 groups={groups}
@@ -60,21 +68,22 @@ export default function Purchase({ userId }) {
                 value={selectedGroupId}
               />
             </span>
-            <form
-              action="/api/checkout_sessions"
-              method="POST"
-              className={styles.form}
-            >
+            {/* <form action="/api/checkout_sessions" method="POST" className={styles.form}>
               <input type="hidden" name="userId" value={userId} />
-              <input type="hidden" name="groupId" value={selectedGroupId} />
+              <input type="hidden" name="groupId" value={selectedGroupId} /> */}
+            {isLoading ? (
+              <div className="center-text">
+                <Loading />
+              </div>
+            ) : (
               <Button
-                text={"EITI Į APMOKĖJIMĄ"}
+                text={"PATVIRTINTI"}
                 disabled={!selectedGroupId}
                 filled
-                type={"submit"}
                 role={"link"}
+                action={addToGroup}
               />
-            </form>
+            )}
           </div>
         </>
       ) : (

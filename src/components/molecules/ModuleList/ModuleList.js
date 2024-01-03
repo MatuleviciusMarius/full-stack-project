@@ -22,9 +22,9 @@ export default function ModuleList({ openModules = 0, userInfo, groupId }) {
       <div className={styles.textContainer}>
         <h1>Sveikinu Tave su artėjančia Norų išsipildymo diena!</h1>
         <p>
-          Starto dieną prisijunk prie www.mydreamworld.lt svetainės naudodama asmeninį slaptažodį,
-          kurį sukūrei registracijos metu ir Tau atsivers pirmieji vartai į Norų išsipildymo pirmąjį
-          modulį.
+          Starto dieną prisijunk prie mokymai.mydreamworld.lt svetainės naudodama asmeninį
+          slaptažodį, kurį sukūrei registracijos metu ir Tau atsivers pirmieji vartai į Norų
+          išsipildymo pirmąjį modulį.
         </p>
         <p>
           Apie artėjančią Tavo starto dieną į Norų išsipildymo kelionę būsi informuojama per

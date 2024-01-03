@@ -13,6 +13,7 @@ export default function PeopleManager({ groups = [], people = [] }) {
   const [selectedPerson, setSelectedPerson] = useState({});
   const [selectedGroupToChangeId, setSelectedGroupToChangeId] = useState();
   const [isLoadingChangeGroup, setIsLoadingChangeGroup] = useState(false);
+  const [orders, setOrders] = useState([]);
 
   const hardcodedSelects = [
     {
@@ -22,6 +23,10 @@ export default function PeopleManager({ groups = [], people = [] }) {
     {
       value: "noGroup",
       label: "Visi be grupių",
+    },
+    {
+      value: "notRegistered",
+      label: "Visi nusipirkę, bet neprisiregistravę",
     },
   ];
 
@@ -34,12 +39,33 @@ export default function PeopleManager({ groups = [], people = [] }) {
     );
   }, [groups]);
 
+  useEffect(() => {
+    const getOrdersWithEmails = async () => {
+      const o = await axios.get("/api/user/userPayNoGroup");
+      setOrders(o.data.orders);
+    };
+    getOrdersWithEmails();
+  }, []);
+
   const allPeopleMapped = useMemo(() => {
     return people.map((person) => ({
       label: person.name,
       value: person._id,
     }));
   }, [people]);
+
+  const peoplePayedWithNoGroup = useMemo(() => {
+    const ordersCopy = [...orders];
+    console.log(orders);
+    console.log(people);
+    const filtered = ordersCopy.filter(
+      (order) => !!people.findIndex((person) => person.email === order.customer_email)
+    );
+    return filtered.map((order) => ({
+      label: order.customer_email,
+      value: order.customer_id,
+    }));
+  }, [orders, people]);
 
   const allPeopleWithNoGroupMapped = useMemo(() => {
     return people
@@ -55,6 +81,8 @@ export default function PeopleManager({ groups = [], people = [] }) {
       setPeopleListData(allPeopleMapped);
     } else if (value === "noGroup") {
       setPeopleListData(allPeopleWithNoGroupMapped);
+    } else if (value === "notRegistered") {
+      setPeopleListData(peoplePayedWithNoGroup);
     } else {
       const group = groups.find((gr) => gr._id === value);
       if (group.users) {
