@@ -17,7 +17,7 @@ export default function login() {
     }
   }, [session, router]);
   return (
-    <div>
+    <div className="page">
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
