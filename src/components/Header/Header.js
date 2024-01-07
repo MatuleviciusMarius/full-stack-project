@@ -38,7 +38,7 @@ export default function Header({ isDashboard = false }) {
             ATSIJUNGTI
           </button>
         ) : (
-          <Link href="/">PRISIJUNGTI</Link>
+          <Link href="/register">REGISTRACIJA</Link>
         )}
       </ul>
     </header>
