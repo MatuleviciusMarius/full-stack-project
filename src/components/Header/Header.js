@@ -22,21 +22,12 @@ export default function Header({ isDashboard = false }) {
         <span className={styles.brandText}>MY DREAM WORLD</span>
       </div>
       <ul className={styles.navigation}>
-        {pathname === "/" ? (
-          <>
-            <a href="#about">PRAKTINIS GIDAS</a>
-            <a href="#aboutMe">APIE MANE</a>
-          </>
-        ) : (
-          <>
-            <Link href="/#about">PRAKTINIS GIDAS</Link>
-            <Link href="/#about">APIE MANE</Link>
-          </>
-        )}
         {isDashboard ? (
           <button className={styles.signOut} onClick={handleSignOut}>
             ATSIJUNGTI
           </button>
+        ) : pathname.includes("register") ? (
+          <Link href="/">PRISIJUNGTI</Link>
         ) : (
           <Link href="/register">REGISTRACIJA</Link>
         )}
