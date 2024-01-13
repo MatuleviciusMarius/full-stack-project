@@ -24,8 +24,6 @@ export default async function registerHandler(req, res) {
       return res.status(400).json({ error: "User not allowed" });
     }
 
-    console.log(orders);
-
     const emailToken = jwt.sign({ email }, process.env.JWT_SECRET);
     const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(password, salt);
@@ -40,26 +38,26 @@ export default async function registerHandler(req, res) {
 
     await newUser.save();
 
-    let transporter = nodemailer.createTransport({
-      host: "smtp.titan.email",
-      port: 465,
-      secure: true,
-      auth: {
-        user: process.env.EMAIL,
-        pass: process.env.EMAIL_PASS,
-      },
-    });
-    const confirmationUrl = `${process.env.HOST}/api/auth/confirm/${emailToken}`;
+    // let transporter = nodemailer.createTransport({
+    //   host: "smtp.titan.email",
+    //   port: 465,
+    //   secure: true,
+    //   auth: {
+    //     user: process.env.EMAIL,
+    //     pass: process.env.EMAIL_PASS,
+    //   },
+    // });
+    // const confirmationUrl = `${process.env.HOST}/api/auth/confirm/${emailToken}`;
 
-    let mailOptions = {
-      from: '"noreply" <noreply@mydreamworld.lt>',
-      to: email,
-      subject: "Email Confirmation",
-      text: `Ačiū už registraciją. Patvirtinkite savo emailą paspausdami šią nuorodą: ${confirmationUrl}`,
-      html: `<b>Ačiū už registraciją. Patvirtinkite savo emailą paspausdami šią nuorodą: <a href="${confirmationUrl}">${confirmationUrl}</a></b>`,
-    };
+    // let mailOptions = {
+    //   from: '"noreply" <noreply@mydreamworld.lt>',
+    //   to: email,
+    //   subject: "Email Confirmation",
+    //   text: `Ačiū už registraciją. Patvirtinkite savo emailą paspausdami šią nuorodą: ${confirmationUrl}`,
+    //   html: `<b>Ačiū už registraciją. Patvirtinkite savo emailą paspausdami šią nuorodą: <a href="${confirmationUrl}">${confirmationUrl}</a></b>`,
+    // };
 
-    await transporter.sendMail(mailOptions);
+    // await transporter.sendMail(mailOptions);
 
     res.status(201).json({ message: "New user created successfully" });
   } catch (error) {
