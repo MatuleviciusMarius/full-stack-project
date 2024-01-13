@@ -35,7 +35,7 @@ export default function Success({ text }) {
         </svg>
       </div>
       <h2 className={styles.successText}>{text}</h2>
-      <Button text={"PRISIJUNGTI"} filled action={() => router.push("/login")} />
+      <Button text={"PRISIJUNGTI"} filled action={() => router.push("/")} />
     </div>
   );
 }
