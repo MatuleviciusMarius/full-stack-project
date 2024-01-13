@@ -67,6 +67,7 @@ export default function Purchase({ userId }) {
                 handleChange={setSelectedGroupId}
                 value={selectedGroupId}
               />
+              <br />
             </span>
             {/* <form action="/api/checkout_sessions" method="POST" className={styles.form}>
               <input type="hidden" name="userId" value={userId} />
@@ -84,6 +85,8 @@ export default function Purchase({ userId }) {
                 action={addToGroup}
               />
             )}
+            <br />
+            <br />
           </div>
         </>
       ) : (
