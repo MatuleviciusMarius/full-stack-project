@@ -25,8 +25,8 @@ export default async function sendChangePasswordEmail(req, res) {
         from: '"noreply" <noreply@mydreamworld.lt>',
         to: email,
         subject: "Keisti slaptažodį",
-        text: `Norėdami pakeisti savo slaptažodį paspauskite šią nuorodą ${changePasswordLink}`,
-        html: `<b>Norėdami pakeisti savo slaptažodį paspauskite šią nuorodą <a href="${changePasswordLink}">${changePasswordLink}</a></b>`,
+        text: `Norėdami pakeisti savo slaptažodį paspauskite šią nuorodą`,
+        html: `<b>Norėdami pakeisti savo slaptažodį paspauskite šią nuorodą <a href="${changePasswordLink}">Keisti Slaptažodį</a></b>`,
       };
 
       await transporter.sendMail(mailOptions);
