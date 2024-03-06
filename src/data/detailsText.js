@@ -115,7 +115,7 @@ export default {
         Puiku, jei norite dalyvauti “Norų išsipildyme”! <br /> Tuomet turite registruotis,
         prisijungti, pasirinkti starto laiką ir apmokėti Kelionę. Po sėkmingo mokėjimo gausite
         patvirtinimo laišką į savo elektroninį paštą. Starto dieną prisijunkite prie
-        www.mydreamworld.lt svetainės naudodami asmeninį slaptažodį, kurį sukūrėte registracijos
+        mokymai-mydreamworld.lt svetainės naudodami asmeninį slaptažodį, kurį sukūrėte registracijos
         metu. Tai suteiks Jums individualią prieigą prie Jums skirtų modulių. Starto dieną Jums
         atsivers pirmieji vartai į Norų išsipildymo pirmąjį modulį. Kiekvienam moduliui skiriamos 3
         dienos, per kurias galėsite įsisavinti medžiagą ir atlikti užduotis. Sekančių modulių vartai

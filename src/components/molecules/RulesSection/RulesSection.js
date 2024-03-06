@@ -28,7 +28,7 @@ export default function RulesSection() {
           atsiunčiamas patvirtinimas.
         </li>
         <li>
-          Starto dieną prisijungiant prie interneto svetainės www.mydreamworld.lt, Jums bus
+          Starto dieną prisijungiant prie interneto svetainės mokymai-mydreamworld.lt, Jums bus
           suteikiama asmeninė prieiga prie 1 Modulio.
         </li>
         <li>
